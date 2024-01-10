@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import logo from "../../public/Images/visit dreznica.png"
+import logo from "../../public/Images/visit dreznica.webp"
 import MenuIcon from '@mui/icons-material/Menu';
 import NavItems from "./sub-components/NavItems";
 import { useState } from 'react';
@@ -129,7 +129,7 @@ const NavBar = styled.div`
     transform: ${({ $isMenuOpen }) =>
       $isMenuOpen ? 'translateX(0)' : 'translateX(100%)'};
     transition: transform 0.3s ease-in-out;
-    background-color: rgb(83, 137, 140);
+    background-color: #507D7F;
     position: fixed;
     padding: 0 16px;
     height: auto;
