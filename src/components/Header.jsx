@@ -1,6 +1,7 @@
 import styled from "styled-components"
-import logo from "../../public/Images/visit dreznica.webp"
+import logo from "../../public/Images/Logo.webp"
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 import NavItems from "./sub-components/NavItems";
 import { useState } from 'react';
 
@@ -23,17 +24,20 @@ function Header() {
             <LogoImage alt="Logo" src={logo} />
             <Title>VISIT <br />DREŽNICA</Title>
           </Logo>
-
         </a>
 
         <NavBar $isMenuOpen={isMenuOpen}>
-          
           <NavItems  />
-
         </NavBar>
 
         <MenuHolder>
-          <CustomMenu onClick={toggleMenu}/>
+
+        {isMenuOpen ? (
+            <CustomClose onClick={toggleMenu} />
+          ) : (
+            <CustomMenu onClick={toggleMenu} />
+          )}
+
         </MenuHolder>
 
       </Container>
@@ -51,6 +55,8 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   color: white;
+  position: sticky;
+  z-index: 100;
 `
 
 const Container = styled.div`
@@ -59,7 +65,7 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   position: relative;
-
+  
   a {
     text-decoration: none;
   }
@@ -112,6 +118,7 @@ const Title = styled.h2`
 
 const NavBar = styled.div`
   width: 68%;
+  z-index: 100;
 
   @media (max-width: 900px) {
     width: 70%;
@@ -156,3 +163,10 @@ const CustomMenu = styled(MenuIcon)`
   }
 `
 
+const CustomClose = styled(CloseIcon)`
+  &.MuiSvgIcon-root {
+    font-size: 36px; 
+    cursor: pointer;
+    color: white;
+  }
+`

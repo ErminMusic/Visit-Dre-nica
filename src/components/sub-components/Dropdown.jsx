@@ -44,14 +44,13 @@ const Drop = styled.div`
   display: flex;
   flex-direction: column;
   width: 200px;
-  left: 8px;
   top: 100%;
   margin: 5px 0;
   visibility: hidden; 
   opacity: 0; 
   transition: opacity 0.3s ease, visibility 0.3s ease;
   
-
+  
   @media (max-width: 850px) {
     top: 95%;
     left: 0;
@@ -65,7 +64,8 @@ const Drop = styled.div`
 
 const Container = styled.div`
   position: relative;
-
+  z-index: 1000;
+  
   &:hover {
     ${Drop} {
       visibility: visible;

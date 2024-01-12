@@ -64,6 +64,7 @@ export default NavItems
 const Container = styled.div`
   display: flex;
   justify-content: space-evenly;
+  z-index: 100;
 
   @media (max-width: 850px) {
     flex-direction: column;
