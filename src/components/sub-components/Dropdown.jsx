@@ -6,8 +6,8 @@ import PropTypes from 'prop-types';
 function Dropdown( {title, options} ) {
 
   Dropdown.propTypes = {
-    title: PropTypes.string.isRequired, // Require title to be a string
-    options: PropTypes.arrayOf(PropTypes.string).isRequired, // Require options to be an array of strings
+    title: PropTypes.string.isRequired, 
+    options: PropTypes.arrayOf(PropTypes.string).isRequired, 
   };
 
   return (

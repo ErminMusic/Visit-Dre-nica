@@ -31,13 +31,11 @@ function Header() {
         </NavBar>
 
         <MenuHolder>
-
-        {isMenuOpen ? (
+          {isMenuOpen ? (
             <CustomClose onClick={toggleMenu} />
           ) : (
             <CustomMenu onClick={toggleMenu} />
           )}
-
         </MenuHolder>
 
       </Container>
@@ -56,6 +54,7 @@ const Wrapper = styled.div`
   justify-content: center;
   color: white;
   position: sticky;
+  top: 0;
   z-index: 100;
 `
 
@@ -70,29 +69,9 @@ const Container = styled.div`
     text-decoration: none;
   }
 
-  @media (max-width: 576px) {
-
-  }
-
-  @media (min-width: 576px) and (max-width: 794px) {
-
-  }
-
-  @media (min-width: 795px) and (max-width: 991px) {
-    
-  }
-
   @media (max-width: 991px){
     width: 100%;
     padding: 0 15px;
-  }
-
-  @media (min-width: 992px) and (max-width: 1199px) {
-    
-  }
-
-  @media (min-width: 1200px) {
-    /* Styles for Extra Large (XL) screens */
   }
 `
 
@@ -125,12 +104,10 @@ const NavBar = styled.div`
   }
   
   @media (max-width: 850px) {
-    position: absolute; /* Change this line */
-    top: 0; /* Add this line */
-    right: 0; /* Add this line */
+    position: absolute; 
+    top: 0; 
+    right: 0; 
   }
-
-
 
   @media (max-width: 850px) {
     transform: ${({ $isMenuOpen }) =>

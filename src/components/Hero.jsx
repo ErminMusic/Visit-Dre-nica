@@ -47,6 +47,8 @@ const Wrap = styled.div`
   width: 100%;
   height: 100vh;
   z-index: 1;
+  overflow: hidden;
+    
 `
 
 const Container = styled.div`
@@ -91,14 +93,13 @@ const BookButton = styled.div`
   border-radius: 16px;
   background-color: #507D7F;
   text-align: center;
-  width: 35%;
-  padding: 16px 36px ;
+  width: 50%;
+  padding: 16px 0px ;
   cursor: pointer;
   opacity: 0.9;
 
   span {
     font-weight: bold;
-
   }
 
   &:hover {
@@ -116,12 +117,13 @@ const ContactButton = styled(BookButton)`
 
 const BackgroundImage = styled.img`
   position: absolute;
-  left: 0;
-  right: 0;
+  left: 1px;
+  right: 0px;
   top: 0;
   z-index: 0;
   width: 100%;
   height: 100vh;
+  object-fit: cover;
 `
 
 const BackgroundOverlay = styled.div`
@@ -130,8 +132,8 @@ const BackgroundOverlay = styled.div`
   right: 0;
   top: 0;
   bottom: 0;
-  width: 100%;
-  height: 100vh; // Set the height to cover the entire viewport
+  width: 50%;
+  height: 100vh; 
   z-index: 2;
-  background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
 `;
