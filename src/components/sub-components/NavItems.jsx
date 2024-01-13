@@ -8,53 +8,37 @@ function NavItems() {
 
   return (
     <Container>
-
       <NavBarItem> 
-
         <span>
           <a href="/">Home</a>
         </span>
-
       </NavBarItem>
 
       <NavBarItem> 
-        
         <Dropdown 
-          
           title="About Us"
           options={about}
-        
         />
-
       </NavBarItem>
 
       <NavBarItem>
-
         <Dropdown 
-        
           title="Activities"
           options={activities}
-        
         />
-        
       </NavBarItem>
 
       <NavBarItem>
-
         <span>
           <a href="/How To Book">How To Book</a>
         </span>
-
       </NavBarItem>
 
       <NavBarItem>
-
         <span>
           <a href="/FAQ">FAQ</a>
         </span>
-
       </NavBarItem>
-
     </Container>
   )
 }
@@ -66,13 +50,17 @@ const Container = styled.div`
   justify-content: space-evenly;
   z-index: 100;
 
+  @media (max-width: 990px) {
+    justify-content: space-between;
+    padding: 0 12px;
+  }
+  
   @media (max-width: 850px) {
     flex-direction: column;
     justify-content: start;
     padding: 8px 0;
     position: relative;
   }
-
 `
 const NavBarItem = styled.div`
   font-weight: bold;
@@ -106,7 +94,6 @@ const NavBarItem = styled.div`
       transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
       transform: scaleX(0);
     }
-    
   }
 
   &:hover {
