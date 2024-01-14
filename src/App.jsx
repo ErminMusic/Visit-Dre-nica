@@ -3,6 +3,7 @@ import './App.css'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import AboutDreznica from './components/AboutDreznica'
+import Strip from './components/Strip'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <Hero />
       <AboutDreznica />
+      <Strip />
 
     </Container>
   )

@@ -46,7 +46,6 @@ const Container = styled.div`
   height: auto;
   display: flex;
   justify-content: center;
-  border: 1px solid black;
 
   @media (max-width: 850px) {
     width: 95%;
@@ -60,7 +59,6 @@ const Container = styled.div`
 
 const ContentHolder = styled.div`
   width: 45%;
-  border: 1px solid black;
   padding: 16px 24px;
 
   h1 {

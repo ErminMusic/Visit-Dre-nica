@@ -107,6 +107,14 @@ const BookButton = styled.div`
     transition: 250ms;
     opacity: 1;
   }
+
+  @media (max-width: 500px) {
+    width: 55%;
+  }
+
+  @media (max-width: 420px) {
+    width: 65%;
+  }
 `
 
 const ContactButton = styled(BookButton)`
