@@ -3,7 +3,7 @@ import AC from "../../public/Images/AC.webp"
 import Bath from "../../public/Images/Bath.webp"
 import Beach from "../../public/Images/Beach.webp"
 import Breakfast from "../../public/Images/Breakfast.webp"
-import CCTV from "../../public/Images/AC.webp"
+import CCTV from "../../public/Images/CCTV.webp"
 import Delivery from "../../public/Images/Delivery.webp"
 import FamilyRoom from "../../public/Images/FamilyRoom.webp"
 import Fire from "../../public/Images/Fire.webp"
@@ -19,7 +19,7 @@ import Picnic from "../../public/Images/Picnic.webp"
 import RoomService from "../../public/Images/RoomService.webp"
 import Security from "../../public/Images/Security.webp"
 import Sink from "../../public/Images/Sink.webp"
-import Toilet from "../../public/Images/AC.webp"
+import Toilet from "../../public/Images/Toilet.webp"
 import WiFi from "../../public/Images/WiFi.webp"
 
 function RoomEquipment() {
@@ -46,16 +46,6 @@ function RoomEquipment() {
       text: "Room Service"
     },
     {
-      icon: CCTV,
-      alter: "CCTV",
-      text: "CCTV of the outside property and parking"
-    },
-    {
-      icon: Security,
-      alter: "Security",
-      text: "Security"
-    },
-    {
       icon: FamilyRoom,
       alter: "FamilyRoom",
       text: "Family Room"
@@ -70,9 +60,19 @@ function RoomEquipment() {
       alter: "Fire",
       text: "Fire Extinguisher"
     },
+    {
+      icon: Security,
+      alter: "Security",
+      text: "Security"
+    },
+    {
+      icon: CCTV,
+      alter: "CCTV",
+      text: "CCTV of the outside property"
+    },
   ]
 
-  const Outside = [
+  const Outdoors = [
     {
       icon: Beach,
       alter: "Beach",
@@ -150,23 +150,66 @@ function RoomEquipment() {
   return (
     <Wrap>
       <Container>
+
         <Title>
-          <span>Rooms</span> Include:
+          <span>All Rooms</span> Include:
         </Title>
+        <IconWrap>
+          {Rooms.map((item, index) => (
+            <IconHolder key={index}>
 
+              <Icon alt={item.alter} src={item.icon} />
 
+              <Text>{item.text}</Text>
+
+            </IconHolder>
+          ))}
+          
+        </IconWrap>
 
         <Title>
           <span>Outdoors:</span>
         </Title>
+          <IconWrap>
+            {Outdoors.map((item, index) => (
+              <IconHolder key={index}>
+
+                <Icon alt={item.alter} src={item.icon} />
+
+                <Text>{item.text}</Text>
+
+              </IconHolder>
+            ))}
+          </IconWrap>
 
         <Title>
           <span>Bathroom</span> Includes:
         </Title>
+        <IconWrap>
+            {Bathroom.map((item, index) => (
+              <IconHolder key={index}>
 
+                <Icon alt={item.alter} src={item.icon} />
+
+                <Text>{item.text}</Text>
+
+              </IconHolder>
+            ))}
+          </IconWrap>
         <Title>
           <span>Services:</span>
         </Title>
+        <IconWrap>
+            {Service.map((item, index) => (
+              <IconHolder key={index}>
+
+                <Icon alt={item.alter} src={item.icon} />
+
+                <Text>{item.text}</Text>
+
+              </IconHolder>
+            ))}
+          </IconWrap>
       </Container>
     </Wrap>
   )
@@ -185,6 +228,7 @@ const Wrap =  styled.div`
 
 const Container = styled.div`
   width: 80%;
+  height: 2000px;
 `
 
 const Title = styled.p`
@@ -195,8 +239,33 @@ const Title = styled.p`
   }
 `
 
+const IconWrap = styled.div`
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+`
 
+const IconHolder = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: auto;
+  padding: 16px 8px;
+  word-wrap: break-word;
+  text-align: center;   
+`
 
+const Icon = styled.img`
+  width: 80px;
+  height: 80px;
+`
+
+const Text = styled.div`
+  font-weight: bold;
+  padding: 12px 0 0 0;
+`
 
 
 
