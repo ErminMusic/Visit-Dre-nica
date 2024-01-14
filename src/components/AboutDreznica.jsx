@@ -18,7 +18,7 @@ function AboutDreznica() {
           <Content>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quasi minima ipsa quisquam magnam optio corporis.<br /><br />
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quasi minima ipsa quisquam magnam optio corporis.<br /><br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quasi minima ipsa quisquam magnam optio corporis.<br /><br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quasi minima ipsa quisquam magnam optio corporis.
           </Content>
 
         </ContentHolder>
@@ -38,7 +38,7 @@ const Wrap = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
-  padding: 46px 0;
+  padding: 36px 0;
 `
 
 const Container = styled.div`
@@ -74,6 +74,7 @@ const ContentHolder = styled.div`
 
   @media (max-width: 700px) {
     width: 90%;
+    padding: 16px 24px 0;
   }
     @media (max-width: 500px) {
     width: 100%;

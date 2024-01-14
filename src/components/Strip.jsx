@@ -13,7 +13,7 @@ function Strip() {
     {
       icon: ScoreIcon,
       alter: "Score Icon",
-      text: "Our score on Booking.com"
+      text: "Score on Booking.com"
     },
     {
       icon: AwardIcon,
@@ -52,7 +52,7 @@ const Wrap = styled.div`
   background-color: #F8F5DF;
   display: flex;
   justify-content: center;
-  padding: 16px 0;
+  padding: 36px 0;
 `
 
 const Container = styled.div`
@@ -73,7 +73,7 @@ const Holder = styled.div`
   align-items: center;
 
   @media (max-width: 520px) {
-    margin: 16px;
+    margin: 20px;
   }
 `
 
@@ -95,11 +95,13 @@ const Wrapper = styled.div`
 
 const IconHolder = styled.img`
   width: 80px;
+  height: 80px;
   border-radius: 10px 10px 10px 0;
   margin: 0 0 12px 0;
 
   @media (max-width: 520px) {
     width: 100px;
+    height: 100px;
   }
 `
 
