@@ -1,10 +1,7 @@
 import styled from 'styled-components'
 import './App.css'
-import Header from './components/Header'
-import Hero from './components/Hero'
-import AboutDreznica from './components/AboutDreznica'
-import Strip from './components/Strip'
-import RoomEquipment from './components/RoomEquipment'
+import Header from './components/sections/Header'
+import Home from './components/main-components/Home'
 
 function App() {
 
@@ -12,10 +9,7 @@ function App() {
     <Container>
       
       <Header />
-      <Hero />
-      <AboutDreznica />
-      <Strip />
-      <RoomEquipment />
+      <Home />
       
     </Container>
   )

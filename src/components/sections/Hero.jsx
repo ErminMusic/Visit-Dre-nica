@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import HeroBg from "../../public/Images/Hero.webp"
+import HeroBg from "../../../public/Images/Hero.webp"
 
 
 function Hero() {
@@ -88,7 +88,7 @@ const ButtonHolder = styled.div`
 `
 
 const BookButton = styled.div`
-  border-radius: 16px;
+  border-radius: 10px;
   background-color: #507D7F;
   text-align: center;
   width: 50%;
@@ -104,6 +104,8 @@ const BookButton = styled.div`
     transform: scale(1.05);
     transition: 250ms;
     opacity: 1;
+    background-color: white;
+    color: #507D7F;
   }
 
   @media (max-width: 500px) {
@@ -118,6 +120,11 @@ const BookButton = styled.div`
 const ContactButton = styled(BookButton)`
   background-color: #8FBC8F;
   margin-top: 20px;
+
+  &:hover {
+    background-color: white;
+    color: #8FBC8F;
+  }
 `
 
 

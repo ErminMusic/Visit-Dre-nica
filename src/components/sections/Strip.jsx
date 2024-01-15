@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import AwardIcon from "../../public/Images/Award.webp"
-import ScoreIcon from "../../public/Images/Score.webp"
+import AwardIcon from "../../../public/Images/Award.webp"
+import ScoreIcon from "../../../public/Images/Score.webp"
 
 function Strip() {
 

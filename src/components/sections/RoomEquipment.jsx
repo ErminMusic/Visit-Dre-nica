@@ -1,26 +1,26 @@
 import styled from "styled-components"
-import AC from "../../public/Images/AC.webp"
-import Bath from "../../public/Images/Bath.webp"
-import Beach from "../../public/Images/Beach.webp"
-import Breakfast from "../../public/Images/Breakfast.webp"
-import CCTV from "../../public/Images/CCTV.webp"
-import Delivery from "../../public/Images/Delivery.webp"
-import FamilyRoom from "../../public/Images/FamilyRoom.webp"
-import Fire from "../../public/Images/Fire.webp"
-import Fireplace from "../../public/Images/Fireplace.webp"
-import Garden from "../../public/Images/Garden.webp"
-import Iron from "../../public/Images/Iron.webp"
-import Laundry from "../../public/Images/Laundry.webp"
-import NonSmokingRooms from "../../public/Images/NonSmokingRooms.webp"
-import PackedLunch from "../../public/Images/PackedLunch.webp"
-import Parking from "../../public/Images/Parking.webp"
-import Patio from "../../public/Images/Patio.webp"
-import Picnic from "../../public/Images/Picnic.webp"
-import RoomService from "../../public/Images/RoomService.webp"
-import Security from "../../public/Images/Security.webp"
-import Sink from "../../public/Images/Sink.webp"
-import Toilet from "../../public/Images/Toilet.webp"
-import WiFi from "../../public/Images/WiFi.webp"
+import AC from "../../../public/Images/AC.webp"
+import Bath from "../../../public/Images/Bath.webp"
+import Beach from "../../../public/Images/Beach.webp"
+import Breakfast from "../../../public/Images/Breakfast.webp"
+import CCTV from "../../../public/Images/CCTV.webp"
+import Delivery from "../../../public/Images/Delivery.webp"
+import FamilyRoom from "../../../public/Images/FamilyRoom.webp"
+import Fire from "../../../public/Images/Fire.webp"
+import Fireplace from "../../../public/Images/Fireplace.webp"
+import Garden from "../../../public/Images/Garden.webp"
+import Iron from "../../../public/Images/Iron.webp"
+import Laundry from "../../../public/Images/Laundry.webp"
+import NonSmokingRooms from "../../../public/Images/NonSmokingRooms.webp"
+import PackedLunch from "../../../public/Images/PackedLunch.webp"
+import Parking from "../../../public/Images/Parking.webp"
+import Patio from "../../../public/Images/Patio.webp"
+import Picnic from "../../../public/Images/Picnic.webp"
+import RoomService from "../../../public/Images/RoomService.webp"
+import Security from "../../../public/Images/Security.webp"
+import Sink from "../../../public/Images/Sink.webp"
+import Toilet from "../../../public/Images/Toilet.webp"
+import WiFi from "../../../public/Images/WiFi.webp"
 
 function RoomEquipment() {
 
@@ -107,6 +107,11 @@ function RoomEquipment() {
       text: "Breakfast"
     },
     {
+      icon: PackedLunch,
+      alter: "PackedLunch",
+      text: "PackedLunch"
+    },
+    {
       icon: Delivery,
       alter: "Delivery",
       text: "Grocery Delivery (additional charges)"
@@ -121,11 +126,7 @@ function RoomEquipment() {
       alter: "Laundry",
       text: "Laundry (additional charges)"
     },
-    {
-      icon: PackedLunch,
-      alter: "PackedLunch",
-      text: "PackedLunch"
-    },
+
   ]
 
   const Bathroom = [
@@ -298,6 +299,17 @@ const Text = styled.div`
   padding: 12px 0 0 0;
 `
 
+// Room type
+// Number of guests
+ 
+// Quadruple Room with Balcony
+// 3 single bedsand1 double bedand1 sofa bed
+
+// Twin Room with Lake View
+// 2 single bedsand1 sofa bed
+
+// Budget Single Room
+// 1 single bed
 
 
 // Triple Room with Mountain View.
