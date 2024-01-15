@@ -7,29 +7,27 @@ function Hero() {
     <Wrap>
       
       <BackgroundOverlay />
-      
-      <BackgroundImage alt="Hero Image" src={HeroBg} />      
+      <BackgroundImage
+        alt="Hero Image"
+        src={HeroBg}
+        srcSet={`${HeroBg} 1920w, ${HeroBg} 600w`} // Specify image sources and sizes
+        sizes="(max-width: 600px) 100vw, 1920px" // Define sizes based on viewport width
+      />      
 
       <Container>
-
         <ContentHolder>
 
           <TextHolder>
-
             <Headline>Visit <span>Drežnica</span></Headline>
-
             <SubHeadline>A Hidden Gem in <br /> Bosnai & Herzegovina</SubHeadline>
 
           </TextHolder>
-
           <ButtonHolder>
 
             <BookButton>BOOK A <span>ROOM</span></BookButton>
-
             <ContactButton><span>CONTACT</span> US</ContactButton>
 
           </ButtonHolder>
-
         </ContentHolder>
 
       </Container>

@@ -106,12 +106,7 @@ const ImageHolder = styled.div`
 const Image = styled.img`
   border-radius: 16px;
   width: 100%;
-
-  @media (max-width: 900px) {
-    width: 100%;
-  }
-
-
+  height: 100%;
 `;
 
 // Mobile (up to 576px):

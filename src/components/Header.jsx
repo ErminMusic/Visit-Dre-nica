@@ -21,7 +21,12 @@ function Header() {
 
         <a href="/">
           <Logo>
-            <LogoImage alt="Logo" src={logo} />
+          <LogoImage
+              alt="Logo"
+              src={logo}
+              srcSet={`${logo} 300w, ${logo} 768w, ${logo} 1280w`} // Add appropriate sizes
+              sizes="(max-width: 300px) 100vw, (max-width: 768px) 80vw, 50vw" // Adjust sizes based on your layout
+            />
             <Title>VISIT <br />DREŽNICA</Title>
           </Logo>
         </a>
