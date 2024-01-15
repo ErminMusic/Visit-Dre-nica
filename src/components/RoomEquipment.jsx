@@ -164,7 +164,6 @@ function RoomEquipment() {
 
             </IconHolder>
           ))}
-          
         </IconWrap>
 
         <Title>
@@ -196,6 +195,7 @@ function RoomEquipment() {
               </IconHolder>
             ))}
           </IconWrap>
+
         <Title>
           <span>Services:</span>
         </Title>
@@ -221,19 +221,22 @@ const Wrap =  styled.div`
   background-color: #F0FFF0;
   width: 100%;
   color: #525252;
-  padding: 36px 0;
+  padding: 18px 0 36px 0;
   display: flex;
   justify-content: center;
 `
 
 const Container = styled.div`
   width: 80%;
-  height: 2000px;
+
+  @media (max-width: 850px) {
+    width: 95%;
+  } 
 `
 
 const Title = styled.p`
   font-size: 36px;
-
+  margin: 18px 0 14px 0;
   span {
     font-weight: bold;
   }
@@ -255,6 +258,14 @@ const IconHolder = styled.div`
   padding: 16px 8px;
   word-wrap: break-word;
   text-align: center;   
+
+  @media (max-width: 650px) {
+    width: 33%;
+  } 
+
+  @media (max-width: 500px) {
+    width: 50%;
+  } 
 `
 
 const Icon = styled.img`

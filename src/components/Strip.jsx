@@ -26,7 +26,7 @@ function Strip() {
     <Wrap>
 
       <Container>
-        
+
         <Wrapper>
         {content.map((item, index) => (
           <Holder key={index}>
