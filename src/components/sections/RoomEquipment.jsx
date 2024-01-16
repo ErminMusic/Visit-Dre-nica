@@ -21,6 +21,7 @@ import Security from "../../../public/Images/Security.webp"
 import Sink from "../../../public/Images/Sink.webp"
 import Toilet from "../../../public/Images/Toilet.webp"
 import WiFi from "../../../public/Images/WiFi.webp"
+import Television from "../../../public/Images/Television.webp"
 
 function RoomEquipment() {
 
@@ -28,12 +29,12 @@ function RoomEquipment() {
     {
       icon: WiFi,
       alter: "WiFi",
-      text: "Free WiFi"
+      text: "FREE WiFi"
     },
     {
       icon: Parking,
       alter: "Parking",
-      text: "Free Parking"
+      text: "FREE Parking"
     },
     {
       icon: AC,
@@ -44,6 +45,11 @@ function RoomEquipment() {
       icon: RoomService,
       alter: "RoomService",
       text: "Room Service"
+    },
+    {
+      icon: Television,
+      alter: "Television",
+      text: "Television"
     },
     {
       icon: FamilyRoom,
@@ -316,7 +322,7 @@ const Text = styled.div`
 // The place rents boats and canoes in summer and bicycles all year.
 
 // Every room includes:
-// Free Parking
+// FREE Parking
 // Free WiFi
 // Family rooms
 // Non-smoking rooms

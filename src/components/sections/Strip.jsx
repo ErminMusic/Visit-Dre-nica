@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import AwardIcon from "../../../public/Images/Award.webp";
 import ScoreIcon from "../../../public/Images/Score.webp";
+import AffordableIcon from "../../../public/Images/Affordable.webp";
 
 function Strip() {
   const content = [
@@ -15,9 +16,9 @@ function Strip() {
       text: "Score on Booking.com",
     },
     {
-      icon: AwardIcon,
-      alter: "Award Icon",
-      text: "Booking.com Traveller Review Awards 2022",
+      icon: AffordableIcon,
+      alter: "Affordable Icon",
+      text: "Affordable for any budget",
     },
   ];
 

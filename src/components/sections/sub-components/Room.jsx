@@ -4,10 +4,11 @@ import BedIcon from "../../../../public/Images/Bed.webp";
 import PeopleIcon from "../../../../public/Images/People.webp";
 import SizeIcon from "../../../../public/Images/Size.webp";
 import ViewIcon from "../../../../public/Images/View.webp";
+import BathIcon from "../../../../public/Images/Bath.webp";
 import PropTypes from 'prop-types';
 import Buttons from "./Buttons";
 
-const Room = ({ title, people, size, bed, view, description, images }) => {
+const Room = ({ title, people, size, bed, view, bathroom, description, images }) => {
 
   Room.propTypes = {
     title: PropTypes.string.isRequired, 
@@ -15,6 +16,7 @@ const Room = ({ title, people, size, bed, view, description, images }) => {
     size: PropTypes.string.isRequired,
     bed: PropTypes.string.isRequired,
     view: PropTypes.string.isRequired, 
+    bathroom: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     images: PropTypes.node.isRequired,
   };
@@ -50,6 +52,10 @@ const Room = ({ title, people, size, bed, view, description, images }) => {
               <Icon alt="View Icon" src={ViewIcon} />
               <p>{view}</p>
             </IconSection>
+            <IconSection >
+              <Icon alt="Bath Icon" src={BathIcon} />
+              <p>{bathroom}</p>
+            </IconSection>
           </IconHolder>
 
           <Buttons />
@@ -74,7 +80,10 @@ const Container = styled.div`
   }
 `;
 
-const SliderHolder = styled.div``;
+const SliderHolder = styled.div`
+  display: flex;
+  justify-content: center;
+`;
 
 const ContentHolder = styled.div`
   display: flex;

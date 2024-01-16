@@ -4,7 +4,7 @@ import styled from "styled-components";
 function Buttons() {
   return (
     <ButtonHolder>
-        <MoreButton><span>LEARN MORE</span></MoreButton>
+        <MoreButton><span>LEARN </span>MORE</MoreButton>
         <BookButton><span>BOOK</span> THIS ROOM</BookButton>
     </ButtonHolder>
   )
@@ -28,9 +28,7 @@ const MoreButton = styled.div`
     cursor: pointer;
     color: white;
     border-radius: 10px;
-    background-color: #507D7F;
-    opacity: 0.9;
-
+    background-color: #8FBC8F;
   
   span {
     font-weight: bold;
@@ -39,18 +37,16 @@ const MoreButton = styled.div`
   &:hover {
     transition: 250ms;
     background-color: white;
-    opacity: 1;
-
-    color: #507D7F;
+    color: #8FBC8F;
   }
 `;
 
 const BookButton = styled(MoreButton)`
-  background-color: #8FBC8F;
+  background-color: #507D7F;
   margin-top: 20px;
 
   &:hover {
     background-color: white;
-    color: #8FBC8F;
+    color: #507D7F;
   }
 `;
