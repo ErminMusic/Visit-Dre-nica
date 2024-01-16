@@ -83,7 +83,7 @@ const ButtonHolder = styled.div``;
 
 const BookButton = styled.div`
   border-radius: 10px;
-  background-color: #507d7f;
+  background-color: rgb(80, 125, 127);
   text-align: center;
   width: 50%;
   padding: 16px 0px;
@@ -99,7 +99,7 @@ const BookButton = styled.div`
     transition: 250ms;
     opacity: 1;
     background-color: white;
-    color: #507d7f;
+    color: rgb(80, 125, 127);
   }
 
   @media (max-width: 500px) {

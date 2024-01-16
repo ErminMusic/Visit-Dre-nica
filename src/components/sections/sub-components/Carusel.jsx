@@ -37,6 +37,7 @@ const Container = styled(Slider)`
 
   img {
     width: 100%;
+    height: 100%;
   }
 
   ul li button {

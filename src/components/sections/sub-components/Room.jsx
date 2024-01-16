@@ -5,6 +5,7 @@ import PeopleIcon from "../../../../public/Images/People.webp";
 import SizeIcon from "../../../../public/Images/Size.webp";
 import ViewIcon from "../../../../public/Images/View.webp";
 import PropTypes from 'prop-types';
+import Buttons from "./Buttons";
 
 const Room = ({ title, people, size, bed, view, description, images }) => {
 
@@ -51,10 +52,7 @@ const Room = ({ title, people, size, bed, view, description, images }) => {
             </IconSection>
           </IconHolder>
 
-          <ButtonHolder>
-            <MoreButton><span>LEARN MORE</span></MoreButton>
-            <BookButton><span>BOOK</span> THIS ROOM</BookButton>
-          </ButtonHolder>
+          <Buttons />
         </Content>
         
       </ContentHolder>
@@ -94,7 +92,10 @@ const Content = styled.div`
   }
 `;
 
-const Title = styled.h3``;
+const Title = styled.p`
+  font-size: 18px;
+  font-weight: bold;
+`;
 
 const IconHolder = styled.div`
   width: 100%;
@@ -121,44 +122,4 @@ const IconSection = styled.div`
 const Icon = styled.img`
   width: 50px;
   height: 50px;
-`;
-
-const ButtonHolder = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-`;
-
-const MoreButton = styled.div`
-  border-radius: 10px;
-  background-color: #507D7F;
-  text-align: center;
-  width: 100%;
-  padding: 16px 0px ;
-  cursor: pointer;
-  opacity: 0.9;
-  color: white;
-  
-  span {
-    font-weight: bold;
-  }
-
-  &:hover {
-    transition: 250ms;
-    opacity: 1;
-    background-color: white;
-    color: #507D7F;
-  }
-`;
-
-const BookButton = styled(MoreButton)`
-  background-color: #8FBC8F;
-  margin-top: 20px;
-
-  &:hover {
-    background-color: white;
-    color: #8FBC8F;
-  }
 `;
