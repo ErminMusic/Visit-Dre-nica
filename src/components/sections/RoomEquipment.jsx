@@ -162,16 +162,13 @@ function RoomEquipment() {
         <IconWrap>
           {Rooms.map((item, index) => (
             <IconHolder key={index}>
-
-              <Icon 
-                alt={item.alter} 
-                src={item.icon}
-                srcSet={`${item.icon} 300w, ${item.icon} 768w, ${item.icon} 1280w`}
-                  sizes="(max-width: 300px) 100vw, (max-width: 768px) 80vw, 50vw" 
+              <Icon
+                  alt={item.alter}
+                  src={item.icon}
+                  srcSet={`${item.icon} 300w, ${item.icon} 768w, ${item.icon} 1280w`}
+                  sizes="(max-width: 300px) 100vw, (max-width: 768px) 80vw, 50vw"
                 />
-
               <Text>{item.text}</Text>
-
             </IconHolder>
           ))}
         </IconWrap>
@@ -182,16 +179,13 @@ function RoomEquipment() {
           <IconWrap>
             {Outdoors.map((item, index) => (
               <IconHolder key={index}>
-
-                <Icon 
-                  alt={item.alter} 
+                <Icon
+                  alt={item.alter}
                   src={item.icon}
                   srcSet={`${item.icon} 300w, ${item.icon} 768w, ${item.icon} 1280w`}
-                  sizes="(max-width: 300px) 100vw, (max-width: 768px) 80vw, 50vw" 
+                  sizes="(max-width: 300px) 100vw, (max-width: 768px) 80vw, 50vw"
                 />
-
                 <Text>{item.text}</Text>
-
               </IconHolder>
             ))}
           </IconWrap>
@@ -202,16 +196,13 @@ function RoomEquipment() {
         <IconWrap>
             {Bathroom.map((item, index) => (
               <IconHolder key={index}>
-
-                <Icon 
-                  alt={item.alter} 
+                <Icon
+                  alt={item.alter}
                   src={item.icon}
                   srcSet={`${item.icon} 300w, ${item.icon} 768w, ${item.icon} 1280w`}
-                  sizes="(max-width: 300px) 100vw, (max-width: 768px) 80vw, 50vw" 
+                  sizes="(max-width: 300px) 100vw, (max-width: 768px) 80vw, 50vw"
                 />
-
                 <Text>{item.text}</Text>
-
               </IconHolder>
             ))}
           </IconWrap>
@@ -222,16 +213,13 @@ function RoomEquipment() {
         <IconWrap>
             {Service.map((item, index) => (
               <IconHolder key={index}>
-
-                <Icon 
-                  alt={item.alter} 
+                <Icon
+                  alt={item.alter}
                   src={item.icon}
                   srcSet={`${item.icon} 300w, ${item.icon} 768w, ${item.icon} 1280w`}
-                  sizes="(max-width: 300px) 100vw, (max-width: 768px) 80vw, 50vw" 
+                  sizes="(max-width: 300px) 100vw, (max-width: 768px) 80vw, 50vw"
                 />
-
                 <Text>{item.text}</Text>
-
               </IconHolder>
             ))}
           </IconWrap>
