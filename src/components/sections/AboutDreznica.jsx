@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import AboutImg from '../../../public/Images/About.webp';
+import AboutImg from '../../assets/About.webp';
 
 function AboutDreznica() {
 

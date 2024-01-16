@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import logo from '../../../public/Images/Logo.webp';
+import logo from '../../assets/Logo.webp';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import NavItems from './sub-components/NavItems';

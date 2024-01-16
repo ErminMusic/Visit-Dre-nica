@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import AwardIcon from "../../../public/Images/Award.webp";
-import ScoreIcon from "../../../public/Images/Score.webp";
-import AffordableIcon from "../../../public/Images/Affordable.webp"
+import AwardIcon from "../../assets/Award.webp";
+import ScoreIcon from "../../assets/Score.webp";
+import AffordableIcon from "../../assets/Affordable.webp"
 
 function Strip() {
   const content = [

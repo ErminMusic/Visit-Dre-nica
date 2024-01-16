@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Room from './sub-components/Room';
-import RoomImage from '../../../public/Images/RoomOne.webp';
+import RoomImage from '../../assets/RoomOne.webp';
 
 function Rooms() {
   

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import HeroBg from '../../../public/Images/Hero.webp'; 
-import HeroBgPhone from '../../../public/Images/HeroPhone.webp'; 
+import HeroBg from '../../assets/Hero.webp'; 
+import HeroBgPhone from '../../assets/HeroPhone.webp'; 
 
 function Hero() {
   return (

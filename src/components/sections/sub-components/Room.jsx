@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import Carusel from "./Carusel";
-import BedIcon from "../../../../public/Images/Bed.webp";
-import PeopleIcon from "../../../../public/Images/People.webp";
-import SizeIcon from "../../../../public/Images/Size.webp";
-import ViewIcon from "../../../../public/Images/View.webp";
-import BathIcon from "../../../../public/Images/Bath.webp";
+import BedIcon from "../../../assets/Bed.webp";
+import PeopleIcon from "../../../assets/People.webp";
+import SizeIcon from "../../../assets/Size.webp";
+import ViewIcon from "../../../assets/View.webp";
+import BathIcon from "../../../assets/Bath.webp";
 import PropTypes from 'prop-types';
 import Buttons from "./Buttons";
 
