@@ -1,31 +1,16 @@
 import styled from 'styled-components';
+import logo from '../../../public/Images/Logo.webp';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import NavItems from './sub-components/NavItems';
-import { Suspense, useState, useEffect } from 'react';
+import { useState } from 'react';
 
 function Header() {
-
-  const [logo, setLogo] = useState(null);
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
-
-  useEffect(() => {
-    const loadIcons = async () => {
-      try {
-        const logo = await import('../../../public/Images/Logo.webp');
-        setLogo(() => logo.default);
-        
-      } catch (error) {
-        console.error("Error loading images:", error);
-      }
-    };
-
-    loadIcons();
-  }, []);
 
   return (
     <Wrapper>
@@ -33,15 +18,13 @@ function Header() {
         
         <a href="/">
           <Logo>
-            <Suspense fallback={<div>Loading...</div>}>
-              <LogoImage
-                alt="Logo"
-                src={logo}
-                loading="lazy"
-                srcSet={`${logo} 300w, ${logo} 768w, ${logo} 1280w`}
-                sizes="(max-width: 300px) 100vw, (max-width: 768px) 80vw, 50vw"
-              />
-            </Suspense>
+          <LogoImage
+            alt="Logo"
+            src={logo}
+            loading="lazy"
+            srcSet={`${logo} 300w, ${logo} 768w, ${logo} 1280w`}
+            sizes="(max-width: 300px) 100vw, (max-width: 768px) 80vw, 50vw"
+          />
             <Title>VISIT <br />DREŽNICA</Title>
           </Logo>
         </a>
