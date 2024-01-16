@@ -2,6 +2,13 @@ import styled from 'styled-components';
 import AboutImg from '../../../public/Images/About.webp';
 
 function AboutDreznica() {
+
+  const textContent = {
+    title: "About ",
+    titleBold: "Drežnica",
+    placeholderText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quasi minima ipsa quisquam magnam optio corporis."
+  }
+
   return (
     <Wrap>
       <Container>
@@ -12,20 +19,17 @@ function AboutDreznica() {
 
         <ContentHolder>
           <h1>
-            About <span>Drežnica</span>
+            {textContent.title} <span>{textContent.titleBold}</span>
           </h1>
 
           <Content>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quasi minima ipsa
-            quisquam magnam optio corporis.
+            {textContent.placeholderText}
             <br />
             <br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quasi minima ipsa
-            quisquam magnam optio corporis.
+            {textContent.placeholderText}
             <br />
             <br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quasi minima ipsa
-            quisquam magnam optio corporis.
+            {textContent.placeholderText}
           </Content>
         </ContentHolder>
         

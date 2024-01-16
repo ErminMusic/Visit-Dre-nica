@@ -1,12 +1,19 @@
 function NavItems() {
+
   let activities = ['Our Activities', 'Nearby Attractions'];
   let about = ['About Drežnica', 'About Us', 'House Rules'];
+
+  const title = {
+    home: "Home",
+    howTo: "How To Book",
+    FAQ: "FAQ",
+  }
 
   return (
     <Container>
       <NavBarItem>
         <span>
-          <a href="/">Home</a>
+          <a href="/">{title.home}</a>
         </span>
       </NavBarItem>
 
@@ -20,13 +27,13 @@ function NavItems() {
 
       <NavBarItem>
         <span>
-          <a href="/How To Book">How To Book</a>
+          <a href="/How To Book">{title.howTo}</a>
         </span>
       </NavBarItem>
 
       <NavBarItem>
         <span>
-          <a href="/FAQ">FAQ</a>
+          <a href="/FAQ">{title.FAQ}</a>
         </span>
       </NavBarItem>
     </Container>

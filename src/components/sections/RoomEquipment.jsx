@@ -2,12 +2,32 @@ import styled from "styled-components"
 import { RoomsInclude, OutdoorsInclude, ServiceInclude, BathroomInclude } from "../data/IncludeIcons"
 
 function RoomEquipment() {
+
+  const room = {
+    normal: "Include:",
+    bold: "All Rooms "
+  }
+
+  const outdoor = {
+    bold: "Outdoors:",
+  }
+
+  const bathroom = {
+    normal: "Include: ",
+    bold: "Bathroom "
+  }
+
+  const service = {
+    normal: "Include:",
+    bold: "Services "
+  }
+
   return (
     <Wrap>
       <Container>
 
         <Title>
-          <span>All Rooms</span> Include:
+          <span>{room.bold}</span>{room.normal}
         </Title>
         <IconWrap>
           {RoomsInclude.map((item, index) => (
@@ -25,7 +45,7 @@ function RoomEquipment() {
         </IconWrap>
 
         <Title>
-          <span>Outdoors:</span>
+          <span>{outdoor.bold}</span>
         </Title>
           <IconWrap>
             {OutdoorsInclude.map((item, index) => (
@@ -43,7 +63,7 @@ function RoomEquipment() {
           </IconWrap>
 
         <Title>
-          <span>Bathroom</span> Includes:
+          <span>{service.bold}</span>{service.normal}
         </Title>
         <IconWrap>
             {ServiceInclude.map((item, index) => (
@@ -61,7 +81,7 @@ function RoomEquipment() {
           </IconWrap>
 
         <Title>
-          <span>Services:</span>
+          <span>{bathroom.bold}</span>{bathroom.normal}
         </Title>
         <IconWrap>
             {BathroomInclude.map((item, index) => (

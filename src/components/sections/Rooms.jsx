@@ -40,11 +40,13 @@ function Rooms() {
     bathroom: "Shared Bathroom"
   };
 
+  const mainTitle = "Choose A Room:"
+
   return (
     <Wrap>
       <Container>
         <TitleHolder>
-          <Title>Choose A Room:</Title>
+          <Title>{mainTitle}</Title>
         </TitleHolder>
       
       <ContentHolder>

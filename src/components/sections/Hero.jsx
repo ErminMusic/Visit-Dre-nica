@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import HeroBg from '../../../public/Images/Hero.webp'; // Original larger image
-import HeroBgPhone from '../../../public/Images/HeroPhone.webp'; // New smaller image for smaller screens
+import HeroBg from '../../../public/Images/Hero.webp'; 
+import HeroBgPhone from '../../../public/Images/HeroPhone.webp'; 
 
 function Hero() {
   return (
