@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import Carusel from "./Carusel";
-import { RoomIcons } from "../../data/RoomIcons";
+import BedIcon from "../../../../public/Images/Bed.webp";
+import PeopleIcon from "../../../../public/Images/People.webp";
+import SizeIcon from "../../../../public/Images/Size.webp";
+import ViewIcon from "../../../../public/Images/View.webp";
+import BathIcon from "../../../../public/Images/Bath.webp";
 import PropTypes from 'prop-types';
 import Buttons from "./Buttons";
 
@@ -30,26 +34,26 @@ const Room = ({ title, people, size, bed, view, bathroom, description, images })
           
           <IconHolder>
             <IconSection >
-              <Icon loading="lazy" alt="People Icon" src={RoomIcons.people} />
+              <Icon loading="lazy" alt="People Icon" src={PeopleIcon} />
               <p>{people}</p>
             </IconSection>
 
             <IconSection >
-              <Icon loading="lazy" alt="Size Icon" src={RoomIcons.size} />
+              <Icon loading="lazy" alt="Size Icon" src={SizeIcon} />
               <p>{size}</p>
             </IconSection>
 
             <IconSection >
-              <Icon loading="lazy" alt="Bed Icon" src={RoomIcons.bed} />
+              <Icon loading="lazy" alt="Bed Icon" src={BedIcon} />
               <p>{bed}</p>
             </IconSection>
 
             <IconSection >
-              <Icon loading="lazy" alt="View Icon" src={RoomIcons.view} />
+              <Icon loading="lazy" alt="View Icon" src={ViewIcon} />
               <p>{view}</p>
             </IconSection>
             <IconSection >
-              <Icon loading="lazy" alt="Bath Icon" src={RoomIcons.bath} />
+              <Icon loading="lazy" alt="Bath Icon" src={BathIcon} />
               <p>{bathroom}</p>
             </IconSection>
           </IconHolder>
