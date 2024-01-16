@@ -9,7 +9,7 @@ function Hero() {
       <BackgroundImage
         alt="Hero Image"
         src={HeroBg}
-        loading='lazy'
+
         srcSet={`${HeroBg} 1920w, ${HeroBg} 600w`} // Specify image sources and sizes
         sizes="(max-width: 600px) 100vw, 1920px" // Define sizes based on viewport width
       />
