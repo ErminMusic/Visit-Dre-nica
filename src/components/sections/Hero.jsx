@@ -1,17 +1,16 @@
 import styled from 'styled-components';
-import HeroBg from '../../../public/Images/Hero.webp';
+import HeroBg from '../../../public/Images/Hero.webp'; // Original larger image
+import HeroBgPhone from '../../../public/Images/HeroPhone.webp'; // New smaller image for smaller screens
 
 function Hero() {
   return (
     <Wrap>
-
       <BackgroundOverlay />
       <BackgroundImage
         alt="Hero Image"
         src={HeroBg}
-
-        srcSet={`${HeroBg} 1920w, ${HeroBg} 600w`} // Specify image sources and sizes
-        sizes="(max-width: 600px) 100vw, 1920px" // Define sizes based on viewport width
+        srcSet={`${HeroBgPhone} 600w, ${HeroBg} 1920w`}
+        sizes="(max-width: 600px) 100vw, 1920px"
       />
 
       <Container>
