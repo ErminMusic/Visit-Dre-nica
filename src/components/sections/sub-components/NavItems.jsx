@@ -1,31 +1,21 @@
-import styled from "styled-components"
-import Dropdown from "./Dropdown";
-
 function NavItems() {
-
-  let activities = ["Our Activities", "Nearby Attractions"]
-  let about = ["About Drežnica", "About Us", "House Rules"]
+  let activities = ['Our Activities', 'Nearby Attractions'];
+  let about = ['About Drežnica', 'About Us', 'House Rules'];
 
   return (
     <Container>
-      <NavBarItem> 
+      <NavBarItem>
         <span>
           <a href="/">Home</a>
         </span>
       </NavBarItem>
 
-      <NavBarItem> 
-        <Dropdown 
-          title="About Us"
-          options={about}
-        />
+      <NavBarItem>
+        <Dropdown title="About Us" options={about} />
       </NavBarItem>
 
       <NavBarItem>
-        <Dropdown 
-          title="Activities"
-          options={activities}
-        />
+        <Dropdown title="Activities" options={activities} />
       </NavBarItem>
 
       <NavBarItem>
@@ -40,10 +30,13 @@ function NavItems() {
         </span>
       </NavBarItem>
     </Container>
-  )
+  );
 }
 
-export default NavItems
+export default NavItems;
+
+import styled from 'styled-components';
+import Dropdown from './Dropdown';
 
 const Container = styled.div`
   display: flex;
@@ -54,14 +47,15 @@ const Container = styled.div`
     justify-content: space-between;
     padding: 0 12px;
   }
-  
+
   @media (max-width: 850px) {
     flex-direction: column;
     justify-content: start;
     padding: 8px 0;
     position: relative;
   }
-`
+`;
+
 const NavBarItem = styled.div`
   font-weight: bold;
   display: flex;
@@ -82,7 +76,7 @@ const NavBarItem = styled.div`
     position: relative;
 
     &::after {
-      content: "";
+      content: '';
       height: 2.5px;
       background: #ffffff;
       position: absolute;
@@ -108,4 +102,4 @@ const NavBarItem = styled.div`
     color: white;
     z-index: 1;
   }
-`
+`;

@@ -1,45 +1,50 @@
-import styled from "styled-components"
-import AboutImg from "../../../public/Images/About.webp"
+import styled from 'styled-components';
+import AboutImg from '../../../public/Images/About.webp';
 
 function AboutDreznica() {
   return (
     <Wrap>
-      
-      <Container> 
+      <Container>
 
         <ImageHolder>
           <Image alt="About" src={AboutImg} />
         </ImageHolder>
-        
+
         <ContentHolder>
-          
-          <h1>About <span>Drežnica</span></h1>
+          <h1>
+            About <span>Drežnica</span>
+          </h1>
 
           <Content>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quasi minima ipsa quisquam magnam optio corporis.<br /><br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quasi minima ipsa quisquam magnam optio corporis.<br /><br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quasi minima ipsa quisquam magnam optio corporis.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quasi minima ipsa
+            quisquam magnam optio corporis.
+            <br />
+            <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quasi minima ipsa
+            quisquam magnam optio corporis.
+            <br />
+            <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quasi minima ipsa
+            quisquam magnam optio corporis.
           </Content>
-
         </ContentHolder>
-      
+        
       </Container>
-      
     </Wrap>
-  )
+  );
 }
 
 export default AboutDreznica
 
 const Wrap = styled.div`
-  background-color: #F0FFF0;
+  background-color: #f0fff0;
   color: #525252;
   width: 100%;
   position: relative;
   display: flex;
   justify-content: center;
   padding: 36px 0;
-`
+`;
 
 const Container = styled.div`
   width: 80%;
@@ -55,7 +60,7 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
   }
-`
+`;
 
 const ContentHolder = styled.div`
   width: 45%;
@@ -68,6 +73,7 @@ const ContentHolder = styled.div`
       font-weight: bold;
     }
   }
+
   @media (max-width: 1100px) {
     width: 50%;
   }
@@ -76,19 +82,20 @@ const ContentHolder = styled.div`
     width: 90%;
     padding: 16px 24px 0;
   }
-    @media (max-width: 500px) {
+
+  @media (max-width: 500px) {
     width: 100%;
   }
-`
+`;
 
 const Content = styled.p`
   margin: 12px 0 0 0;
-`
+`;
 
 const ImageHolder = styled.div`
   display: flex;
   justify-content: center;
-  width: 45%;
+  width: 35%;
 
   @media (max-width: 1100px) {
     width: 50%;
@@ -98,7 +105,8 @@ const ImageHolder = styled.div`
   @media (max-width: 700px) {
     width: 90%;
   }
-    @media (max-width: 500px) {
+
+  @media (max-width: 500px) {
     width: 100%;
   }
 `;

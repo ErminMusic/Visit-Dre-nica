@@ -1,56 +1,49 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import PropTypes from 'prop-types';
 
-
-function Dropdown( {title, options} ) {
-
+function Dropdown({ title, options }) {
   Dropdown.propTypes = {
-    title: PropTypes.string.isRequired, 
-    options: PropTypes.arrayOf(PropTypes.string).isRequired, 
+    title: PropTypes.string.isRequired,
+    options: PropTypes.arrayOf(PropTypes.string).isRequired,
   };
 
   return (
     <Container>
-
       <Wrapp>
-         
-        <span>{title}</span><CustomArrow />
-
+        <span>{title}</span>
+        <CustomArrow />
       </Wrapp>
-
 
       <Drop>
         {options.map((item, index) => (
-          <DropOptions key={index} href={`/${item}`}>{item}</DropOptions>
+          <DropOptions key={index} href={`/${item}`}>
+            {item}
+          </DropOptions>
         ))}
       </Drop>
-
-    </Container> 
-  )
+    </Container>
+  );
 }
-
-export default Dropdown
 
 const CustomArrow = styled(KeyboardArrowDownIcon)`
   &.MuiSvgIcon-root {
     font-size: 36px;
   }
-`
+`;
 
 const Drop = styled.div`
-  background: #507D7F;
+  background: #507d7f;
   position: absolute;
   display: flex;
   flex-direction: column;
   width: 200px;
   top: 100%;
   margin: 5px 0;
-  visibility: hidden; 
-  opacity: 0; 
+  visibility: hidden;
+  opacity: 0;
   transition: opacity 0.3s ease, visibility 0.3s ease;
-  
-  
+
   @media (max-width: 850px) {
     top: 95%;
     left: 0;
@@ -60,12 +53,12 @@ const Drop = styled.div`
     height: 50%;
     display: none;
   }
-`
+`;
 
 const Container = styled.div`
   position: relative;
   z-index: 1000;
-  
+
   &:hover {
     ${Drop} {
       visibility: visible;
@@ -77,20 +70,18 @@ const Container = styled.div`
   }
 
   @media (max-width: 850px) {
-    background-color: #507D7F;
-    
+    background-color: #507d7f;
   }
-
-`
+`;
 
 const DropOptions = styled.a`
   padding: 20px 15px;
   text-decoration: none;
   color: white;
-  background-color: #507D7F;
+  background-color: #507d7f;
   z-index: 50;
   border-bottom: 1px solid rgb(61, 100, 102);
-`
+`;
 
 const Wrapp = styled.div`
   display: flex;
@@ -99,6 +90,7 @@ const Wrapp = styled.div`
 
   @media (max-width: 850px) {
     justify-content: start;
-
   }
-`
+`;
+
+export default Dropdown;

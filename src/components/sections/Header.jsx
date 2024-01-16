@@ -1,38 +1,35 @@
-import styled from "styled-components"
-import logo from "../../../public/Images/Logo.webp"
+import styled from 'styled-components';
+import logo from '../../../public/Images/Logo.webp';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import NavItems from "./sub-components/NavItems";
+import NavItems from './sub-components/NavItems';
 import { useState } from 'react';
 
 function Header() {
-
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
 
-
   return (
     <Wrapper>
-
       <Container>
-
+        
         <a href="/">
           <Logo>
-          <LogoImage
+            <LogoImage
               alt="Logo"
               src={logo}
-              srcSet={`${logo} 300w, ${logo} 768w, ${logo} 1280w`} // Add appropriate sizes
-              sizes="(max-width: 300px) 100vw, (max-width: 768px) 80vw, 50vw" // Adjust sizes based on your layout
+              srcSet={`${logo} 300w, ${logo} 768w, ${logo} 1280w`}
+              sizes="(max-width: 300px) 100vw, (max-width: 768px) 80vw, 50vw"
             />
             <Title>VISIT <br />DREŽNICA</Title>
           </Logo>
         </a>
 
         <NavBar $isMenuOpen={isMenuOpen}>
-          <NavItems  />
+          <NavItems />
         </NavBar>
 
         <MenuHolder>
@@ -44,12 +41,11 @@ function Header() {
         </MenuHolder>
 
       </Container>
-
     </Wrapper>
   );
 }
 
-export default Header
+export default Header;
 
 const Wrapper = styled.div`
   height: 80px;
@@ -61,7 +57,7 @@ const Wrapper = styled.div`
   position: sticky;
   top: 0;
   z-index: 100;
-`
+`;
 
 const Container = styled.div`
   width: 80%;
@@ -69,7 +65,7 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   position: relative;
-  
+
   a {
     text-decoration: none;
   }
@@ -78,27 +74,23 @@ const Container = styled.div`
     width: 100%;
     padding: 0 15px;
   }
-`
-
-
+`;
 
 const Logo = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;
-
-`
+`;
 
 const LogoImage = styled.img`
   width: 70px;
   height: 70px;
-`
+`;
 
 const Title = styled.h2`
   color: white;
   padding: 0 10px;
-
-`
+`;
 
 const NavBar = styled.div`
   width: 68%;
@@ -107,11 +99,11 @@ const NavBar = styled.div`
   @media (max-width: 900px) {
     width: 70%;
   }
-  
+
   @media (max-width: 850px) {
-    position: absolute; 
-    top: 0; 
-    right: 0; 
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 
   @media (max-width: 850px) {
@@ -127,7 +119,7 @@ const NavBar = styled.div`
     right: 0;
     z-index: 1;
   }
-`
+`;
 
 const MenuHolder = styled.div`
   display: none;
@@ -135,20 +127,20 @@ const MenuHolder = styled.div`
   @media (max-width: 850px) {
     display: block;
   }
-`
+`;
 
 const CustomMenu = styled(MenuIcon)`
   &.MuiSvgIcon-root {
-    font-size: 36px; 
+    font-size: 36px;
     cursor: pointer;
     color: white;
   }
-`
+`;
 
 const CustomClose = styled(CloseIcon)`
   &.MuiSvgIcon-root {
-    font-size: 36px; 
+    font-size: 36px;
     cursor: pointer;
     color: white;
   }
-`
+`;

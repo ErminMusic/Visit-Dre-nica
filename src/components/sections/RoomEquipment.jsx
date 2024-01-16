@@ -126,7 +126,6 @@ function RoomEquipment() {
       alter: "Laundry",
       text: "Laundry (additional charges)"
     },
-
   ]
 
   const Bathroom = [
@@ -145,7 +144,6 @@ function RoomEquipment() {
       alter: "Toilet",
       text: "Toilet"
     },
-
   ]
 
   return (
@@ -231,6 +229,7 @@ function RoomEquipment() {
               </IconHolder>
             ))}
           </IconWrap>
+    
       </Container>
     </Wrap>
   )
@@ -238,14 +237,14 @@ function RoomEquipment() {
 
 export default RoomEquipment
 
-const Wrap =  styled.div`
+const Wrap = styled.div`
   background-color: #F0FFF0;
   width: 100%;
   color: #525252;
   padding: 18px 0 36px 0;
   display: flex;
   justify-content: center;
-`
+`;
 
 const Container = styled.div`
   width: 80%;
@@ -253,21 +252,22 @@ const Container = styled.div`
   @media (max-width: 850px) {
     width: 95%;
   } 
-`
+`;
 
 const Title = styled.p`
   font-size: 36px;
   margin: 18px 0 14px 0;
+
   span {
     font-weight: bold;
   }
-`
+`;
 
 const IconWrap = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-`
+`;
 
 const IconHolder = styled.div`
   display: flex;
@@ -287,18 +287,17 @@ const IconHolder = styled.div`
   @media (max-width: 500px) {
     width: 50%;
   } 
-`
+`;
 
 const Icon = styled.img`
   width: 80px;
   height: 80px;
-`
+`;
 
 const Text = styled.div`
   font-weight: bold;
   padding: 12px 0 0 0;
-`
-
+`;
 // Room type
 // Number of guests
  

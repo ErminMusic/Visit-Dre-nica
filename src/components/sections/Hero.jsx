@@ -1,42 +1,39 @@
-import styled from "styled-components"
-import HeroBg from "../../../public/Images/Hero.webp"
-
+import styled from 'styled-components';
+import HeroBg from '../../../public/Images/Hero.webp';
 
 function Hero() {
   return (
     <Wrap>
-      
+
       <BackgroundOverlay />
       <BackgroundImage
         alt="Hero Image"
         src={HeroBg}
         srcSet={`${HeroBg} 1920w, ${HeroBg} 600w`} // Specify image sources and sizes
         sizes="(max-width: 600px) 100vw, 1920px" // Define sizes based on viewport width
-      />      
+      />
 
       <Container>
         <ContentHolder>
 
           <TextHolder>
             <Headline>Visit <span>Drežnica</span></Headline>
-            <SubHeadline>A Hidden Gem in <br /> Bosnai & Herzegovina</SubHeadline>
-
+            <SubHeadline>A Hidden Gem in <br /> Bosnia & Herzegovina</SubHeadline>
           </TextHolder>
-          <ButtonHolder>
 
+          <ButtonHolder>
             <BookButton>BOOK A <span>ROOM</span></BookButton>
             <ContactButton><span>CONTACT</span> US</ContactButton>
-
           </ButtonHolder>
-        </ContentHolder>
 
+        </ContentHolder>
       </Container>
 
     </Wrap>
-  )
+  );
 }
 
-export default Hero
+export default Hero;
 
 const Wrap = styled.div`
   position: relative;
@@ -46,8 +43,7 @@ const Wrap = styled.div`
   height: 100vh;
   z-index: 1;
   overflow: hidden;
-    
-`
+`;
 
 const Container = styled.div`
   width: 80%;
@@ -55,17 +51,17 @@ const Container = styled.div`
   z-index: 100;
   display: flex;
   align-items: center;
-`
+`;
 
 const ContentHolder = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-`
+`;
 
 const TextHolder = styled.div`
   max-height: fit-content;
-`
+`;
 
 const Headline = styled.h1`
   font-size: 56px;
@@ -73,26 +69,24 @@ const Headline = styled.h1`
   text-transform: uppercase;
 
   span {
-    color: #F0FFF0;
+    color: #f0fff0;
   }
-`
+`;
 
 const SubHeadline = styled.h2`
   font-size: 32px;
   margin: 16px 0 20px 0;
   font-weight: normal;
-`
+`;
 
-const ButtonHolder = styled.div`
-  
-`
+const ButtonHolder = styled.div``;
 
 const BookButton = styled.div`
   border-radius: 10px;
-  background-color: #507D7F;
+  background-color: #507d7f;
   text-align: center;
   width: 50%;
-  padding: 16px 0px ;
+  padding: 16px 0px;
   cursor: pointer;
   opacity: 0.9;
 
@@ -105,7 +99,7 @@ const BookButton = styled.div`
     transition: 250ms;
     opacity: 1;
     background-color: white;
-    color: #507D7F;
+    color: #507d7f;
   }
 
   @media (max-width: 500px) {
@@ -115,18 +109,17 @@ const BookButton = styled.div`
   @media (max-width: 420px) {
     width: 65%;
   }
-`
+`;
 
 const ContactButton = styled(BookButton)`
-  background-color: #8FBC8F;
+  background-color: #8fbc8f;
   margin-top: 20px;
 
   &:hover {
     background-color: white;
-    color: #8FBC8F;
+    color: #8fbc8f;
   }
-`
-
+`;
 
 const BackgroundImage = styled.img`
   position: absolute;
@@ -137,7 +130,7 @@ const BackgroundImage = styled.img`
   width: 100%;
   height: 100vh;
   object-fit: cover;
-`
+`;
 
 const BackgroundOverlay = styled.div`
   position: absolute;
@@ -146,7 +139,7 @@ const BackgroundOverlay = styled.div`
   top: 0;
   bottom: 0;
   width: 50%;
-  height: 100vh; 
+  height: 100vh;
   z-index: 2;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
 `;

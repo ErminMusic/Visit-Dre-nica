@@ -1,51 +1,43 @@
-import styled from "styled-components"
-import AwardIcon from "../../../public/Images/Award.webp"
-import ScoreIcon from "../../../public/Images/Score.webp"
+import styled from "styled-components";
+import AwardIcon from "../../../public/Images/Award.webp";
+import ScoreIcon from "../../../public/Images/Score.webp";
 
 function Strip() {
-
   const content = [
     {
       icon: AwardIcon,
       alter: "Award Icon",
-      text: "Booking.com Traveller Review Awards 2022"
+      text: "Booking.com Traveller Review Awards 2022",
     },
     {
       icon: ScoreIcon,
       alter: "Score Icon",
-      text: "Score on Booking.com"
+      text: "Score on Booking.com",
     },
     {
       icon: AwardIcon,
       alter: "Award Icon",
-      text: "Booking.com Traveller Review Awards 2022"
+      text: "Booking.com Traveller Review Awards 2022",
     },
-  ]
+  ];
 
   return (
     <Wrap>
-
       <Container>
-
         <Wrapper>
-        {content.map((item, index) => (
-          <Holder key={index}>
-
-            <IconHolder alt={item.alter} src={item.icon} />
-
-            <TextHolder>{item.text}</TextHolder>
-            
-          </Holder>
-        ))}
+          {content.map((item, index) => (
+            <Holder key={index}>
+              <IconHolder alt={item.alter} src={item.icon} />
+              <TextHolder>{item.text}</TextHolder>
+            </Holder>
+          ))}
         </Wrapper>
-        
       </Container>
-        
     </Wrap>
-  )
+  );
 }
 
-export default Strip
+export default Strip;
 
 const Wrap = styled.div`
   width: 100%;
@@ -53,7 +45,7 @@ const Wrap = styled.div`
   display: flex;
   justify-content: center;
   padding: 36px 0;
-`
+`;
 
 const Container = styled.div`
   width: 80%;
@@ -63,8 +55,8 @@ const Container = styled.div`
 
   @media (max-width: 850px) {
     width: 100%;
-  } 
-`
+  }
+`;
 
 const Holder = styled.div`
   display: flex;
@@ -75,7 +67,7 @@ const Holder = styled.div`
   @media (max-width: 520px) {
     margin: 20px;
   }
-`
+`;
 
 const Wrapper = styled.div`
   display: flex;
@@ -91,7 +83,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     align-items: center;
   }
-`
+`;
 
 const IconHolder = styled.img`
   width: 80px;
@@ -103,15 +95,15 @@ const IconHolder = styled.img`
     width: 100px;
     height: 100px;
   }
-`
+`;
 
 const TextHolder = styled.div`
   width: 120px;
   color: #525252;
   font-weight: bold;
   text-align: center;
-  
+
   @media (max-width: 520px) {
     font-size: 18px;
   }
-`
+`;
