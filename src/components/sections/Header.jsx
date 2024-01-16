@@ -85,7 +85,7 @@ const Logo = styled.div`
 
 const LogoImage = styled.img`
   width: 100%; /* Adjust as needed */
-  height: auto;
+  height: 100%;
   max-width: 70px; /* Set a maximum width */
 `;
 
