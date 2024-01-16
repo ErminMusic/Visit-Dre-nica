@@ -29,6 +29,8 @@ const MoreButton = styled.div`
     color: white;
     border-radius: 10px;
     background-color: #507D7F;
+    opacity: 0.9;
+
   
   span {
     font-weight: bold;
@@ -36,8 +38,9 @@ const MoreButton = styled.div`
 
   &:hover {
     transition: 250ms;
-    opacity: 1;
     background-color: white;
+    opacity: 1;
+
     color: #507D7F;
   }
 `;
