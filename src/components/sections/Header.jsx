@@ -18,12 +18,13 @@ function Header() {
         
         <a href="/">
           <Logo>
-            <LogoImage
-              alt="Logo"
-              src={logo}
-              srcSet={`${logo} 300w, ${logo} 768w, ${logo} 1280w`}
-              sizes="(max-width: 300px) 100vw, (max-width: 768px) 80vw, 50vw"
-            />
+          <LogoImage
+            alt="Logo"
+            src={logo}
+            loading="lazy"
+            srcSet={`${logo} 300w, ${logo} 768w, ${logo} 1280w`}
+            sizes="(max-width: 300px) 100vw, (max-width: 768px) 80vw, 50vw"
+          />
             <Title>VISIT <br />DREŽNICA</Title>
           </Logo>
         </a>
@@ -83,8 +84,9 @@ const Logo = styled.div`
 `;
 
 const LogoImage = styled.img`
-  width: 70px;
-  height: 70px;
+  width: 100%; /* Adjust as needed */
+  height: auto;
+  max-width: 70px; /* Set a maximum width */
 `;
 
 const Title = styled.h2`
