@@ -164,6 +164,7 @@ function RoomEquipment() {
             <IconHolder key={index}>
               <Icon
                   alt={item.alter}
+                  loading="lazy"
                   src={item.icon}
                   srcSet={`${item.icon} 300w, ${item.icon} 768w, ${item.icon} 1280w`}
                   sizes="(max-width: 300px) 100vw, (max-width: 768px) 80vw, 50vw"
@@ -181,6 +182,7 @@ function RoomEquipment() {
               <IconHolder key={index}>
                 <Icon
                   alt={item.alter}
+                  loading="lazy"
                   src={item.icon}
                   srcSet={`${item.icon} 300w, ${item.icon} 768w, ${item.icon} 1280w`}
                   sizes="(max-width: 300px) 100vw, (max-width: 768px) 80vw, 50vw"
@@ -198,6 +200,7 @@ function RoomEquipment() {
               <IconHolder key={index}>
                 <Icon
                   alt={item.alter}
+                  loading="lazy"
                   src={item.icon}
                   srcSet={`${item.icon} 300w, ${item.icon} 768w, ${item.icon} 1280w`}
                   sizes="(max-width: 300px) 100vw, (max-width: 768px) 80vw, 50vw"
@@ -215,6 +218,7 @@ function RoomEquipment() {
               <IconHolder key={index}>
                 <Icon
                   alt={item.alter}
+                  loading="lazy"
                   src={item.icon}
                   srcSet={`${item.icon} 300w, ${item.icon} 768w, ${item.icon} 1280w`}
                   sizes="(max-width: 300px) 100vw, (max-width: 768px) 80vw, 50vw"

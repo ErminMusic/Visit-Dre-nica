@@ -34,26 +34,26 @@ const Room = ({ title, people, size, bed, view, bathroom, description, images })
           
           <IconHolder>
             <IconSection >
-              <Icon alt="People Icon" src={PeopleIcon} />
+              <Icon loading="lazy" alt="People Icon" src={PeopleIcon} />
               <p>{people}</p>
             </IconSection>
 
             <IconSection >
-              <Icon alt="Size Icon" src={SizeIcon} />
+              <Icon loading="lazy" alt="Size Icon" src={SizeIcon} />
               <p>{size}</p>
             </IconSection>
 
             <IconSection >
-              <Icon alt="Bed Icon" src={BedIcon} />
+              <Icon loading="lazy" alt="Bed Icon" src={BedIcon} />
               <p>{bed}</p>
             </IconSection>
 
             <IconSection >
-              <Icon alt="View Icon" src={ViewIcon} />
+              <Icon loading="lazy" alt="View Icon" src={ViewIcon} />
               <p>{view}</p>
             </IconSection>
             <IconSection >
-              <Icon alt="Bath Icon" src={BathIcon} />
+              <Icon loading="lazy" alt="Bath Icon" src={BathIcon} />
               <p>{bathroom}</p>
             </IconSection>
           </IconHolder>

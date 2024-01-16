@@ -23,7 +23,7 @@ function Carousel({ image }) {
     <Container {...settings}>
       {image.map((item, index) => (
         <div key={index}>
-          <img src={item} alt={`carousel-image-${index}`} />
+          <img loading="lazy" src={item} alt={`carousel-image-${index}`} />
         </div>
       ))}
     </Container>
