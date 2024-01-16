@@ -1,9 +1,30 @@
 import styled from "styled-components";
-import AwardIcon from "../../../public/Images/Award.webp";
-import ScoreIcon from "../../../public/Images/Score.webp";
-import AffordableIcon from "../../../public/Images/Affordable.webp";
+import { Suspense, useState, useEffect } from 'react';
 
 function Strip() {
+  const [AwardIcon, setAwardIcon] = useState(null);
+  const [ScoreIcon, setScoreIcon] = useState(null);
+  const [AffordableIcon, setAffordableIcon] = useState(null);
+
+  useEffect(() => {
+    const loadIcons = async () => {
+      try {
+        const award = await import('../../../public/Images/Award.webp');
+        setAwardIcon(() => award.default);
+        
+        const score = await import('../../../public/Images/Score.webp');
+        setScoreIcon(() => score.default);
+        
+        const affordable = await import('../../../public/Images/Affordable.webp');
+        setAffordableIcon(() => affordable.default);
+      } catch (error) {
+        console.error("Error loading images:", error);
+      }
+    };
+
+    loadIcons();
+  }, []);
+
   const content = [
     {
       icon: AwardIcon,
@@ -28,7 +49,9 @@ function Strip() {
         <Wrapper>
           {content.map((item, index) => (
             <Holder key={index}>
-              <IconHolder alt={item.alter} src={item.icon} />
+              <Suspense fallback={<div>Loading...</div>}>
+                {item.icon && <IconHolder alt={item.alter} src={item.icon} />}
+              </Suspense>
               <TextHolder>{item.text}</TextHolder>
             </Holder>
           ))}
