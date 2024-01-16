@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-function Carousel({ images }) {
+function Carousel({ image }) {
   
   const settings = {
     dots: true,
@@ -16,12 +16,12 @@ function Carousel({ images }) {
   };
 
   Carousel.propTypes = {
-    images: PropTypes.arrayOf(PropTypes.string).isRequired,
+    image: PropTypes.arrayOf(PropTypes.string).isRequired,
   };
 
   return (
     <Container {...settings}>
-      {images.map((item, index) => (
+      {image.map((item, index) => (
         <div key={index}>
           <img src={item} alt={`carousel-image-${index}`} />
         </div>
