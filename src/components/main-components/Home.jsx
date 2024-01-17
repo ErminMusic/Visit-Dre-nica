@@ -9,9 +9,9 @@ const Strip = lazy(() => import('../sections/Strip'));
 
 function Home() {
   return (
-    <>
+    <> 
+      <Hero />
       <Suspense fallback={<div>Loading...</div>}>
-        <Hero />
         <AboutDreznica />
         <Strip />
         <RoomEquipment />
