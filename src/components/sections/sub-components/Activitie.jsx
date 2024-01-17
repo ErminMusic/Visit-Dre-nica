@@ -50,6 +50,9 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   
+  @media (max-width: 700px) {
+    width: 100%;
+  } 
 `;
 
 const Image = styled.img`
@@ -65,6 +68,11 @@ const Image = styled.img`
     width: 90%;
     height: 90%;
   }
+
+  @media (max-width: 700px) {
+    width: 90%;
+    height: 90%;
+  } 
 `;
 
 const ContentHolder = styled.div`
@@ -99,7 +107,8 @@ const Button = styled.a`
     height: 90%;
   }
 
-  /* Add aria-label for descriptive text */
+
+
   &[aria-label] {
     position: relative;
   }

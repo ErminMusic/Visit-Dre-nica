@@ -49,6 +49,10 @@ const ActivitiesHolder = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+  } 
 `;
 
 const Title = styled.h1`
