@@ -1,19 +1,23 @@
-import React from 'react';
+import { lazy, Suspense } from 'react';
 
-const Hero = React.lazy(() => import('../sections/Hero'));
-const AboutDreznica = React.lazy(() => import('../sections/AboutDreznica'));
-const RoomEquipment = React.lazy(() => import('../sections/RoomEquipment'));
-const Rooms = React.lazy(() => import('../sections/Rooms'));
-const Strip = React.lazy(() => import('../sections/Strip'));
+
+const Hero = lazy(() => import('../sections/Hero'));
+const AboutDreznica = lazy(() => import('../sections/AboutDreznica'));
+const RoomEquipment = lazy(() => import('../sections/RoomEquipment'));
+const Rooms = lazy(() => import('../sections/Rooms'));
+const Strip = lazy(() => import('../sections/Strip'));
 
 function Home() {
   return (
     <>
-      <Hero />
-      <AboutDreznica />
-      <Strip />
-      <RoomEquipment />
-      <Rooms />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Hero />
+        <AboutDreznica />
+        <Strip />
+        <RoomEquipment />
+        <Rooms />
+      </Suspense>
+      
     </>
   )
 }
