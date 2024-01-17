@@ -28,7 +28,10 @@ function Activitie({ list }) {
           <h2>{item.name}</h2>
         </ContentHolder>
 
-        <Button href={item.link}>LEARN MORE</Button>
+        <Button href={item.link}>
+          <span>{item.name}</span>
+          LEARN MORE
+        </Button>
         
       </Container>
       ))}
@@ -96,6 +99,21 @@ const Button = styled.a`
     height: 90%;
   }
 
+  /* Add aria-label for descriptive text */
+  &[aria-label] {
+    position: relative;
+  }
+
+  span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
 `;
 // const h1 = styled.div`
 
