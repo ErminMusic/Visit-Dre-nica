@@ -33,7 +33,7 @@ const CustomArrow = styled(KeyboardArrowDownIcon)`
 `;
 
 const Drop = styled.div`
-  background: #507d7f;
+  background: #4b7376;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -70,7 +70,7 @@ const Container = styled.div`
   }
 
   @media (max-width: 850px) {
-    background-color: #507d7f;
+  background: #4b7376;
   }
 `;
 
@@ -78,7 +78,7 @@ const DropOptions = styled.a`
   padding: 20px 15px;
   text-decoration: none;
   color: white;
-  background-color: #507d7f;
+  background: #4b7376;
   z-index: 50;
   border-bottom: 1px solid rgb(61, 100, 102);
 `;

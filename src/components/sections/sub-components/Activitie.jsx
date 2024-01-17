@@ -57,7 +57,7 @@ const Container = styled.div`
 
 const Image = styled.img`
   width: 70%;
-  height: 70%;
+  height: 100%;
   border-radius: 16px;
 
   @media (max-width: 1100px) {

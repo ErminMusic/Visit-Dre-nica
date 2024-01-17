@@ -51,7 +51,7 @@ export default Header;
 const Wrapper = styled.div`
   height: 80px;
   width: 100%;
-  background: #507D7F;
+  background: #4b7376;
   display: flex;
   justify-content: center;
   color: white;
@@ -112,7 +112,7 @@ const NavBar = styled.div`
     transform: ${({ $isMenuOpen }) =>
       $isMenuOpen ? 'translateX(0)' : 'translateX(100%)'};
     transition: transform 0.3s ease-in-out;
-    background-color: #507D7F;
+    background: #4b7376;
     position: fixed;
     padding: 0 16px;
     height: auto;
