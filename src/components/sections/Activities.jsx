@@ -32,7 +32,7 @@ const Wrap = styled.div`
   background-color: #F0FFF0;
   width: 100%;
   color: #525252;
-  padding: 36px 0;
+  padding: 16px 0 36px 0;
   display: flex;
   justify-content: center;
 `;
@@ -56,5 +56,5 @@ const ActivitiesHolder = styled.div`
 `;
 
 const Title = styled.h1`
-  margin: 0 0 12px 0;
+  margin: 20px 0;
 `;

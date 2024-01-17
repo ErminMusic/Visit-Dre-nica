@@ -4,26 +4,26 @@ import RentABike from "../../assets/RentABike.webp"
 export const ActivitiesList = [
     {
     image: RentABoat,
-    name: "Rent A Boat",
-    alter: "Rent A Boat Image",
+    name: "Rent a Boat",
+    alter: "Rent a Boat Image",
     link: "Our Activities"
     },
     {
     image: RentABoat,
-    name: "Rent A Boat",
-    alter: "Rent A Boat Image",
+    name: "Rent a Boat",
+    alter: "Rent a Boat Image",
     link: "Our Activities"
     },
     {
     image: RentABoat,
-    name: "Rent A Boat",
-    alter: "Rent A Boat Image",
+    name: "Rent a Boat",
+    alter: "Rent a Boat Image",
     link: "Our Activities"
     },
     {
     image: RentABoat,
-    name: "Rent A Boat",
-    alter: "Rent A Boat Image",
+    name: "Rent a Boat",
+    alter: "Rent a Boat Image",
     link: "Our Activities"
     },
 ]
@@ -31,26 +31,26 @@ export const ActivitiesList = [
 export const AttractionList = [
     {
     image: RentABike,
-    name: "Rent A Bike",
-    alter: "Rent A Bike Image",
+    name: "Rent a Bike",
+    alter: "Rent a Bike Image",
     link: "Nearby Attractions"
     },
     {
     image: RentABike,
-    name: "Rent A Bike",
-    alter: "Rent A Bike Image",
+    name: "Rent a Bike",
+    alter: "Rent a Bike Image",
     link: "Nearby Attractions"
     },
     {
     image: RentABike,
-    name: "Rent A Bike",
-    alter: "Rent A Bike Image",
+    name: "Rent a Bike",
+    alter: "Rent a Bike Image",
     link: "Nearby Attractions"
     },
     {
     image: RentABike,
-    name: "Rent A Bike",
-    alter: "Rent A Bike Image",
+    name: "Rent a Bike",
+    alter: "Rent a Bike Image",
     link: "Nearby Attractions"
     },
 ]

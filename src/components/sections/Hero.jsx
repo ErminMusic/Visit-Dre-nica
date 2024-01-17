@@ -96,7 +96,6 @@ const BookButton = styled.div`
   }
 
   &:hover {
-    transform: scale(1.05);
     transition: 250ms;
     opacity: 1;
     background-color: white;

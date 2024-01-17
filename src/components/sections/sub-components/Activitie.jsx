@@ -44,12 +44,11 @@ export default Activitie
 const Container = styled.div`
   width: 45%;
   color: #525252;
-  padding: 12px 0 20px 0;
+  margin: 12px 0 36px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
   @media (max-width: 700px) {
     width: 100%;
   } 
@@ -76,7 +75,7 @@ const Image = styled.img`
 `;
 
 const ContentHolder = styled.div`
-  margin: 8px 0;
+  margin: 12px 0;
 `;
 
 const Button = styled.a`
@@ -93,9 +92,6 @@ const Button = styled.a`
   &:hover {
     transform: scale(1.05);
     transition: 250ms;
-    opacity: 1;
-    background-color: white;
-    color: rgb(80, 125, 127);
   }
 
   @media (max-width: 1100px) {
