@@ -4,8 +4,8 @@ import styled from "styled-components";
 function Buttons() {
   return (
     <ButtonHolder>
-        <MoreButton><span>LEARN </span>MORE</MoreButton>
-        <BookButton><span>BOOK</span> THIS ROOM</BookButton>
+      <MoreButton><span>LEARN </span>MORE</MoreButton>
+      <BookButton><span>BOOK</span> THIS ROOM</BookButton>
     </ButtonHolder>
   )
 }
@@ -22,13 +22,13 @@ const ButtonHolder = styled.div`
 `;
 
 const MoreButton = styled.div`
-    width: 100%;
-    text-align: center;
-    padding: 16px 0;
-    cursor: pointer;
-    color: white;
-    border-radius: 10px;
-    background-color: #8FBC8F;
+  width: 100%;
+  text-align: center;
+  padding: 16px 0;
+  cursor: pointer;
+  color: white;
+  border-radius: 10px;
+  background-color: #8FBC8F;
   
   span {
     font-weight: bold;

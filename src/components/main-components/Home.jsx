@@ -6,6 +6,7 @@ const AboutDreznica = lazy(() => import('../sections/AboutDreznica'));
 const RoomEquipment = lazy(() => import('../sections/RoomEquipment'));
 const Rooms = lazy(() => import('../sections/Rooms'));
 const Strip = lazy(() => import('../sections/Strip'));
+const Activities = lazy(() => import('../sections/Activities'));
 
 function Home() {
   return (
@@ -16,6 +17,7 @@ function Home() {
         <Strip />
         <RoomEquipment />
         <Rooms />
+        <Activities />
       </Suspense>
       
     </>
