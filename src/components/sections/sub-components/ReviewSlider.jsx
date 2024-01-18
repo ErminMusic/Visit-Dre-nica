@@ -1,9 +1,10 @@
-import { useState } from 'react';
-import Slider from 'react-slick';
+import { useState, lazy } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+
+const Slider = lazy(() => import('react-slick'));
 
 function ReviewSlider({ list }) {
   const settings = {
