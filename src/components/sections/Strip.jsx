@@ -64,9 +64,11 @@ const Holder = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 20%;
 
   @media (max-width: 520px) {
     margin: 20px;
+    width: 35%;
   }
 `;
 
@@ -99,7 +101,7 @@ const IconHolder = styled.img`
 `;
 
 const TextHolder = styled.div`
-  width: 120px;
+  width: 100%;
   color: #525252;
   font-weight: bold;
   text-align: center;

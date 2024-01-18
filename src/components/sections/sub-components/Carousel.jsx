@@ -35,7 +35,6 @@ export default Carousel;
 const Container = styled(Slider)`
   width: 95%;
 
-
   img {
     width: 100%;
     height: 100%;

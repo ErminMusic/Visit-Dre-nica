@@ -103,7 +103,7 @@ const Wrap = styled.div`
   background-color: #f8f5df;
   width: 100%;
   color: #525252;
-  padding: 36px 0 18px 0;
+  padding: 36px 0 0px 0;
   display: flex;
   justify-content: center;
 `;

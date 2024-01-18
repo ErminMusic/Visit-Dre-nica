@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Carusel from "./Carusel";
+import Carusel from "./Carousel";
 import BedIcon from "../../../assets/Bed.webp";
 import PeopleIcon from "../../../assets/People.webp";
 import SizeIcon from "../../../assets/Size.webp";

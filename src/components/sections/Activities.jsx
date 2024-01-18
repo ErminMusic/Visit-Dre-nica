@@ -32,7 +32,7 @@ const Wrap = styled.div`
   background-color: #F0FFF0;
   width: 100%;
   color: #525252;
-  padding: 16px 0 36px 0;
+  padding: 16px 0 0px 0;
   display: flex;
   justify-content: center;
 `;
