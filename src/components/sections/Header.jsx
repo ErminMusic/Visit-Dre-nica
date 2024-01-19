@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import logo from '../../assets/Logo.webp';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import NavItems from './sub-components/NavItems';
+import NavItems from './sub-components/Header/NavItems';
 import { useState } from 'react';
+import HeaderLogo from './sub-components/Header/HeaderLogo';
 
 function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -16,18 +16,7 @@ function Header() {
     <Wrapper>
       <Container>
         
-        <a href="/">
-          <Logo>
-          <LogoImage
-            alt="Logo"
-            src={logo}
-            loading="lazy"
-            srcSet={`${logo} 300w, ${logo} 768w, ${logo} 1280w`}
-            sizes="(max-width: 300px) 100vw, (max-width: 768px) 80vw, 50vw"
-          />
-            <Title>VISIT <br />DREŽNICA</Title>
-          </Logo>
-        </a>
+        <HeaderLogo />
 
         <NavBar $isMenuOpen={isMenuOpen}>
           <NavItems />
@@ -77,22 +66,6 @@ const Container = styled.div`
   }
 `;
 
-const Logo = styled.div`
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-`;
-
-const LogoImage = styled.img`
-  width: 100%; /* Adjust as needed */
-  height: 100%;
-  max-width: 70px; /* Set a maximum width */
-`;
-
-const Title = styled.h2`
-  color: white;
-  padding: 0 10px;
-`;
 
 const NavBar = styled.div`
   width: 68%;

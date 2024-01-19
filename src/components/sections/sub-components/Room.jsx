@@ -5,17 +5,25 @@ import PeopleIcon from "../../../assets/People.webp";
 import SizeIcon from "../../../assets/Size.webp";
 import ViewIcon from "../../../assets/View.webp";
 import BathIcon from "../../../assets/Bath.webp";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import Buttons from "./Buttons";
 
-const Room = ({ title, people, size, bed, view, bathroom, description, images }) => {
-
+const Room = ({
+  title,
+  people,
+  size,
+  bed,
+  view,
+  bathroom,
+  description,
+  images,
+}) => {
   Room.propTypes = {
-    title: PropTypes.string.isRequired, 
+    title: PropTypes.string.isRequired,
     people: PropTypes.string.isRequired,
     size: PropTypes.string.isRequired,
     bed: PropTypes.string.isRequired,
-    view: PropTypes.string.isRequired, 
+    view: PropTypes.string.isRequired,
     bathroom: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     images: PropTypes.node.isRequired,
@@ -31,28 +39,28 @@ const Room = ({ title, people, size, bed, view, bathroom, description, images })
         <Content>
           <Title>{title}</Title>
           <p>{description}</p>
-          
+
           <IconHolder>
-            <IconSection >
+            <IconSection>
               <Icon loading="lazy" alt="People Icon" src={PeopleIcon} />
               <p>{people}</p>
             </IconSection>
 
-            <IconSection >
+            <IconSection>
               <Icon loading="lazy" alt="Size Icon" src={SizeIcon} />
               <p>{size}</p>
             </IconSection>
 
-            <IconSection >
+            <IconSection>
               <Icon loading="lazy" alt="Bed Icon" src={BedIcon} />
               <p>{bed}</p>
             </IconSection>
 
-            <IconSection >
+            <IconSection>
               <Icon loading="lazy" alt="View Icon" src={ViewIcon} />
               <p>{view}</p>
             </IconSection>
-            <IconSection >
+            <IconSection>
               <Icon loading="lazy" alt="Bath Icon" src={BathIcon} />
               <p>{bathroom}</p>
             </IconSection>
@@ -60,11 +68,10 @@ const Room = ({ title, people, size, bed, view, bathroom, description, images })
 
           <Buttons />
         </Content>
-        
       </ContentHolder>
     </Container>
   );
-}
+};
 
 export default Room;
 
@@ -123,7 +130,7 @@ const IconSection = styled.div`
 
   p {
     font-size: 12px;
-    margin: 0 0 0 8px ;
+    margin: 0 0 0 8px;
     font-weight: bold;
   }
 `;

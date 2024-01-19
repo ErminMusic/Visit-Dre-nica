@@ -1,174 +1,73 @@
-import styled from "styled-components"
-import { RoomsInclude, OutdoorsInclude, ServiceInclude, BathroomInclude } from "../data/IncludeIcons"
+import styled from "styled-components";
+import {
+    RoomsInclude,
+    OutdoorsInclude,
+    ServiceInclude,
+    BathroomInclude,
+} from "../data/IncludeIcons";
+import EquipmentIcons from "./sub-components/RoomEquipment/EquipmentIcons";
 
 function RoomEquipment() {
+    const room = {
+        normal: "Include:",
+        bold: "All Rooms ",
+    };
 
-  const room = {
-    normal: "Include:",
-    bold: "All Rooms "
-  }
+    const outdoor = {
+        bold: "Outdoors:",
+    };
 
-  const outdoor = {
-    bold: "Outdoors:",
-  }
+    const bathroom = {
+        normal: "Include: ",
+        bold: "Bathroom ",
+    };
 
-  const bathroom = {
-    normal: "Include: ",
-    bold: "Bathroom "
-  }
+    const service = {
+        normal: "Include:",
+        bold: "Services ",
+    };
 
-  const service = {
-    normal: "Include:",
-    bold: "Services "
-  }
+    return (
+        <Wrap>
+            <Container>
 
-  return (
-    <Wrap>
-      <Container>
+                <EquipmentIcons title={room} content={RoomsInclude} />
 
-        <Title>
-          <span>{room.bold}</span>{room.normal}
-        </Title>
-        <IconWrap>
-          {RoomsInclude.map((item, index) => (
-            <IconHolder key={index}>
-              <Icon
-                  alt={item.alter}
-                  loading="lazy"
-                  src={item.icon}
-                  srcSet={`${item.icon} 300w, ${item.icon} 768w, ${item.icon} 1280w`}
-                  sizes="(max-width: 300px) 100vw, (max-width: 768px) 80vw, 50vw"
-                />
-              <Text>{item.text}</Text>
-            </IconHolder>
-          ))}
-        </IconWrap>
+                <EquipmentIcons title={outdoor} content={OutdoorsInclude} />
 
-        <Title>
-          <span>{outdoor.bold}</span>
-        </Title>
-          <IconWrap>
-            {OutdoorsInclude.map((item, index) => (
-              <IconHolder key={index}>
-                <Icon
-                  alt={item.alter}
-                  loading="lazy"
-                  src={item.icon}
-                  srcSet={`${item.icon} 300w, ${item.icon} 768w, ${item.icon} 1280w`}
-                  sizes="(max-width: 300px) 100vw, (max-width: 768px) 80vw, 50vw"
-                />
-                <Text>{item.text}</Text>
-              </IconHolder>
-            ))}
-          </IconWrap>
+                <EquipmentIcons title={service} content={ServiceInclude} />
 
-        <Title>
-          <span>{service.bold}</span>{service.normal}
-        </Title>
-        <IconWrap>
-            {ServiceInclude.map((item, index) => (
-              <IconHolder key={index}>
-                <Icon
-                  alt={item.alter}
-                  loading="lazy"
-                  src={item.icon}
-                  srcSet={`${item.icon} 300w, ${item.icon} 768w, ${item.icon} 1280w`}
-                  sizes="(max-width: 300px) 100vw, (max-width: 768px) 80vw, 50vw"
-                />
-                <Text>{item.text}</Text>
-              </IconHolder>
-            ))}
-          </IconWrap>
+                <EquipmentIcons title={bathroom} content={BathroomInclude} />
 
-        <Title>
-          <span>{bathroom.bold}</span>{bathroom.normal}
-        </Title>
-        <IconWrap>
-            {BathroomInclude.map((item, index) => (
-              <IconHolder key={index}>
-                <Icon
-                  alt={item.alter}
-                  loading="lazy"
-                  src={item.icon}
-                  srcSet={`${item.icon} 300w, ${item.icon} 768w, ${item.icon} 1280w`}
-                  sizes="(max-width: 300px) 100vw, (max-width: 768px) 80vw, 50vw"
-                />
-                <Text>{item.text}</Text>
-              </IconHolder>
-            ))}
-          </IconWrap>
-    
-      </Container>
-    </Wrap>
-  )
+            </Container>
+        </Wrap>
+    );
 }
 
-export default RoomEquipment
+export default RoomEquipment;
 
 const Wrap = styled.div`
-  background-color: #F0FFF0;
-  width: 100%;
-  color: #525252;
-  padding: 18px 0 36px 0;
-  display: flex;
-  justify-content: center;
+    background-color: #f0fff0;
+    width: 100%;
+    color: #525252;
+    padding: 18px 0 36px 0;
+    display: flex;
+    justify-content: center;
 `;
 
 const Container = styled.div`
-  width: 80%;
+    width: 80%;
 
-  @media (max-width: 850px) {
-    width: 95%;
-  } 
+    @media (max-width: 850px) {
+        width: 95%;
+    }
 `;
 
-const Title = styled.p`
-  font-size: 36px;
-  margin: 18px 0 14px 0;
 
-  span {
-    font-weight: bold;
-  }
-`;
 
-const IconWrap = styled.div`
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-`;
-
-const IconHolder = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 25%;
-  height: auto;
-  padding: 16px 8px;
-  word-wrap: break-word;
-  text-align: center;   
-
-  @media (max-width: 650px) {
-    width: 33%;
-  } 
-
-  @media (max-width: 500px) {
-    width: 50%;
-  } 
-`;
-
-const Icon = styled.img`
-  width: 80px;
-  height: 80px;
-`;
-
-const Text = styled.div`
-  font-weight: bold;
-  padding: 12px 0 0 0;
-`;
 // Room type
 // Number of guests
- 
+
 // Quadruple Room with Balcony
 // 3 single bedsand1 double bedand1 sofa bed
 
@@ -177,7 +76,6 @@ const Text = styled.div`
 
 // Budget Single Room
 // 1 single bed
-
 
 // Triple Room with Mountain View.
 
@@ -192,8 +90,6 @@ const Text = styled.div`
 // Room service
 // Private beach area
 // Breakfast
-
-
 
 // Bathroom includes:
 // Toilet paper
@@ -263,4 +159,3 @@ const Text = styled.div`
 // English
 // Croatian
 // Serbian
- 
