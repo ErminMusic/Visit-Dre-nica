@@ -3,10 +3,18 @@ import styled from "styled-components";
 
 const TextHolder = ({ date, title, description, isOpen, toggleReadMore }) => {
     const ShowDescription = {
-        WebkitLineClamp: 5,
+        WebkitLineClamp: 4,
         WebkitBoxOrient: "vertical",
         overflow: "hidden",
         display: "-webkit-box",
+    };
+
+    TextHolder.propTypes = {
+        date: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        isOpen: PropTypes.bool.isRequired,
+        toggleReadMore: PropTypes.func.isRequired,
     };
 
     return (
@@ -27,14 +35,6 @@ const TextHolder = ({ date, title, description, isOpen, toggleReadMore }) => {
             )}
         </TextContainer>
     );
-};
-
-TextHolder.propTypes = {
-    date: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    isOpen: PropTypes.bool.isRequired,
-    toggleReadMore: PropTypes.func.isRequired,
 };
 
 const TextContainer = styled.div`

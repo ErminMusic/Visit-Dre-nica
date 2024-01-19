@@ -1,18 +1,22 @@
 import styled from "styled-components";
-import AboutImg from "../../assets/About.webp";
+import PropTypes from "prop-types";
 import { lazy, Suspense } from "react";
 
 const Image = lazy(() => import("./sub-components/About/Image"));
 const Content = lazy(() => import("./sub-components/About/Content"));
 
-function AboutDreznica() {
-    const textContent = {
-        title: "About ",
-        titleBold: "Drežnica",
-        placeholderText:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quasi minima ipsa quisquam magnam optio corporis.",
-        image: AboutImg,
-        alter: "About Image",
+function About( {content} ) {
+
+    About.propTypes = {
+        content: PropTypes.arrayOf(
+            PropTypes.shape({
+                title: PropTypes.string.isRequired,
+                titleBold: PropTypes.string.isRequired,
+                placeholderText: PropTypes.string.isRequired,
+                alter: PropTypes.string.isRequired,
+                image: PropTypes.node.isRequired,
+            })
+        ),
     };
 
     return (
@@ -20,14 +24,14 @@ function AboutDreznica() {
             <Container>
                 <Suspense fallback={<div>Loading...</div>}>
                     <Image
-                        image={textContent.image}
-                        alter={textContent.alter}
+                        image={content.image}
+                        alter={content.alter}
                     />
 
                     <Content
-                        title={textContent.title}
-                        titleBold={textContent.titleBold}
-                        content={textContent.placeholderText}
+                        title={content.title}
+                        titleBold={content.titleBold}
+                        content={content.placeholderText}
                     />
                 </Suspense>
             </Container>
@@ -35,7 +39,7 @@ function AboutDreznica() {
     );
 }
 
-export default AboutDreznica;
+export default About;
 
 const Wrap = styled.div`
     background-color: #f0fff0;
