@@ -1,11 +1,13 @@
 import styled from "styled-components";
+import { lazy, Suspense } from "react";
 import {
     RoomsInclude,
     OutdoorsInclude,
     ServiceInclude,
     BathroomInclude,
 } from "../data/IncludeIcons";
-import EquipmentIcons from "./sub-components/RoomEquipment/EquipmentIcons";
+
+const EquipmentIcons = lazy(() => import("./sub-components/RoomEquipment/EquipmentIcons"));
 
 function RoomEquipment() {
     const room = {
@@ -14,6 +16,7 @@ function RoomEquipment() {
     };
 
     const outdoor = {
+        normal: "",
         bold: "Outdoors:",
     };
 
@@ -30,15 +33,15 @@ function RoomEquipment() {
     return (
         <Wrap>
             <Container>
+                <Suspense fallback={<div>Loading...</div>}>
+                    <EquipmentIcons title={room} content={RoomsInclude} />
 
-                <EquipmentIcons title={room} content={RoomsInclude} />
+                    <EquipmentIcons title={outdoor} content={OutdoorsInclude} />
 
-                <EquipmentIcons title={outdoor} content={OutdoorsInclude} />
+                    <EquipmentIcons title={service} content={ServiceInclude} />
 
-                <EquipmentIcons title={service} content={ServiceInclude} />
-
-                <EquipmentIcons title={bathroom} content={BathroomInclude} />
-
+                    <EquipmentIcons title={bathroom} content={BathroomInclude}/>
+                </Suspense>
             </Container>
         </Wrap>
     );
@@ -62,8 +65,6 @@ const Container = styled.div`
         width: 95%;
     }
 `;
-
-
 
 // Room type
 // Number of guests

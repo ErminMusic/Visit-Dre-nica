@@ -3,8 +3,10 @@ import styled from "styled-components";
 
 function EquipmentIcons({ title, content }) {
     EquipmentIcons.propTypes = {
-        title: PropTypes.string.isRequired,
-        titleBold: PropTypes.node.isRequired,
+        title: PropTypes.shape({
+            normal: PropTypes.string.isRequired,
+            bold: PropTypes.string.isRequired,
+        }).isRequired,
 
         content: PropTypes.arrayOf(
             PropTypes.shape({

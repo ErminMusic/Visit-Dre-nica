@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import AboutImg from "../../assets/About.webp";
-import Image from "./sub-components/About/Image";
-import Content from "./sub-components/About/Content";
+import { lazy, Suspense } from "react";
+
+const Image = lazy(() => import("./sub-components/About/Image"));
+const Content = lazy(() => import("./sub-components/About/Content"));
 
 function AboutDreznica() {
     const textContent = {
@@ -16,13 +18,18 @@ function AboutDreznica() {
     return (
         <Wrap>
             <Container>
-                <Image image={textContent.image} alter={textContent.alter} />
+                <Suspense fallback={<div>Loading...</div>}>
+                    <Image
+                        image={textContent.image}
+                        alter={textContent.alter}
+                    />
 
-                <Content
-                    title={textContent.title}
-                    titleBold={textContent.titleBold}
-                    content={textContent.placeholderText}
-                />
+                    <Content
+                        title={textContent.title}
+                        titleBold={textContent.titleBold}
+                        content={textContent.placeholderText}
+                    />
+                </Suspense>
             </Container>
         </Wrap>
     );

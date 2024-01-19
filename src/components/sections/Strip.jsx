@@ -1,11 +1,15 @@
 import styled from "styled-components";
-import StripIcons from "./sub-components/Strip/StripIcons";
+import { lazy, Suspense } from "react";
+
+const StripIcons = lazy(() => import("./sub-components/Strip/StripIcons"));
 
 function Strip() {
     return (
         <Wrap>
             <Container>
-                <StripIcons />
+                <Suspense fallback={<div>Loading...</div>}>
+                    <StripIcons />
+                </Suspense>
             </Container>
         </Wrap>
     );
