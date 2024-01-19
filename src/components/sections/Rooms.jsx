@@ -1,44 +1,10 @@
 import styled from "styled-components";
-import Room from "./sub-components/Room";
-import RoomImage from "../../assets/RoomOne.webp";
+import { RoomDetails } from "../data/RoomDetails";
+import { lazy, Suspense } from "react";
+
+const Room = lazy(() => import("./sub-components/Rooms/Room"));
 
 function Rooms() {
-    const roomOne = {
-        title: "Budget Single Room",
-        people: "1 Adult",
-        view: "Lake View",
-        bed: "1 Single Bed",
-        size: "20sqm",
-        description:
-            "11111Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur aperiam voluptatem, necessitatibus iure optio incidunt rerum? Explicabo, aut facere nihil maxime vel consequuntur. Sed magnam eligendi, velit dolorum iste necessitatibus.",
-        images: [RoomImage, RoomImage, RoomImage],
-        bathroom: "Shared Bathroom",
-    };
-
-    const roomTwo = {
-        title: "Twin Room",
-        people: "2 Adults",
-        view: "Lake View",
-        bed: "2 Single Beds and 1 Sofa Bed",
-        size: "20sqm",
-        description:
-            "22222Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur aperiam voluptatem, necessitatibus iure optio incidunt rerum? Explicabo, aut facere nihil maxime vel consequuntur. Sed magnam eligendi, velit dolorum iste necessitatibus.",
-        images: [RoomImage, RoomImage, RoomImage],
-        bathroom: "Shared Bathroom",
-    };
-
-    const roomThree = {
-        title: "Quadruple Room with Balcony",
-        people: "4 Adults",
-        view: "Lake View",
-        bed: "3 Single, 1 Double and 1 Sofa Bed",
-        size: "20sqm",
-        description:
-            "33333Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur aperiam voluptatem, necessitatibus iure optio incidunt rerum? Explicabo, aut facere nihil maxime vel consequuntur. Sed magnam eligendi, velit dolorum iste necessitatibus.",
-        images: [RoomImage, RoomImage, RoomImage],
-        bathroom: "Shared Bathroom",
-    };
-
     const mainTitle = "Choose A Room:";
 
     return (
@@ -49,49 +15,9 @@ function Rooms() {
                 </TitleHolder>
 
                 <ContentHolder>
-                    <Room
-                        title={roomOne.title}
-                        people={roomOne.people}
-                        view={roomOne.view}
-                        bed={roomOne.bed}
-                        size={roomOne.size}
-                        description={roomOne.description}
-                        images={roomOne.images}
-                        bathroom={roomOne.bathroom}
-                    />
-
-                    <Room
-                        title={roomTwo.title}
-                        people={roomTwo.people}
-                        view={roomTwo.view}
-                        bed={roomTwo.bed}
-                        size={roomTwo.size}
-                        description={roomTwo.description}
-                        images={roomTwo.images}
-                        bathroom={roomTwo.bathroom}
-                    />
-
-                    <Room
-                        title={roomThree.title}
-                        people={roomThree.people}
-                        view={roomThree.view}
-                        bed={roomThree.bed}
-                        size={roomThree.size}
-                        description={roomThree.description}
-                        images={roomThree.images}
-                        bathroom={roomThree.bathroom}
-                    />
-
-                    <Room
-                        title={roomOne.title}
-                        people={roomOne.people}
-                        view={roomOne.view}
-                        bed={roomOne.bed}
-                        size={roomOne.size}
-                        description={roomOne.description}
-                        images={roomOne.images}
-                        bathroom={roomOne.bathroom}
-                    />
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <Room roomContent={RoomDetails} />
+                    </Suspense>
                 </ContentHolder>
             </Container>
         </Wrap>

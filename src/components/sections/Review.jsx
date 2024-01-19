@@ -1,6 +1,8 @@
 import styled from "styled-components";
-import ReviewSlider from "./sub-components/ReviewSlider";
 import { GuestReviews } from "../data/GuestReview";
+import { lazy, Suspense } from "react";
+
+const ReviewSlider = lazy(() => import("./sub-components/Review/ReviewSlider"));
 
 function Testimonials() {
     return (
@@ -9,7 +11,9 @@ function Testimonials() {
                 <h1>See what guests loved the most:</h1>
             </TitleHolder>
 
-            <ReviewSlider list={GuestReviews} />
+            <Suspense fallback={<div>Loading...</div>}>
+                <ReviewSlider list={GuestReviews} />
+            </Suspense>
         </Wrap>
     );
 }
