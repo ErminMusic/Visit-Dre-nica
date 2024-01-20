@@ -27,6 +27,9 @@ const Wrap = styled.div`
     padding: 36px 0 48px 0;
     color: #525252;
     overflow: hidden;
+    @media (max-width: 380px) {
+        padding: 36px 0 60px 0;
+    }
 `;
 const Title = styled.h1``;
 const TitleHolder = styled.div`
