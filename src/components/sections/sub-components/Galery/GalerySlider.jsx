@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 function GalerySlider({ images }) {
     const settings = {
         className: "slider variable-width",
-        dots: false,
+        dots: true,
         infinite: true,
         centerMode: true,
         slidesToShow: 1,
