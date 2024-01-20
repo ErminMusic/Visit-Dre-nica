@@ -1,13 +1,17 @@
 import styled from "styled-components";
 import "./App.css";
 import Header from "./components/sections/Header";
-import Home from "./components/main-components/Home";
+import { lazy, Suspense } from "react";
+
+const Home = lazy(() => import("./components/main-components/Home"));
 
 function App() {
     return (
         <Container>
             <Header />
-            <Home />
+            <Suspense fallback={<div>Loading...</div>}>
+                <Home />
+            </Suspense>
         </Container>
     );
 }

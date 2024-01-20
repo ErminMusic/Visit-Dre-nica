@@ -141,6 +141,6 @@ const ImageHolder = styled.div`
 
 const Image = styled.img`
     height: 100%;
-    width: auto;
+    width: 100%;
     object-fit: cover;
 `;
