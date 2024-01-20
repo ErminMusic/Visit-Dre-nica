@@ -17,11 +17,9 @@ function Activitie({ list }) {
             {list.map((item, index) => (
                 <Container key={index}>
                     <Image alt={item.alter} src={item.image} loading="lazy" />
-
                     <ContentHolder>
                         <h2>{item.name}</h2>
                     </ContentHolder>
-
                     <Button href={item.link}>
                         <span>{item.name}</span>
                         LEARN MORE
@@ -46,12 +44,10 @@ const Container = styled.div`
         width: 100%;
     }
 `;
-
 const Image = styled.img`
     width: 70%;
     height: 100%;
     border-radius: 16px;
-
     @media (max-width: 1100px) {
         width: 85%;
         height: 85%;
@@ -60,17 +56,14 @@ const Image = styled.img`
         width: 90%;
         height: 90%;
     }
-
     @media (max-width: 700px) {
         width: 90%;
         height: 90%;
     }
 `;
-
 const ContentHolder = styled.div`
     margin: 12px 0;
 `;
-
 const Button = styled.a`
     text-decoration: none;
     border-radius: 10px;
@@ -81,12 +74,10 @@ const Button = styled.a`
     cursor: pointer;
     font-weight: bold;
     color: white;
-
     &:hover {
         transform: scale(1.05);
         transition: 250ms;
     }
-
     @media (max-width: 1100px) {
         width: 85%;
         height: 85%;
@@ -95,11 +86,9 @@ const Button = styled.a`
         width: 90%;
         height: 90%;
     }
-
     &[aria-label] {
         position: relative;
     }
-
     span {
         position: absolute;
         width: 1px;
@@ -111,6 +100,3 @@ const Button = styled.a`
         border: 0;
     }
 `;
-// const h1 = styled.div`
-
-// `;

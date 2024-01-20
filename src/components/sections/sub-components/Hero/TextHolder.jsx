@@ -18,12 +18,10 @@ export default TextHolder;
 const Container = styled.div`
     max-height: fit-content;
 `;
-
 const Headline = styled.h1`
     font-size: 56px;
     font-weight: bold;
     text-transform: uppercase;
-
     span {
         color: #f0fff0;
     }

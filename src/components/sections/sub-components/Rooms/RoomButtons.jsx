@@ -22,7 +22,6 @@ const ButtonHolder = styled.div`
     align-items: center;
     width: 100%;
 `;
-
 const MoreButton = styled.div`
     width: 100%;
     position: relative;
@@ -33,7 +32,6 @@ const MoreButton = styled.div`
     border-radius: 10px;
     background-color: #8fbc8f;
     z-index: 50;
-
     &::after {
         content: "";
         position: absolute;
@@ -51,22 +49,18 @@ const MoreButton = styled.div`
             rgba(0, 0, 0, 0) 100%
         );
     }
-
     span {
         font-weight: bold;
     }
-
     &:hover {
         transition: 250ms;
         background-color: white;
         color: #8fbc8f;
     }
 `;
-
 const BookButton = styled(MoreButton)`
     background-color: #507d7f;
     margin-top: 20px;
-
     &:hover {
         background-color: white;
         color: #507d7f;

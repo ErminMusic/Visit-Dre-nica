@@ -2,6 +2,10 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const IconSection = ({ iconSrc, text }) => {
+  IconSection.propTypes = {
+    iconSrc: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+  };
   return (
     <Container>
       <Icon loading="lazy" alt="Icon" src={iconSrc} />
@@ -10,10 +14,7 @@ const IconSection = ({ iconSrc, text }) => {
   );
 };
 
-IconSection.propTypes = {
-  iconSrc: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
-};
+export default IconSection;
 
 const Container = styled.div`
   width: 45%;
@@ -21,17 +22,13 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   margin: 10px 0px;
-
   p {
     font-size: 12px;
     margin: 0 0 0 8px;
     font-weight: bold;
   }
 `;
-
 const Icon = styled.img`
   width: 50px;
   height: 50px;
 `;
-
-export default IconSection;

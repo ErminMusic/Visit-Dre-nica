@@ -28,7 +28,6 @@ function HeroButtons({ content }) {
 export default HeroButtons;
 
 const ButtonHolder = styled.div``;
-
 const BookButton = styled.div`
     border-radius: 10px;
     background-color: rgb(80, 125, 127);
@@ -37,22 +36,18 @@ const BookButton = styled.div`
     padding: 16px 0px;
     cursor: pointer;
     opacity: 0.9;
-
     span {
         font-weight: bold;
     }
-
     &:hover {
         transition: 250ms;
         opacity: 1;
         background-color: white;
         color: rgb(80, 125, 127);
     }
-
     @media (max-width: 500px) {
         width: 55%;
     }
-
     @media (max-width: 420px) {
         width: 65%;
     }
@@ -61,7 +56,6 @@ const BookButton = styled.div`
 const ContactButton = styled(BookButton)`
     background-color: #8fbc8f;
     margin-top: 20px;
-
     &:hover {
         background-color: white;
         color: #8fbc8f;

@@ -11,10 +11,8 @@ function Dropdown({ title, options }) {
     return (
         <Container>
             <Wrapp>
-                <span>{title}</span>
-                <CustomArrow />
+                <span>{title}</span><CustomArrow />
             </Wrapp>
-
             <Drop>
                 {options.map((item, index) => (
                     <DropOptions key={index} href={`/${item}`}>
@@ -31,7 +29,6 @@ const CustomArrow = styled(KeyboardArrowDownIcon)`
         font-size: 36px;
     }
 `;
-
 const Drop = styled.div`
     background: #4b7376;
     position: absolute;
@@ -43,7 +40,6 @@ const Drop = styled.div`
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s ease, visibility 0.3s ease;
-
     @media (max-width: 850px) {
         top: 95%;
         left: 0;
@@ -58,7 +54,6 @@ const Drop = styled.div`
 const Container = styled.div`
     position: relative;
     z-index: 1000;
-
     &:hover {
         ${Drop} {
             visibility: visible;
@@ -68,12 +63,10 @@ const Container = styled.div`
             transition: opacity 0.3s ease, visibility 0.3s ease;
         }
     }
-
     @media (max-width: 850px) {
         background: #4b7376;
     }
 `;
-
 const DropOptions = styled.a`
     padding: 20px 15px;
     text-decoration: none;
@@ -82,12 +75,10 @@ const DropOptions = styled.a`
     z-index: 50;
     border-bottom: 1px solid rgb(61, 100, 102);
 `;
-
 const Wrapp = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-
     @media (max-width: 850px) {
         justify-content: start;
     }

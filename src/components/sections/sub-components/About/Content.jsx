@@ -13,7 +13,6 @@ function Content({ content, title, titleBold }) {
             <h1>
                 {title} <span>{titleBold}</span>
             </h1>
-
             <Text>
                 {content}
                 <br />
@@ -32,7 +31,6 @@ export default Content;
 const ContentHolder = styled.div`
     width: 45%;
     padding: 16px 24px;
-
     h1 {
         font-weight: normal;
 
@@ -40,21 +38,17 @@ const ContentHolder = styled.div`
             font-weight: bold;
         }
     }
-
     @media (max-width: 1100px) {
         width: 50%;
     }
-
     @media (max-width: 700px) {
         width: 90%;
         padding: 24px 0;
     }
-
     @media (max-width: 500px) {
         width: 100%;
     }
 `;
-
 const Text = styled.p`
     margin: 12px 0 0 0;
 `;

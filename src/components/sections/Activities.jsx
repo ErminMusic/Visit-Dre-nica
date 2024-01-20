@@ -1,10 +1,7 @@
 import styled from "styled-components";
 import { ActivitiesList, AttractionList } from "../data/ActivitiesContent";
 import { lazy, Suspense } from "react";
-
-const Activitie = lazy(() =>
-    import("../sections/sub-components/Activities/Activitie")
-);
+const Activitie = lazy(() =>import("../sections/sub-components/Activities/Activitie"));
 
 function Activities() {
     return (
@@ -41,28 +38,23 @@ const Wrap = styled.div`
     display: flex;
     justify-content: center;
 `;
-
 const Container = styled.div`
     width: 80%;
     @media (max-width: 850px) {
         width: 95%;
     }
 `;
-
 const ActivitiesHolder = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-
     @media (max-width: 700px) {
         flex-direction: column;
     }
 `;
-
 const TitleHolder = styled.div`
     margin: 20px;
     width: 100%;
 `;
-
 const Title = styled.h1``;

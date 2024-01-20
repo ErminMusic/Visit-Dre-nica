@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { GaleryImage } from "../data/GaleryImages";
 import { lazy, Suspense } from "react";
-
 const GalerySlider = lazy(() => import("./sub-components/Galery/GalerySlider"));
 
 function Galery() {
@@ -29,9 +28,7 @@ const Wrap = styled.div`
     color: #525252;
     overflow: hidden;
 `;
-
 const Title = styled.h1``;
-
 const TitleHolder = styled.div`
     margin: 0 0 16px 0;
     width: 80%;

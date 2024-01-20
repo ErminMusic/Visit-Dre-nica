@@ -42,7 +42,6 @@ const Holder = styled.div`
     justify-content: center;
     align-items: center;
     width: 20%;
-
     @media (max-width: 520px) {
         margin: 20px;
         width: 35%;
@@ -54,35 +53,29 @@ const Wrapper = styled.div`
     justify-content: space-evenly;
     align-items: start;
     width: 100%;
-
     @media (max-width: 700px) {
         justify-content: space-around;
     }
-
     @media (max-width: 520px) {
         flex-direction: column;
         align-items: center;
     }
 `;
-
 const IconHolder = styled.img`
     width: 80px;
     height: 80px;
     border-radius: 10px 10px 10px 0;
     margin: 0 0 12px 0;
-
     @media (max-width: 520px) {
         width: 100px;
         height: 100px;
     }
 `;
-
 const TextHolder = styled.div`
     width: 100%;
     color: #525252;
     font-weight: bold;
     text-align: center;
-
     @media (max-width: 520px) {
         font-size: 18px;
     }

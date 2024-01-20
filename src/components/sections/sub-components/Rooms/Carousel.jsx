@@ -13,7 +13,6 @@ function Carousel({ image }) {
         slidesToScroll: 1,
         autoplay: false,
     };
-
     Carousel.propTypes = {
         image: PropTypes.arrayOf(PropTypes.string).isRequired,
     };
@@ -41,28 +40,22 @@ const SliderHolder = styled.div`
     display: flex;
     justify-content: center;
 `;
-
 const Container = styled(Slider)`
     width: 95%;
-
     img {
         width: 100%;
         height: 100%;
     }
-
     ul li button {
         color: white;
-
         &:before {
             font-size: 15px;
             color: rgb(0, 0, 0);
         }
     }
-
     .slick-list {
         overflow: hidden;
     }
-
     .slick-prev,
     .slick-next {
         top: 50%;
@@ -70,11 +63,9 @@ const Container = styled(Slider)`
         scale: 1.5;
         z-index: 10;
     }
-
     .slick-prev {
         left: 15px;
     }
-
     .slick-next {
         right: 15px;
     }

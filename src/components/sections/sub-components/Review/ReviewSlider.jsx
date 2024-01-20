@@ -3,7 +3,6 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 const Slider = lazy(() => import("react-slick"));
 const Person = lazy(() => import("./Person"));
 const TextHolder = lazy(() => import("./TextHolder"));
@@ -17,7 +16,6 @@ function ReviewSlider({ list }) {
         slidesToScroll: 1,
         autoplay: false,
     };
-
     ReviewSlider.propTypes = {
         list: PropTypes.arrayOf(
             PropTypes.shape({
@@ -59,11 +57,9 @@ export default ReviewSlider;
 
 const Carousel = styled(Slider)`
     width: 80%;
-
     .element-style {
         display: flex;
     }
-
     ul li button {
         color: white;
 
@@ -72,11 +68,9 @@ const Carousel = styled(Slider)`
             color: rgb(0, 0, 0);
         }
     }
-
     .slick-list {
         overflow: hidden;
     }
-
     .slick-prev,
     .slick-next {
         top: 50%;
@@ -85,21 +79,17 @@ const Carousel = styled(Slider)`
         z-index: 10;
         display: none;
     }
-
     .slick-prev::before,
     .slick-next::before {
         display: none;
     }
-
     .slick-next {
         right: -45px;
     }
-
     .slick-prev {
         left: -45px;
     }
 `;
-
 const Container = styled.div`
     display: flex;
     padding: 8px;

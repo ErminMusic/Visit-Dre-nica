@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { GuestReviews } from "../data/GuestReview";
 import { lazy, Suspense } from "react";
-
 const ReviewSlider = lazy(() => import("./sub-components/Review/ReviewSlider"));
 
 function Testimonials() {
@@ -10,7 +9,6 @@ function Testimonials() {
             <TitleHolder>
                 <h1>See what our guests loved the most:</h1>
             </TitleHolder>
-
             <Suspense fallback={<div>Loading...</div>}>
                 <ReviewSlider list={GuestReviews} />
             </Suspense>
@@ -31,7 +29,6 @@ const Wrap = styled.div`
     flex-direction: column;
     overflow: hidden;
 `;
-
 const TitleHolder = styled.div`
     width: 80%;
 `;

@@ -4,7 +4,11 @@ import styled from "styled-components";
 
 const TextHolder = ({ date, title, description }) => {
     const [isOpen, setIsOpen] = useState(false);
-
+    TextHolder.propTypes = {
+        date: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+    };
     const showDescriptionStyle = {
         WebkitLineClamp: isOpen ? "unset" : 4,
         WebkitBoxOrient: "vertical",
@@ -15,9 +19,7 @@ const TextHolder = ({ date, title, description }) => {
     return (
         <TextContainer>
             <p>
-                Reviewed:
-                <br />
-                {date}
+                Reviewed:<br />{date}
             </p>
             <Title>{title}</Title>
             <Description style={showDescriptionStyle}>
@@ -32,22 +34,16 @@ const TextHolder = ({ date, title, description }) => {
     );
 };
 
-TextHolder.propTypes = {
-    date: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-};
+export default TextHolder;
 
 const TextContainer = styled.div`
     p {
         margin: 8px 0;
     }
 `;
-
 const Description = styled.p`
     margin: 8px 0;
 `;
-
 const ReadMoreButton = styled.button`
     background: none;
     border: none;
@@ -59,9 +55,6 @@ const ReadMoreButton = styled.button`
     outline: none;
     font-size: 16px;
 `;
-
 const Title = styled.h2`
     margin: 12px 0;
 `;
-
-export default TextHolder;

@@ -47,26 +47,21 @@ export default EquipmentIcons;
 const Title = styled.p`
     font-size: 36px;
     margin: 18px 0 14px 0;
-
     span {
         font-weight: bold;
     }
 `;
-
 const TitleHolder = styled.div`
     width: 100%;
-
     @media (max-width: 850px) {
         width: 95%;
     }
 `;
-
 const IconWrap = styled.div`
     width: 100%;
     display: flex;
     flex-wrap: wrap;
 `;
-
 const IconHolder = styled.div`
     display: flex;
     flex-direction: column;
@@ -77,21 +72,17 @@ const IconHolder = styled.div`
     padding: 16px 8px;
     word-wrap: break-word;
     text-align: center;
-
     @media (max-width: 650px) {
         width: 33%;
     }
-
     @media (max-width: 500px) {
         width: 50%;
     }
 `;
-
 const Icon = styled.img`
     width: 80px;
     height: 80px;
 `;
-
 const Text = styled.div`
     font-weight: bold;
     padding: 12px 0 0 0;

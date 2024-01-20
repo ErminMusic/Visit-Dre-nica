@@ -14,8 +14,7 @@ function HeaderLogo() {
                         sizes="(max-width: 300px) 100vw, (max-width: 768px) 80vw, 50vw"
                     />
                     <Title>
-                        VISIT <br />
-                        DREŽNICA
+                        VISIT <br />DREŽNICA
                     </Title>
                 </Logo>
             </a>
@@ -30,13 +29,11 @@ const Logo = styled.div`
     align-items: center;
     cursor: pointer;
 `;
-
 const LogoImage = styled.img`
     width: 100%;
     height: 100%;
     max-width: 70px;
 `;
-
 const Title = styled.h2`
     color: white;
     padding: 0 10px;

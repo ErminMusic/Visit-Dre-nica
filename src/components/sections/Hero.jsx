@@ -11,21 +11,15 @@ function Hero() {
     buttonTwo: "US",
     buttonTwoSpan: "CONTACT"
   }
-
   return (
     <Wrap>
-      
       <Background />
-
       <Container>
         <ContentHolder>
-
           <TextHolder />
           <Buttons content={buttonContent} />
-
         </ContentHolder>
       </Container>
-
     </Wrap>
   );
 }
@@ -41,7 +35,6 @@ const Wrap = styled.div`
   z-index: 1;
   overflow: hidden;
 `;
-
 const Container = styled.div`
   width: 80%;
   color: white;
@@ -49,7 +42,6 @@ const Container = styled.div`
   display: flex;
   align-items: center;
 `;
-
 const ContentHolder = styled.div`
   display: flex;
   flex-direction: column;

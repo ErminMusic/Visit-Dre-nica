@@ -29,7 +29,6 @@ const BackgroundImage = styled.img`
     height: 100vh;
     object-fit: cover;
 `;
-
 const BackgroundOverlay = styled.div`
     position: absolute;
     left: 0;

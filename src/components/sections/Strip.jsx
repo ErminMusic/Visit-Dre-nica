@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { lazy, Suspense } from "react";
-
 const StripIcons = lazy(() => import("./sub-components/Strip/StripIcons"));
 
 function Strip() {
@@ -24,13 +23,11 @@ const Wrap = styled.div`
     justify-content: center;
     padding: 36px 0;
 `;
-
 const Container = styled.div`
     width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
-
     @media (max-width: 850px) {
         width: 100%;
     }

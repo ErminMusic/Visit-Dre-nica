@@ -2,6 +2,13 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const Person = ({ profileImage, name, countryName, flag, score }) => {
+    Person.propTypes = {
+        profileImage: PropTypes.node.isRequired,
+        name: PropTypes.string.isRequired,
+        countryName: PropTypes.node.isRequired,
+        flag: PropTypes.node.isRequired,
+        score: PropTypes.string.isRequired,
+    };
     return (
         <Container>
             <PersonHolder>
@@ -23,24 +30,16 @@ const Person = ({ profileImage, name, countryName, flag, score }) => {
     );
 };
 
-Person.propTypes = {
-    profileImage: PropTypes.node.isRequired,
-    name: PropTypes.string.isRequired,
-    countryName: PropTypes.node.isRequired,
-    flag: PropTypes.node.isRequired,
-    score: PropTypes.string.isRequired,
-};
+export default Person;
 
 const Container = styled.div`
     display: flex;
      justify-content: space-between;
     padding: 8px;
 `;
-
 const PersonHolder = styled.div`
     display: flex;
 `;
-
 const IconHolder = styled.div`
     display: flex;
     flex-direction: column;
@@ -48,31 +47,25 @@ const IconHolder = styled.div`
     align-items: center;
     font-size: 16px;
     margin: 0 12px 0 0;
-
     span {
         font-weight: bold;
     }
 `;
-
 const Image = styled.img`
     border-radius: 50%;
     height: 50px;
     width: 50px;
 `;
-
 const PersonInfo = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     span {
         font-weight: bold;
     }
-
     div {
         display: flex;
         margin: 8px 0;
-
         img {
             width: 20px;
             height: 20px;
@@ -80,7 +73,6 @@ const PersonInfo = styled.div`
         }
     }
 `;
-
 const Score = styled.div`
     height: 50px;
     width: 50px;
@@ -93,7 +85,6 @@ const Score = styled.div`
     color: white;
     font-weight: bold;
     position: relative;
-
     &::after {
         content: "";
         position: absolute;
@@ -112,5 +103,3 @@ const Score = styled.div`
         );
     }
 `;
-
-export default Person;
