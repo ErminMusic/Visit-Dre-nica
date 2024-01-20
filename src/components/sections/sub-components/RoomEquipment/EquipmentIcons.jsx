@@ -18,10 +18,12 @@ function EquipmentIcons({ title, content }) {
     };
     return (
         <>
-            <Title>
-                <span>{title.bold}</span>
-                {title.normal}
-            </Title>
+            <TitleHolder>
+                <Title>
+                    <span>{title.bold}</span>
+                    {title.normal}
+                </Title>
+            </TitleHolder>
             <IconWrap>
                 {content.map((item, index) => (
                     <IconHolder key={index}>
@@ -48,6 +50,14 @@ const Title = styled.p`
 
     span {
         font-weight: bold;
+    }
+`;
+
+const TitleHolder = styled.div`
+    width: 100%;
+
+    @media (max-width: 850px) {
+        width: 95%;
     }
 `;
 

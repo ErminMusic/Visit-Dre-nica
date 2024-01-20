@@ -47,7 +47,7 @@ const ContentHolder = styled.div`
 
     @media (max-width: 700px) {
         width: 90%;
-        padding: 16px 24px 0;
+        padding: 24px 0;
     }
 
     @media (max-width: 500px) {

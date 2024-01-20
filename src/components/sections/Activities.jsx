@@ -2,22 +2,25 @@ import styled from "styled-components";
 import { ActivitiesList, AttractionList } from "../data/ActivitiesContent";
 import { lazy, Suspense } from "react";
 
-const Activitie = lazy(() => import("../sections/sub-components/Activities/Activitie"));
+const Activitie = lazy(() =>
+    import("../sections/sub-components/Activities/Activitie")
+);
 
 function Activities() {
     return (
         <Wrap>
             <Container>
-                <Title>Activities:</Title>
-
+                <TitleHolder>
+                    <Title>Activities:</Title>
+                </TitleHolder>
                 <ActivitiesHolder>
                     <Suspense fallback={<div>Loading...</div>}>
                         <Activitie list={ActivitiesList} />
                     </Suspense>
                 </ActivitiesHolder>
-
-                <Title>Nearby Attractions:</Title>
-
+                <TitleHolder>
+                    <Title>Nearby Attractions:</Title>
+                </TitleHolder>
                 <ActivitiesHolder>
                     <Suspense fallback={<div>Loading...</div>}>
                         <Activitie list={AttractionList} />
@@ -57,6 +60,9 @@ const ActivitiesHolder = styled.div`
     }
 `;
 
-const Title = styled.h1`
-    margin: 20px 0;
+const TitleHolder = styled.div`
+    margin: 20px;
+    width: 100%;
 `;
+
+const Title = styled.h1``;

@@ -23,7 +23,6 @@ const Wrap = styled.div`
     width: 100%;
     background-color: #f8f5df;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 36px 0;
@@ -35,5 +34,5 @@ const Title = styled.h1``;
 
 const TitleHolder = styled.div`
     margin: 0 0 16px 0;
-    width: 100%;
+    width: 80%;
 `;

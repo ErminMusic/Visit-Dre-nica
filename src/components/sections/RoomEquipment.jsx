@@ -60,7 +60,10 @@ const Wrap = styled.div`
 
 const Container = styled.div`
     width: 80%;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     @media (max-width: 850px) {
         width: 95%;
     }

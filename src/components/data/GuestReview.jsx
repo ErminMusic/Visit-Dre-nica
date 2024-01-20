@@ -9,7 +9,7 @@ export const GuestReviews = [
         countryName: "Venezuela",
         score: "10",
         date: "18/01/2024",
-        title: "I planned on stay 2 nights, ended up staying 2 weeks!",
+        title: "I planned on staying for 2 nights, ended up staying 2 weeks!",
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, molestiae, quia ipsum dicta repellendus sequi corporis sit omnis iste explicabo delectus id repellat debitis obcaecati. Laboriosam necessitatibus id aliquam voluptatem.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, molestiae, quia ipsum dicta repellendus sequi corporis sit omnis iste explicabo delectus id repellat debitis obcaecati. Laboriosam necessitatibus id aliquam voluptatem.            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, molestiae, quia ipsum dicta repellendus sequi corporis sit omnis iste explicabo delectus id repellat debitis obcaecati. Laboriosam necessitatibus id aliquam voluptatem.            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, molestiae, quia ipsum dicta repellendus sequi corporis sit omnis iste explicabo delectus id repellat debitis obcaecati. Laboriosam necessitatibus id aliquam voluptatem.",
     },
     {
@@ -19,7 +19,7 @@ export const GuestReviews = [
         countryName: "Venezuela",
         score: "10",
         date: "18/01/2024",
-        title: "I planned on stay 2 nights, ended up staying 2 weeks!",
+        title: "I planned on staying for 2 nights, ended up staying 2 weeks!",
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, molestiae, quia ipsum dicta repellendus sequi corporis sit omnis iste explicabo delectus id repellat debitis obcaecati. Laboriosam necessitatibus id aliquam voluptatem.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, molestiae, quia ipsum dicta repellendus sequi corporis sit omnis iste explicabo delectus id repellat debitis obcaecati. Laboriosam necessitatibus id aliquam voluptatem. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, molestiae, quia ipsum dicta repellendus sequi corporis sit omnis iste explicabo delectus id repellat debitis obcaecati. Laboriosam necessitatibus id aliquam voluptatem. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, molestiae, quia ipsum dicta repellendus sequi corporis sit omnis iste explicabo delectus id repellat debitis obcaecati. Laboriosam necessitatibus id aliquam voluptatem.",
     },
     {
@@ -29,7 +29,7 @@ export const GuestReviews = [
         countryName: "Venezuela",
         score: "10",
         date: "18/01/2024",
-        title: "I planned on stay 2 nights, ended up staying 2 weeks!",
+        title: "I planned on staying for 2 nights, ended up staying 2 weeks!",
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, molestiae, quia ipsum dicta repellendus sequi corporis sit omnis iste explicabo delectus",
     },
     {
@@ -39,7 +39,7 @@ export const GuestReviews = [
         countryName: "Venezuela",
         score: "10",
         date: "18/01/2024",
-        title: "I planned on stay 2 nights, ended up staying 2 weeks!",
+        title: "I planned on staying for 2 nights, ended up staying 2 weeks!",
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, molestiae, quia ipsum dicta repellendus sequi corporis sit omnis iste explicabo delectus id repellat debitis obcaecati. Laboriosam necessitatibus id aliquam voluptatem.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, molestiae, quia ipsum dicta repellendus sequi corporis sit omnis iste explicabo delectus id repellat debitis obcaecati. Laboriosam necessitatibus id aliquam voluptatem. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, molestiae, quia ipsum dicta repellendus sequi corporis sit omnis iste explicabo delectus id repellat debitis obcaecati. Laboriosam necessitatibus id aliquam voluptatem.            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, molestiae, quia ipsum dicta repellendus sequi corporis sit omnis iste explicabo delectus id repellat debitis obcaecati. Laboriosam necessitatibus id aliquam voluptatem.",
     },
 ]

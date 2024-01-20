@@ -46,13 +46,17 @@ const Container = styled.div`
     justify-content: center;
     flex-direction: column;
 
-    @media (max-width: 850px) {
-        width: 95%;
+    @media (max-width: 1100px) {
+        height: 340px;
     }
 
-    @media (max-width: 1100px) {
-        height: 350px;
-        width: auto;
+    @media (max-width: 850px) {
+        width: 95%;
+        height: 260px;
+    }
+
+    @media (max-width: 600px) {
+        height: 210px;
     }
 `;
 
@@ -62,15 +66,22 @@ const StyledSlider = styled(Slider)`
 
     ul li button {
         color: white;
-
         &:before {
             font-size: 15px;
             color: rgb(0, 0, 0);
+            margin-top: 15px;
         }
+    }
+
+    .slick-dots li{
+        
     }
 
     .slick-list {
         overflow: hidden;
+        display: block;
+        width: 100%;
+        height: auto;
     }
 
     .slick-prev::before,
@@ -103,6 +114,7 @@ const ImageHolder = styled.div`
 
 const Image = styled.img`
     height: 100%;
+    width: auto;
 `;
 
 export default GalerySlider;
