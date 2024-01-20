@@ -86,10 +86,13 @@ const Container = styled.div`
 `;
 const StyledSlider = styled(Slider)`
     width: 100%;
+    @media (max-width: 380px) {
+        max-height: 210px;
+    }
     .slick-dots {
         bottom: -30px;
         li {
-            margin: 0 5px;
+            margin: 0 1px;
             button {
                 font-size: 20px;
                 width: 20px;
@@ -99,13 +102,12 @@ const StyledSlider = styled(Slider)`
                     background-color: #4caf50; 
                 }
                 &:before {
-                    font-size: 15px;
+                    font-size: 10px;
                     color: rgb(0, 0, 0);
                 }
             }
         }
     }
-
 `;
 const ImageHolder = styled.div`
     height: 400px;

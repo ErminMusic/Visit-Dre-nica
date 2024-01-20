@@ -4,8 +4,7 @@ import { lazy, Suspense } from "react";
 const Room = lazy(() => import("./sub-components/Rooms/Room"));
 
 function Rooms() {
-    const mainTitle = "Choose A Room:";
-
+    const mainTitle = "Choose a Room:";
     return (
         <Wrap>
             <Container>
