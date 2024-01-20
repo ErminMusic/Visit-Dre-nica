@@ -13,6 +13,7 @@ function GalerySlider({ images }) {
         slidesToShow: 1,
         slidesToScroll: 1,
         variableWidth: true,
+        swipeToSlide: true,
     };
 
     GalerySlider.propTypes = {
@@ -26,9 +27,6 @@ function GalerySlider({ images }) {
 
     return (
         <Container>
-            <TitleHolder>
-                <Title>Gallery:</Title>
-            </TitleHolder>
             <StyledSlider {...settings}>
                 {images.map((item, index) => (
                     <ImageHolder key={index}>
@@ -44,23 +42,24 @@ const Container = styled.div`
     width: 80%;
     height: auto;
     display: flex;
+    height: 450px;
     justify-content: center;
     flex-direction: column;
 
     @media (max-width: 850px) {
         width: 95%;
     }
-`;
 
-const Title = styled.h1``;
-
-const TitleHolder = styled.div`
-    margin: 0 0 16px 0;
+    @media (max-width: 1100px) {
+        height: 350px;
+        width: auto;
+    }
 `;
 
 const StyledSlider = styled(Slider)`
     width: 100%;
-
+    border: none;
+    
     ul li button {
         color: white;
 
@@ -83,7 +82,13 @@ const StyledSlider = styled(Slider)`
 
 const ImageHolder = styled.div`
     height: 400px;
+    width: auto;
     padding: 0 16px;
+
+    @media (max-width: 1100px) {
+        height: 330px;
+        width: auto;
+    }
 `;
 
 const Image = styled.img`

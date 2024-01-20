@@ -1,13 +1,18 @@
 import styled from "styled-components";
 import { GaleryImage } from "../data/GaleryImages";
-import GalerySlider from "./sub-components/Galery/GalerySlider";
+import { lazy, Suspense } from "react";
+
+const GalerySlider = lazy(() => import("./sub-components/Galery/GalerySlider"));
 
 function Galery() {
     return (
         <Wrap>
-
-
-            <GalerySlider images={GaleryImage} />
+            <TitleHolder>
+                <Title>Gallery:</Title>
+            </TitleHolder>
+            <Suspense fallback={<div>Loading...</div>}>
+                <GalerySlider images={GaleryImage} />
+            </Suspense>
         </Wrap>
     );
 }
@@ -22,6 +27,12 @@ const Wrap = styled.div`
     align-items: center;
     flex-direction: column;
     padding: 36px 0;
+    color: #525252;
 `;
 
+const Title = styled.h1``;
 
+const TitleHolder = styled.div`
+    margin: 0 0 16px 0;
+    width: 100%;
+`;
