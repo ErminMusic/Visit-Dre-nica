@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
 import AboutImg from "../../assets/About.webp";
+import AboutVisitImg from "../../assets/AboutVisitDreznica.webp";
 
 const Hero = lazy(() => import("../sections/Hero"));
 const About = lazy(() => import("../sections/About"));
@@ -8,6 +9,7 @@ const Rooms = lazy(() => import("../sections/Rooms"));
 const Strip = lazy(() => import("../sections/Strip"));
 const Activities = lazy(() => import("../sections/Activities"));
 const Review = lazy(() => import("../sections/Review"));
+const Galery = lazy(() => import("../sections/Galery"));
 
 function Home() {
     const AboutDreznica = {
@@ -23,9 +25,9 @@ function Home() {
         title: "About ",
         titleBold: "Visit Drežnica",
         placeholderText:
-            "Visit DrežnicaLorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quasi minima ipsa quisquam magnam optio corporis.",
+            "Visit Drežnica Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quasi minima ipsa quisquam magnam optio corporis.",
         alter: "About Image",
-        image: AboutImg,
+        image: AboutVisitImg,
     };
     return (
         <>
@@ -38,6 +40,7 @@ function Home() {
                 <Activities />
                 <Review />
                 <About content={AboutVisitDreznica} />
+                <Galery />
             </Suspense>
         </>
     );

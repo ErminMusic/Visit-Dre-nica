@@ -1,4 +1,4 @@
-import { useState, lazy } from "react";
+import { lazy } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import "slick-carousel/slick/slick.css";
@@ -17,8 +17,6 @@ function ReviewSlider({ list }) {
         slidesToScroll: 1,
         autoplay: false,
     };
-
-    const [isOpen, setIsOpen] = useState(false);
 
     ReviewSlider.propTypes = {
         list: PropTypes.arrayOf(
@@ -50,8 +48,6 @@ function ReviewSlider({ list }) {
                         date={item.date}
                         title={item.title}
                         description={item.description}
-                        isOpen={isOpen}
-                        toggleReadMore={() => setIsOpen(!isOpen)}
                     />
                 </Container>
             ))}

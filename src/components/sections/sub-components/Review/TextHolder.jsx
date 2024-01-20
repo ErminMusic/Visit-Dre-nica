@@ -1,20 +1,15 @@
+import { useState } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-const TextHolder = ({ date, title, description, isOpen, toggleReadMore }) => {
-    const ShowDescription = {
-        WebkitLineClamp: 4,
+const TextHolder = ({ date, title, description }) => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const showDescriptionStyle = {
+        WebkitLineClamp: isOpen ? "unset" : 4,
         WebkitBoxOrient: "vertical",
         overflow: "hidden",
         display: "-webkit-box",
-    };
-
-    TextHolder.propTypes = {
-        date: PropTypes.string.isRequired,
-        title: PropTypes.string.isRequired,
-        description: PropTypes.string.isRequired,
-        isOpen: PropTypes.bool.isRequired,
-        toggleReadMore: PropTypes.func.isRequired,
     };
 
     return (
@@ -25,16 +20,22 @@ const TextHolder = ({ date, title, description, isOpen, toggleReadMore }) => {
                 {date}
             </p>
             <Title>{title}</Title>
-            <Description style={isOpen ? null : ShowDescription}>
+            <Description style={showDescriptionStyle}>
                 {description}
             </Description>
             {description.length > 200 && (
-                <ReadMoreButton onClick={toggleReadMore}>
+                <ReadMoreButton onClick={() => setIsOpen(!isOpen)}>
                     {isOpen ? "Read Less" : "Read More"}
                 </ReadMoreButton>
             )}
         </TextContainer>
     );
+};
+
+TextHolder.propTypes = {
+    date: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
 };
 
 const TextContainer = styled.div`

@@ -5,28 +5,23 @@ import { lazy, Suspense } from "react";
 const Image = lazy(() => import("./sub-components/About/Image"));
 const Content = lazy(() => import("./sub-components/About/Content"));
 
-function About( {content} ) {
-
+function About({ content }) {
     About.propTypes = {
-        content: PropTypes.arrayOf(
-            PropTypes.shape({
-                title: PropTypes.string.isRequired,
-                titleBold: PropTypes.string.isRequired,
-                placeholderText: PropTypes.string.isRequired,
-                alter: PropTypes.string.isRequired,
-                image: PropTypes.node.isRequired,
-            })
-        ),
+        content: PropTypes.shape({
+            title: PropTypes.string.isRequired,
+            titleBold: PropTypes.string.isRequired,
+            placeholderText: PropTypes.string.isRequired,
+            alter: PropTypes.string.isRequired,
+            image: PropTypes.node.isRequired,
+        }).isRequired,
     };
+
 
     return (
         <Wrap>
             <Container>
                 <Suspense fallback={<div>Loading...</div>}>
-                    <Image
-                        image={content.image}
-                        alter={content.alter}
-                    />
+                    <Image image={content.image} alter={content.alter} />
 
                     <Content
                         title={content.title}
