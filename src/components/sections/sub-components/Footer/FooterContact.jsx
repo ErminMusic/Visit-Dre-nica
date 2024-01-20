@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
-import InstagramIcon from '@mui/icons-material/Instagram';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import EmailIcon from '@mui/icons-material/Email';
-import PhoneIcon from '@mui/icons-material/Phone';
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import EmailIcon from "@mui/icons-material/Email";
+import PhoneIcon from "@mui/icons-material/Phone";
 
 function FooterContact() {
     const contact = {
@@ -11,24 +11,28 @@ function FooterContact() {
         email: "visitdreznica@gmail.com",
         social: "Visit Drežnica",
         igLink: "https://www.instagram.com/visitdreznica/",
-        fbLink: "https://www.facebook.com/visitdreznica"
-    }
+        fbLink: "https://www.facebook.com/visitdreznica",
+    };
 
     return (
         <Container>
             <Title>{contact.title}</Title>
             <Links>
                 <LinkHolder>
-                    <CustomIG /><a href={`${contact.igLink}`}>Instagram</a>
+                    <CustomIG />
+                    <a href={`${contact.igLink}`}>Instagram</a>
                 </LinkHolder>
                 <LinkHolder>
-                    <CustomFB /><a href={`${contact.fbLink}`}>FaceBook</a>
+                    <CustomFB />
+                    <a href={`${contact.fbLink}`}>FaceBook</a>
                 </LinkHolder>
                 <LinkHolder>
-                    <CustomMail /><p>{contact.email}</p>
+                    <CustomMail />
+                    <p>{contact.email}</p>
                 </LinkHolder>
                 <LinkHolder>
-                    <CustomPhone /><p>{contact.phone}</p>
+                    <CustomPhone />
+                    <p>{contact.phone}</p>
                 </LinkHolder>
             </Links>
         </Container>
@@ -72,9 +76,11 @@ const Links = styled.div`
 const LinkHolder = styled.div`
     display: flex;
     align-items: center;
-    a, p {
-        margin: 0 8px;
+    padding: 10px 0;
+    a,p {
         text-decoration: none;
         color: white;
+        margin-left: 8px;
+        font-size: 16px;
     }
 `;
