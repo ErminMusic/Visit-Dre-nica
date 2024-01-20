@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 function GalerySlider({ images }) {
     const settings = {
         className: "slider variable-width",
-        dots: true,
+        dots: false,
         infinite: true,
         centerMode: true,
         slidesToShow: 1,
@@ -73,10 +73,6 @@ const StyledSlider = styled(Slider)`
         }
     }
 
-    .slick-dots li{
-        
-    }
-
     .slick-list {
         overflow: hidden;
         display: block;
@@ -86,7 +82,6 @@ const StyledSlider = styled(Slider)`
 
     .slick-prev::before,
     .slick-next::before {
-        color: #8fbc8f;
         display: none;
     }
 `;
