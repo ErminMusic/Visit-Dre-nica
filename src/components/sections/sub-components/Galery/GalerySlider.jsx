@@ -59,7 +59,7 @@ const Container = styled.div`
 const StyledSlider = styled(Slider)`
     width: 100%;
     border: none;
-    
+
     ul li button {
         color: white;
 
@@ -87,6 +87,16 @@ const ImageHolder = styled.div`
 
     @media (max-width: 1100px) {
         height: 330px;
+        width: auto;
+    }
+
+    @media (max-width: 850px) {
+        height: 250px;
+        width: auto;
+    }
+
+    @media (max-width: 600px) {
+        height: 200px;
         width: auto;
     }
 `;

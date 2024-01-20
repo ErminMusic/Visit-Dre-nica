@@ -28,6 +28,7 @@ const Wrap = styled.div`
     flex-direction: column;
     padding: 36px 0;
     color: #525252;
+    overflow: hidden;
 `;
 
 const Title = styled.h1``;
