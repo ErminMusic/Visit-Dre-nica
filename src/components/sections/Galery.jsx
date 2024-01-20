@@ -25,7 +25,7 @@ const Wrap = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 36px 0;
+    padding: 36px 0 48px 0;
     color: #525252;
     overflow: hidden;
 `;

@@ -88,7 +88,6 @@ const Carousel = styled(Slider)`
 
     .slick-prev::before,
     .slick-next::before {
-        color: #8fbc8f;
         display: none;
     }
 

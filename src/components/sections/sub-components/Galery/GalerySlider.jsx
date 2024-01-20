@@ -1,21 +1,30 @@
 import styled from "styled-components";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
 import PropTypes from "prop-types";
+import Slider from "react-slick";
+
+function SamplePrevArrow(props) {
+    const { className, onClick } = props;
+    return (
+        <div
+            className={className}
+            style={{ cursor: "default", display: "none" }}
+            onClick={onClick}
+        />
+    );
+}
+
+function SampleNextArrow(props) {
+    const { className, onClick } = props;
+    return (
+        <div
+            className={className}
+            style={{ cursor: "default", display: "none" }}
+            onClick={onClick}
+        />
+    );
+}
 
 function GalerySlider({ images }) {
-    const settings = {
-        className: "slider variable-width",
-        dots: true,
-        infinite: true,
-        centerMode: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        variableWidth: true,
-        swipeToSlide: true,
-    };
-
     GalerySlider.propTypes = {
         images: PropTypes.arrayOf(
             PropTypes.shape({
@@ -25,12 +34,34 @@ function GalerySlider({ images }) {
         ).isRequired,
     };
 
+    SamplePrevArrow.propTypes = {
+        className: PropTypes.string,
+        onClick: PropTypes.func,
+    };
+
+    SampleNextArrow.propTypes = {
+        className: PropTypes.string,
+        onClick: PropTypes.func,
+    };
+
+    const settings = {
+        className: "slider variable-width",
+        dots: true,
+        infinite: true,
+        centerMode: true,
+        swipeToSlide: true,
+        slidesToShow: 1,
+        variableWidth: true,
+        nextArrow: <SampleNextArrow />,
+        prevArrow: <SamplePrevArrow />,
+    };
+
     return (
         <Container>
             <StyledSlider {...settings}>
-                {images.map((item, index) => (
+                {images.map((image, index) => (
                     <ImageHolder key={index}>
-                        <Image alt={item.alter} src={item.image} />
+                        <Image alt={image.alter} src={image.image} />
                     </ImageHolder>
                 ))}
             </StyledSlider>
@@ -42,7 +73,6 @@ const Container = styled.div`
     width: 80%;
     height: auto;
     display: flex;
-    height: 450px;
     justify-content: center;
     flex-direction: column;
 
@@ -62,29 +92,31 @@ const Container = styled.div`
 
 const StyledSlider = styled(Slider)`
     width: 100%;
-    border: none;
 
-    ul li button {
-        color: white;
-        &:before {
-            font-size: 15px;
-            color: rgb(0, 0, 0);
-            margin-top: 15px;
+    .slick-dots {
+        bottom: -30px;
+        li {
+            margin: 0 5px;
+            button {
+                font-size: 20px;
+                width: 20px;
+                height: 20px;
+                margin: 0 5px;
+                &.slick-active {
+                    background-color: #4caf50; 
+                }
+
+                &:before {
+                    font-size: 15px;
+                    color: rgb(0, 0, 0);
+                }
+            }
         }
     }
 
-    .slick-list {
-        overflow: hidden;
-        display: block;
-        width: 100%;
-        height: auto;
-    }
-
-    .slick-prev::before,
-    .slick-next::before {
-        display: none;
-    }
 `;
+
+export default GalerySlider;
 
 const ImageHolder = styled.div`
     height: 400px;
@@ -110,6 +142,5 @@ const ImageHolder = styled.div`
 const Image = styled.img`
     height: 100%;
     width: auto;
+    object-fit: cover;
 `;
-
-export default GalerySlider;
