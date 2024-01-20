@@ -4,7 +4,7 @@ import logo from "../../../../assets/Logo.webp";
 function HeaderLogo() {
     return (
         <>
-            <a href="/">
+            <Link href="/">
                 <Logo>
                     <LogoImage
                         alt="Logo"
@@ -17,13 +17,17 @@ function HeaderLogo() {
                         VISIT <br />DREŽNICA
                     </Title>
                 </Logo>
-            </a>
+            </Link>
         </>
     );
 }
 
 export default HeaderLogo;
 
+
+const Link = styled.a`
+    text-decoration: none;
+`;
 const Logo = styled.div`
     display: flex;
     align-items: center;

@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import AboutImg from "../../assets/About.webp";
 import AboutVisitImg from "../../assets/AboutVisitDreznica.webp";
+import styled from "styled-components";
 const About = lazy(() => import("../sections/About"));
 const RoomEquipment = lazy(() => import("../sections/RoomEquipment"));
 const Rooms = lazy(() => import("../sections/Rooms"));
@@ -27,7 +28,7 @@ function Home() {
         image: AboutVisitImg,
     };
     return (
-        <>
+        <Container>
             <Suspense fallback={<div>Loading...</div>}>
                 <About content={AboutDreznica} />
                 <Strip />
@@ -38,8 +39,12 @@ function Home() {
                 <About content={AboutVisitDreznica} />
                 <Galery />
             </Suspense>
-        </>
+        </Container>
     );
 }
 
 export default Home;
+
+const Container = styled.div`
+    overflow: hidden;
+`;
