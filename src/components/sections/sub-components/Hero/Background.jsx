@@ -28,6 +28,7 @@ const BackgroundImage = styled.img`
     width: 100%;
     height: 100vh;
     object-fit: cover;
+    object-position: center;
 `;
 const BackgroundOverlay = styled.div`
     position: absolute;
@@ -40,7 +41,7 @@ const BackgroundOverlay = styled.div`
     z-index: 2;
     background: linear-gradient(
         to right,
-        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0.9) 2%,
         rgba(0, 0, 0, 0) 100%
     );
 `;
