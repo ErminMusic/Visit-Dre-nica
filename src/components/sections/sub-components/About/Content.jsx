@@ -7,21 +7,33 @@ function Content({ content, title, titleBold }) {
         titleBold: PropTypes.string.isRequired,
         content: PropTypes.string.isRequired,
     };
-
+    const renderContent = () => {
+        const paragraphs = content.split("\n").map((paragraph, index) => {
+            if (paragraph.includes("<strong>") && paragraph.includes("</strong>")) {
+                const parts = paragraph.split(/<\/?strong>/);
+                return (
+                    <Text key={index}>
+                        {parts.map((part, partIndex) => {
+                            return partIndex % 2 === 0 ? (
+                                <span key={partIndex}>{part}</span>
+                            ) : (
+                                <strong key={partIndex}>{part}</strong>
+                            );
+                        })}
+                    </Text>
+                );
+            } else {
+                return <Text key={index}>{paragraph}</Text>;
+            }
+        });
+        return paragraphs;
+    };
     return (
         <ContentHolder>
             <h1>
                 {title} <span>{titleBold}</span>
             </h1>
-            <Text>
-                {content}
-                <br />
-                <br />
-                {content}
-                <br />
-                <br />
-                {content}
-            </Text>
+            {renderContent()}
         </ContentHolder>
     );
 }

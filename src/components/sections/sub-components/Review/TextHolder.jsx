@@ -15,6 +15,11 @@ const TextHolder = ({ date, title, description }) => {
         overflow: "hidden",
         display: "-webkit-box",
     };
+    const paragraphs = description.split('\n').map((paragraph, index) => (
+        <Description key={index}>
+            {paragraph}
+        </Description>
+    ));
 
     return (
         <TextContainer>
@@ -22,9 +27,9 @@ const TextHolder = ({ date, title, description }) => {
                 Reviewed:<br />{date}
             </p>
             <Title>{title}</Title>
-            <Description style={showDescriptionStyle}>
-                {description}
-            </Description>
+            <div style={showDescriptionStyle}>
+                {paragraphs}
+            </div>
             {description.length > 200 && (
                 <ReadMoreButton onClick={() => setIsOpen(!isOpen)}>
                     {isOpen ? "Read Less" : "Read More"}

@@ -12,18 +12,21 @@ const Galery = lazy(() => import("../sections/Galery"));
 
 function Home() {
     const AboutDreznica = {
-        title: "About ",
-        titleBold: "Drežnica",
-        placeholderText:
-            "Drežnica Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quasi minima ipsa quisquam magnam optio corporis.",
+        title: "Why you should ",
+        titleBold: "visit Drežnica",
+        placeholderText: 
+        `If you're <strong>drawn to the serene beauty of nature</strong> and crave an escape from humdrum routine and daily stress, Drežnica is the place for you.\n\n
+        Surrounded by breathtaking mountains with a tranquil emerald river going through and untouched nature stretching as far as the eye can see…\n\n 
+        Drežnica offers an unforgettable blend of adventure and peace.\n\n
+        After visiting Drežnica, you'll be eager to share your exhilarating adventures with friends and family, captivating them with tales of discovering hidden gems in its untouched wilderness.\n\n
+        `,
         alter: "About Image",
         image: AboutImg,
     };
     const AboutVisitDreznica = {
         title: "About ",
         titleBold: "Visit Drežnica",
-        placeholderText:
-            "Visit Drežnica Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quasi minima ipsa quisquam magnam optio corporis.",
+        placeholderText: "afdwdaw",
         alter: "About Image",
         image: AboutVisitImg,
     };

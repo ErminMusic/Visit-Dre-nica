@@ -7,7 +7,7 @@ function Map() {
     const getMap = async () => {
         setTimeout(() => {
             setLink(
-                "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5786.303317160787!2d17.731311646383094!3d43.52003006901677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134b496843754719%3A0xc078175d63de19d1!2sDreznica%20hostel!5e0!3m2!1sbs!2sba!4v1705777282591!5m2!1sbs!2sba",
+                "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2045.744180288838!2d17.737734467960276!3d43.52070770028315!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134b49b40024e361%3A0xb62f48c40b715b50!2sVISIT%20DREZNICA%20-%20info%20point!5e0!3m2!1sbs!2sba!4v1705833777320!5m2!1sbs!2sba",
                 { passive: "true" }
             );
         }, 3000);

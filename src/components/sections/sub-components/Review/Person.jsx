@@ -34,7 +34,7 @@ export default Person;
 
 const Container = styled.div`
     display: flex;
-     justify-content: space-between;
+    justify-content: space-between;
     padding: 8px;
 `;
 const PersonHolder = styled.div`
@@ -77,7 +77,7 @@ const Score = styled.div`
     height: 50px;
     width: 50px;
     border-radius: 10px 10px 10px 0;
-    background-color: #8fbc8f;
+    background-color: #003b95;
     display: flex;
     justify-content: center;
     align-items: center;
