@@ -5,33 +5,40 @@ function Content({ content, title, titleBold }) {
     Content.propTypes = {
         title: PropTypes.string.isRequired,
         titleBold: PropTypes.string.isRequired,
-        content: PropTypes.string.isRequired,
+        content: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.shape({
+                __html: PropTypes.string.isRequired,
+            }),
+            PropTypes.arrayOf(
+                PropTypes.shape({
+                    __html: PropTypes.string.isRequired,
+                })
+            ).isRequired,
+        ]).isRequired,
     };
+
     const renderContent = () => {
-        const paragraphs = content.split("\n").map((paragraph, index) => {
-            if (paragraph.includes("<strong>") && paragraph.includes("</strong>")) {
-                const parts = paragraph.split(/<\/?strong>/);
-                return (
-                    <Text key={index}>
-                        {parts.map((part, partIndex) => {
-                            return partIndex % 2 === 0 ? (
-                                <span key={partIndex}>{part}</span>
-                            ) : (
-                                <strong key={partIndex}>{part}</strong>
-                            );
-                        })}
-                    </Text>
-                );
-            } else {
-                return <Text key={index}>{paragraph}</Text>;
-            }
-        });
-        return paragraphs;
+        if (Array.isArray(content)) {
+            return content.map((item, index) => (
+                <Paragraph key={index} dangerouslySetInnerHTML={item} />
+            ));
+        } else if (typeof content === "object" && content.__html) {
+            return <Paragraph dangerouslySetInnerHTML={content} />;
+        } else if (typeof content === "string") {
+            const paragraphs = content
+                .split("\n")
+                .map((paragraph, index) => (
+                    <Paragraph key={index}>{paragraph}</Paragraph>
+                ));
+            return paragraphs;
+        }
     };
     return (
         <ContentHolder>
             <h1>
-                {title} <span>{titleBold}</span>
+                <span>{titleBold}</span>
+                {title}
             </h1>
             {renderContent()}
         </ContentHolder>
@@ -61,6 +68,7 @@ const ContentHolder = styled.div`
         width: 100%;
     }
 `;
-const Text = styled.p`
-    margin: 12px 0 0 0;
+
+const Paragraph = styled.p`
+    margin: 16px 0 0 0;
 `;

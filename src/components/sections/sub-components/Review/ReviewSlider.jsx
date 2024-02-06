@@ -27,6 +27,7 @@ function ReviewSlider({ list }) {
                 date: PropTypes.string.isRequired,
                 title: PropTypes.string.isRequired,
                 description: PropTypes.string.isRequired,
+                disliked: PropTypes.string.isRequired,
             })
         ).isRequired,
     };
@@ -46,6 +47,7 @@ function ReviewSlider({ list }) {
                         date={item.date}
                         title={item.title}
                         description={item.description}
+                        disliked={item.disliked}
                     />
                 </Container>
             ))}

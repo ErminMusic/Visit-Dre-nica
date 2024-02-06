@@ -46,6 +46,10 @@ const Holder = styled.div`
         margin: 20px;
         width: 35%;
     }
+    @media (max-width: 350px) {
+        width: 140px;
+        height: 140px;
+    }
 `;
 
 const Wrapper = styled.div`

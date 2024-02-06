@@ -2,12 +2,13 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-const TextHolder = ({ date, title, description }) => {
+const TextHolder = ({ date, title, description, disliked }) => {
     const [isOpen, setIsOpen] = useState(false);
     TextHolder.propTypes = {
         date: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired,
         description: PropTypes.string.isRequired,
+        disliked: PropTypes.string.isRequired,
     };
     const showDescriptionStyle = {
         WebkitLineClamp: isOpen ? "unset" : 4,
@@ -20,6 +21,11 @@ const TextHolder = ({ date, title, description }) => {
             {paragraph}
         </Description>
     ));
+    const dislike = disliked.split('\n').map((paragraph, index) => (
+        <Description key={index}>
+            {paragraph}
+        </Description>
+    ));
 
     return (
         <TextContainer>
@@ -28,7 +34,10 @@ const TextHolder = ({ date, title, description }) => {
             </p>
             <Title>{title}</Title>
             <div style={showDescriptionStyle}>
+                <span>Liked:</span>
                 {paragraphs}
+                <span>Disliked:</span>
+                {dislike}
             </div>
             {description.length > 200 && (
                 <ReadMoreButton onClick={() => setIsOpen(!isOpen)}>
@@ -45,6 +54,10 @@ const TextContainer = styled.div`
     p {
         margin: 8px 0;
     }
+    span {
+        font-size: 18px;
+        font-weight: bold;
+    }
 `;
 const Description = styled.p`
     margin: 8px 0;
@@ -58,7 +71,7 @@ const ReadMoreButton = styled.button`
     margin: 8px 0;
     padding: 0;
     outline: none;
-    font-size: 16px;
+    font-size: 18px;
 `;
 const Title = styled.h2`
     margin: 12px 0;

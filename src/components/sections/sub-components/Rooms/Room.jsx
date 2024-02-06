@@ -36,14 +36,31 @@ const Room = ({ roomContent }) => {
                     <ContentHolder>
                         <Content>
                             <Title>{item.title}</Title>
-                            <p>{item.description}</p>
+                            <RoomDescription>
+                                <p>{item.description}</p>
+                            </RoomDescription>
                             <IconHolder>
                                 <Suspense fallback={<div>Loading...</div>}>
-                                    <IconSection iconSrc={PeopleIcon} text={item.people}/>
-                                    <IconSection iconSrc={SizeIcon} text={item.size}/>
-                                    <IconSection iconSrc={BedIcon} text={item.bed}/>
-                                    <IconSection iconSrc={ViewIcon} text={item.view}/>
-                                    <IconSection iconSrc={BathIcon} text={item.bathroom}/>
+                                    <IconSection
+                                        iconSrc={PeopleIcon}
+                                        text={item.people}
+                                    />
+                                    <IconSection
+                                        iconSrc={SizeIcon}
+                                        text={item.size}
+                                    />
+                                    <IconSection
+                                        iconSrc={BedIcon}
+                                        text={item.bed}
+                                    />
+                                    <IconSection
+                                        iconSrc={ViewIcon}
+                                        text={item.view}
+                                    />
+                                    <IconSection
+                                        iconSrc={BathIcon}
+                                        text={item.bathroom}
+                                    />
                                 </Suspense>
                             </IconHolder>
                             <Suspense fallback={<div>Loading...</div>}>
@@ -85,6 +102,21 @@ const Content = styled.div`
 const Title = styled.p`
     font-size: 18px;
     font-weight: bold;
+`;
+const RoomDescription = styled.div`
+    min-height: 160px;
+    @media (min-width: 1101px) {
+        min-height: 100px;
+    }
+    @media (max-width: 1100px) {
+        min-height: 130px;
+    }
+    @media (max-width: 950px) {
+        min-height: 150px;
+    }
+    @media (max-width: 700px) {
+        min-height: auto;
+    }
 `;
 const IconHolder = styled.div`
     width: 100%;

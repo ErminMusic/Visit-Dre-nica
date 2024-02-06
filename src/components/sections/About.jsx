@@ -9,12 +9,25 @@ function About({ content }) {
         content: PropTypes.shape({
             title: PropTypes.string.isRequired,
             titleBold: PropTypes.string.isRequired,
-            placeholderText: PropTypes.string.isRequired,
+            generalDescription: PropTypes.arrayOf(
+                PropTypes.shape({
+                    __html: PropTypes.string.isRequired,
+                })
+            ).isRequired,
+            mountainDescription: PropTypes.arrayOf(
+                PropTypes.shape({
+                    __html: PropTypes.string.isRequired,
+                })
+            ).isRequired,
+            riverDescription: PropTypes.arrayOf(
+                PropTypes.shape({
+                    __html: PropTypes.string.isRequired,
+                })
+            ).isRequired,
             alter: PropTypes.string.isRequired,
             image: PropTypes.node.isRequired,
         }).isRequired,
     };
-
     return (
         <Wrap>
             <Container>
@@ -23,7 +36,27 @@ function About({ content }) {
                     <Content
                         title={content.title}
                         titleBold={content.titleBold}
-                        content={content.placeholderText}
+                        content={content.generalDescription}
+                    />
+                </Suspense>
+            </Container>
+            <FlipContainer>
+                <Suspense fallback={<div>Loading...</div>}>
+                    <Image image={content.image} alter={content.alter} />
+                    <Content
+                        title=""
+                        titleBold=""
+                        content={content.mountainDescription}
+                    />
+                </Suspense>
+            </FlipContainer>
+            <Container>
+                <Suspense fallback={<div>Loading...</div>}>
+                    <Image image={content.image} alter={content.alter} />
+                    <Content
+                        title=""
+                        titleBold=""
+                        content={content.riverDescription}
                     />
                 </Suspense>
             </Container>
@@ -40,13 +73,26 @@ const Wrap = styled.div`
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     padding: 36px 0;
 `;
 const Container = styled.div`
     width: 80%;
+    margin: 24px 0;
     height: auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    @media (max-width: 850px) {
+        width: 95%;
+    }
+    @media (max-width: 700px) {
+        flex-direction: column;
+        align-items: center;
+    }
+`;
+const FlipContainer = styled(Container)`
+    flex-direction: row-reverse;
     @media (max-width: 850px) {
         width: 95%;
     }
