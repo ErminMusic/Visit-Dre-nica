@@ -87,11 +87,11 @@ const Container = styled.div`
 const StyledSlider = styled(Slider)`
     width: 100%;
 
-    @media (max-width: 380px) {
+    @media (max-width: 440px) {
         max-height: 210px;
         .slick-dots {
             li {
-                bottom: -25px;
+                bottom: -18px;
             }
         }
     }
