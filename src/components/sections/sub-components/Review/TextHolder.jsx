@@ -80,5 +80,5 @@ const ReadMoreButton = styled.button`
     font-size: 18px;
 `;
 const Title = styled.h2`
-    margin: 12px 0;
+    margin: 14px 0;
 `;

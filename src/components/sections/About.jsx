@@ -87,8 +87,9 @@ const Container = styled.div`
         width: 95%;
     }
     @media (max-width: 700px) {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
+        margin: 12px 0;
     }
 `;
 const FlipContainer = styled(Container)`
@@ -97,7 +98,7 @@ const FlipContainer = styled(Container)`
         width: 95%;
     }
     @media (max-width: 700px) {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
     }
 `;

@@ -60,8 +60,8 @@ function Home() {
         image: AboutImg,
     };
     const AboutVisitDreznica = {
-        title: "About ",
-        titleBold: "Visit Drežnica",
+        title: "Visit Drežnica",
+        titleBold: "About ",
         aboutUsDescription: "afdwdaw",
         alter: "About Image",
         image: AboutVisitImg,
