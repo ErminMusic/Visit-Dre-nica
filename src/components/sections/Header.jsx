@@ -3,22 +3,10 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import NavItems from "./sub-components/Header/NavItems";
 import HeaderLogo from "./sub-components/Header/HeaderLogo";
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 
 function Header() {
     const [isMenuOpen, setMenuOpen] = useState(false);
-    const menuRef = useRef(null);
-    useEffect(() => {
-        function handleClickOutside(event) {
-            if (menuRef.current && !menuRef.current.contains(event.target)) {
-                setMenuOpen(false);
-            }
-        }
-        document.addEventListener("mousedown", handleClickOutside);
-        return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
-        };
-    }, [menuRef]);
     const toggleMenu = () => {
         setMenuOpen(!isMenuOpen);
     };
@@ -26,7 +14,7 @@ function Header() {
         <Wrapper>
             <Container>
                 <HeaderLogo />
-                <NavBar ref={menuRef} $isMenuOpen={isMenuOpen}>
+                <NavBar $isMenuOpen={isMenuOpen}>
                     <NavItems />
                 </NavBar>
                 <MenuHolder>
