@@ -3,9 +3,6 @@ import styled from "styled-components";
 function Buttons() {
     return (
         <ButtonHolder>
-            <MoreButton>
-                <span>LEARN </span>MORE
-            </MoreButton>
             <BookButton>
                 <span>BOOK</span> THIS ROOM
             </BookButton>
@@ -22,7 +19,7 @@ const ButtonHolder = styled.div`
     align-items: center;
     width: 100%;
 `;
-const MoreButton = styled.div`
+const BookButton = styled.div`
     width: 100%;
     position: relative;
     text-align: center;
@@ -30,7 +27,7 @@ const MoreButton = styled.div`
     cursor: pointer;
     color: white;
     border-radius: 10px;
-    background-color: #8fbc8f;
+    background-color: #507d7f;
     z-index: 50;
     &::after {
         content: "";
@@ -54,14 +51,6 @@ const MoreButton = styled.div`
     }
     &:hover {
         transition: 250ms;
-        background-color: white;
-        color: #8fbc8f;
-    }
-`;
-const BookButton = styled(MoreButton)`
-    background-color: #507d7f;
-    margin-top: 20px;
-    &:hover {
         background-color: white;
         color: #507d7f;
     }

@@ -1,22 +1,37 @@
 import styled from "styled-components";
-import { GuestReviews } from "../data/GuestReview";
 import { lazy, Suspense } from "react";
+import PropTypes from "prop-types"; 
 const ReviewSlider = lazy(() => import("./sub-components/Review/ReviewSlider"));
 
-function Testimonials() {
+function Review( {guestInfo} ) {
+    Review.propTypes = {
+        guestInfo: PropTypes.arrayOf(
+            PropTypes.shape({
+                name: PropTypes.string.isRequired,
+                profileImage: PropTypes.node.isRequired,
+                countryName: PropTypes.node.isRequired,
+                flag: PropTypes.node.isRequired,
+                score: PropTypes.string.isRequired,
+                date: PropTypes.string.isRequired,
+                title: PropTypes.string.isRequired,
+                description: PropTypes.string.isRequired,
+                disliked: PropTypes.string.isRequired,
+            })
+        ).isRequired,
+    };
     return (
         <Wrap>
             <TitleHolder>
                 <h1>See what our guests loved the most:</h1>
             </TitleHolder>
             <Suspense fallback={<div>Loading...</div>}>
-                <ReviewSlider list={GuestReviews} />
+                <ReviewSlider list={guestInfo} />
             </Suspense>
         </Wrap>
     );
 }
 
-export default Testimonials;
+export default Review;
 
 const Wrap = styled.div`
     background-color: #f8f5df;

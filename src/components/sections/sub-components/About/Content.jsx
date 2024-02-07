@@ -50,9 +50,11 @@ export default Content;
 const ContentHolder = styled.div`
     width: 45%;
     padding: 16px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     h1 {
         font-weight: normal;
-
         span {
             font-weight: bold;
         }

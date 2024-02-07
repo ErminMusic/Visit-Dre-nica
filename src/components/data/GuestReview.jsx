@@ -1,49 +1,73 @@
-import ProfilePictureOne from "../../assets/ProfilePlaceholder.webp";
-import FlagOne from "../../assets/Flag.webp";
+import ImagePlaceholder from "../../assets/Reviews/ProfilePlaceholder.webp";
+import Finland from "../../assets/Reviews/Finska.webp";
+import Venezuela from "../../assets/Reviews/Venecuela.webp";
+import France from "../../assets/Reviews/Francuska.webp";
+import Italy from "../../assets/Reviews/Italija.webp";
+import PeppiImage from "../../assets/Reviews/PeppiImage.webp";
+export const GuestReview = [
+    {
+        name: "Peppi",
+        profileImage: PeppiImage,
+        flag: Finland,
+        countryName: "Finland",
+        score: "10",
+        date: "07/11/2023",
+        title: "There is just something magical about this place",
+        description: `Amazing place to stay. The owner Dino is the friendliest, most helpful person you can meet and genuinely wants you to enjoy yourself in Drežnica. I had a cold during my stay and he brought everything I needed from the city and served me tea and soup.\n
 
-export const GuestReviews = [
-    {
-        name: "First Last 1",
-        profileImage: ProfilePictureOne,
-        flag: FlagOne,
-        countryName: "Venezuela",
-        score: "10",
-        date: "18/01/2024",
-        title: "I planned on staying for 2 nights, ended up staying 2 weeks!",
-        description: `I've stayed in this lovely place just for one night, intimately say that but I had very fun. If you'll be around Mostar, you need to visit and stay in this place. It has a great lake and mountain view. Dino is a very kind and helpful person. Thanks a lot for this experience.`,
-        disliked: `The Bees`
+        The accommodation rooms were exactly as the pictures let me expect, even with the most amazing scenery. The soul can really rest in these landscapes. On the other side of the bridge, a restaurant and a train stop literally outside the yard area.\n 
+        
+        It's also convenient to get there by bus( I come from Mostar), for those who don't have their own car. I heard that several guests have extended their stay and I'm not surprised at all, because there is just something magical about this place. I highly recommend it!`,
+        disliked: `Nothing, only that I had to leave. In addition, I heard that the outdoor "kitchen area" is being improved soon, which is nice.\n`,
     },
     {
-        name: "Raoul Poenar",
-        profileImage: ProfilePictureOne,
-        flag: FlagOne,
+        name: "Rayru",
+        profileImage: ImagePlaceholder,
+        flag: Venezuela,
         countryName: "Venezuela",
         score: "10",
-        date: "18/01/2024",
-        title: "I planned on staying for 2 nights, ended up staying 2 weeks!",
-        description: `I felt incredibly good here. Dino and his mom are incredibly warm and open persons. The room was really clean and comfortable and the views from the house are incredible.`,
-        disliked: `The Bees`
+        date: "23/08/2023",
+        title: "I came to stay for 2 nights and ended up staying 15 nights. This is how great my stay here was!",
+        description: `Everything about my stay at Dino's was incredible, but what is truly amazing is how warm and welcoming he and his Mother and Sister are, they truly made me feel like I was at home. \n\n
+
+        I planned to come for a few nights and ended up staying a few weeks this is how good I feel here. I work remotely and the internet worked really well for my online call needs, in between I would just jump in the river to cool down from the unforgiving summer heat or just catch a boat ride with Dino. 
+        
+        It is convenient that the train stops at the very property so you can travel easily from and to Sarajevo or Mostar and it is really a beautiful train ride! Generally, Dino was always willing to help with whatever I needed and show me around town. \n\n
+        
+        The cherry on top of the cake? Dino's Mom Sabina cooks THE BEST meals! Being breakfast lunch or dinner, it was just delicious. I am really thankful I got to spend these two weeks here and I most definitely will be back! P.S.: Dino is best known as Dinosaurio!\n\n
+        `,
+        disliked: `Honestly I have zero complaints from my stay here!`,
     },
     {
-        name: "First Last 3",
-        profileImage: ProfilePictureOne,
-        flag: FlagOne,
-        countryName: "Venezuela",
+        name: "Oumayma",
+        profileImage: ImagePlaceholder,
+        flag: France,
+        countryName: "France",
         score: "10",
         date: "18/01/2024",
-        title: "I planned on staying for 2 nights, ended up staying 2 weeks!",
-        description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit.\n\nNobis, molestiae, quia ipsum dicta repellendus sequi corporis sit omnis iste explicabo delectus`,
-        disliked: `The Bees`
+        title: "The highlight of my trip & beyond all expectations!",
+        description: `One of the best places I have ever stayed in. Dino and his mom were super nice and very welcoming. You immediately feel like you're at home. \n\n
+
+        Mrs. Sabina, Dino's mom, is an incredible cook (the best cevapi I've had were hers, and I tried a bunch). Dino offered me a boat ride to show me around. You can swim in the lake, and the water is very clean and not cold.\n\n
+        
+        Dino was always helpful and there when I needed anything. He even offered to come and pick me up from Mostar and drive me around to show me the other side of Drežnica. \n\n
+        
+        Drežnica's nature is simply breathtaking. When you're there, you can't help but feel a profound sense of tranquility and overwhelming peace.\n\n`,
+        disliked: `Nothing to dislike.`,
     },
     {
-        name: "First Last 4",
-        profileImage: ProfilePictureOne,
-        flag: FlagOne,
-        countryName: "Venezuela",
+        name: "Alessandro",
+        profileImage: ImagePlaceholder,
+        flag: Italy,
+        countryName: "Italy",
         score: "10",
-        date: "18/01/2024",
-        title: "I planned on staying for 2 nights, ended up staying 2 weeks!",
-        description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, molestiae, quia ipsum dicta repellendus sequi corporis sit omnis iste explicabo delectus id repellat debitis obcaecati. Laboriosam necessitatibus id aliquam voluptatem.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, molestiae, quia ipsum dicta repellendus sequi corporis sit omnis iste explicabo delectus id repellat debitis obcaecati. Laboriosam necessitatibus id aliquam \n\nvoluptatem. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, molestiae, quia ipsum dicta repellendus sequi corporis sit omnis iste explicabo delectus id repellat debitis obcaecati. Laboriosam necessitatibus id aliquam voluptatem.            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, molestiae, quia ipsum dicta repellendus sequi corporis sit omnis iste explicabo delectus id repellat debitis obcaecati. Laboriosam necessitatibus id aliquam voluptatem.`,
-        disliked: `The Bees`
+        date: "26/05/2022",
+        title: "Exceptional",
+        description: `The location deserves a 10+10 as a vote. Fantastic. Don't miss the chance to stay at Dino's and his family's apartment. You are greeted by extraordinary people who will make you really feel at home.\n\n
+
+        The beauty of the view from your room is indescribable for how beautiful it is. Excellent breakfast is served in the garden, a stone's throw from the river. Highly recommended for families with children in my opinion. \n\n
+        
+        I had a really good time and will definitely be back. Again, for what you pay you will be satisfied and enthusiastic. Excellent value for money.\n\n`,
+        disliked: `The repair. Would have happily stayed`,
     },
 ];

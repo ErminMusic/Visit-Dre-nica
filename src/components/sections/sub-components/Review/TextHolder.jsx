@@ -16,21 +16,23 @@ const TextHolder = ({ date, title, description, disliked }) => {
         overflow: "hidden",
         display: "-webkit-box",
     };
-    const paragraphs = description.split('\n').map((paragraph, index) => (
-        <Description key={index}>
-            {paragraph}
-        </Description>
-    ));
-    const dislike = disliked.split('\n').map((paragraph, index) => (
-        <Description key={index}>
-            {paragraph}
-        </Description>
-    ));
+    const paragraphs = description
+        .split("\n")
+        .map((paragraph, index) => (
+            <Description key={index}>{paragraph}</Description>
+        ));
+    const dislike = disliked
+        .split("\n")
+        .map((paragraph, index) => (
+            <Description key={index}>{paragraph}</Description>
+        ));
 
     return (
         <TextContainer>
             <p>
-                Reviewed:<br />{date}
+                Reviewed:
+                <br />
+                {date}
             </p>
             <Title>{title}</Title>
             <div style={showDescriptionStyle}>
@@ -39,7 +41,7 @@ const TextHolder = ({ date, title, description, disliked }) => {
                 <span>Disliked:</span>
                 {dislike}
             </div>
-            {description.length > 200 && (
+            {description.length > 150 && (
                 <ReadMoreButton onClick={() => setIsOpen(!isOpen)}>
                     {isOpen ? "Read Less" : "Read More"}
                 </ReadMoreButton>
@@ -54,14 +56,18 @@ const TextContainer = styled.div`
     p {
         margin: 8px 0;
     }
-    span {
-        font-size: 18px;
-        font-weight: bold;
+    div {
+        span {
+            font-size: 18px;
+            font-weight: bold;
+            padding: 12px 0;
+        }
     }
 `;
 const Description = styled.p`
     margin: 8px 0;
 `;
+
 const ReadMoreButton = styled.button`
     background: none;
     border: none;
