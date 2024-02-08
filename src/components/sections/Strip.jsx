@@ -50,7 +50,7 @@ const Container = styled.div`
     align-items: center;
     margin: 0 0 16px 0;
     padding: 6px 0;
-    border-bottom: 2px solid #f7f0b6;
+    border-bottom: 2.5px solid #f7f0b6;
     @media (max-width: 850px) {
         width: 100%;
     }

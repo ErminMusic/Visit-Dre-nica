@@ -13,12 +13,12 @@ function RoomEquipment() {
         bold: "Outdoors:",
     };
     const bathroom = {
-        normal: "Include: ",
-        bold: "Bathroom ",
+        normal: "Includes: ",
+        bold: "The Bathroom ",
     };
     const service = {
-        normal: "Include:",
-        bold: "Services ",
+        normal: "",
+        bold: "Services:",
     };
 
     return (

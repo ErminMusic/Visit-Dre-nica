@@ -67,12 +67,12 @@ export const RoomsInclude = [
     {
       icon: Security,
       alter: "Security",
-      text: "Security"
+      text: "24-Hour Security"
     },
     {
       icon: CCTV,
       alter: "CCTV",
-      text: "CCTV of the outside property"
+      text: "CCTV of the Outside Property"
     },
   ]
 

@@ -24,17 +24,6 @@ export const RoomDetails = [
         bathroom: "Shared Bathroom",
     },
     {
-        title: "Quadruple Room with Balcony",
-        people: "4 Adults",
-        view: "Lake View",
-        bed: "3 Single, 1 Double and 1 Sofa Bed",
-        size: "20sqm",
-        description:
-            "33333Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur aperiam voluptatem, necessitatibus iure optio incidunt rerum? Explicabo, aut facere nihil maxime vel consequuntur. Sed magnam eligendi, velit dolorum iste necessitatibus.",
-        images: [RoomImage, RoomImage, RoomImage],
-        bathroom: "Shared Bathroom",
-    },
-    {
         title: "Triple Room with Mountain View",
         people: "3 Adults",
         view: "Mountain View",
@@ -42,6 +31,17 @@ export const RoomDetails = [
         size: "13sqm",
         description:
             "Enjoy the charm of our Triple Room with Mountain View, boasting picturesque vistas of the surrounding landscape. With garden, mountain, and inner courtyard views, plus a private patio, you'll find tranquility at every turn.",
+        images: [RoomImage, RoomImage, RoomImage],
+        bathroom: "Shared Bathroom",
+    },
+    {
+        title: "Quadruple Room with Balcony",
+        people: "4 Adults",
+        view: "Lake View",
+        bed: "3 Single, 1 Double and 1 Sofa Bed",
+        size: "20sqm",
+        description:
+            "Ideal for families seeking relaxation, this spacious room features a private balcony boasting stunning views of the tranquil lake, providing the perfect backdrop for unforgettable moments together.",
         images: [RoomImage, RoomImage, RoomImage],
         bathroom: "Shared Bathroom",
     },

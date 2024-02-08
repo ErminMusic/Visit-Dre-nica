@@ -19,20 +19,36 @@ function FooterContact() {
             <Title>{contact.title}</Title>
             <Links>
                 <LinkHolder>
-                    <CustomIG />
-                    <a href={`${contact.igLink}`}>Instagram</a>
+                    <a href={`${contact.igLink}`}>
+                        <div>
+                            <CustomIG />
+                            Instagram
+                        </div>
+                    </a>
                 </LinkHolder>
                 <LinkHolder>
-                    <CustomFB />
-                    <a href={`${contact.fbLink}`}>FaceBook</a>
+                    <a href={`${contact.fbLink}`}>
+                        <div>
+                            <CustomFB />
+                            Facebook
+                        </div>
+                    </a>
                 </LinkHolder>
                 <LinkHolder>
-                    <CustomMail />
-                    <p>{contact.email}</p>
+                    <p>
+                        <div>
+                            <CustomMail />
+                            {contact.email}
+                        </div>
+                    </p>
                 </LinkHolder>
                 <LinkHolder>
-                    <CustomPhone />
-                    <p>{contact.phone}</p>
+                    <p>
+                        <div>
+                            <CustomPhone />
+                            {contact.phone}
+                        </div>
+                    </p>
                 </LinkHolder>
             </Links>
         </Container>
@@ -46,21 +62,25 @@ const Container = styled.div`
 `;
 const CustomIG = styled(InstagramIcon)`
     &.MuiSvgIcon-root {
+        margin-right: 4px;
         font-size: 28px;
     }
 `;
 const CustomFB = styled(FacebookIcon)`
     &.MuiSvgIcon-root {
+        margin-right: 4px;
         font-size: 28px;
     }
 `;
 const CustomMail = styled(EmailIcon)`
     &.MuiSvgIcon-root {
+        margin-right: 4px;
         font-size: 28px;
     }
 `;
 const CustomPhone = styled(PhoneIcon)`
     &.MuiSvgIcon-root {
+        margin-right: 4px;
         font-size: 28px;
     }
 `;
@@ -77,10 +97,15 @@ const LinkHolder = styled.div`
     display: flex;
     align-items: center;
     padding: 10px 0;
-    a,p {
+    a,
+    p {
         text-decoration: none;
         color: white;
-        margin-left: 8px;
+        text-align: center;
         font-size: 16px;
+        div {
+            display: flex;
+            align-items: center;
+        }
     }
 `;
