@@ -13,12 +13,12 @@ const Person = ({ profileImage, name, countryName, flag, score }) => {
         <Container>
             <PersonHolder>
                 <IconHolder>
-                    <Image alt={name} src={profileImage} />
+                    <Image loading="lazy" alt={name} src={profileImage} />
                 </IconHolder>
                 <PersonInfo>
                     <span>{name}</span>
                     <div>
-                        <img src={flag} alt={countryName} />
+                        <img loading="lazy" src={flag} alt={countryName} />
                         {countryName}
                     </div>
                 </PersonInfo>
