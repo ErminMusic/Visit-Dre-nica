@@ -41,7 +41,7 @@ const Wrap = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 36px 0;
+    padding: 36px 0 0 0;
 `;
 const Container = styled.div`
     width: 80%;
