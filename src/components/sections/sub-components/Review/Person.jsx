@@ -69,7 +69,7 @@ const PersonInfo = styled.div`
         img {
             width: 20px;
             height: 20px;
-            margin: 0 6px 0 0;
+            margin: 1.5px 6px 0 0;
         }
     }
 `;

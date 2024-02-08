@@ -60,9 +60,13 @@ function Home() {
         image: AboutImg,
     };
     const AboutVisitDreznica = {
-        title: "Visit Drežnica",
+        title: "Us",
         titleBold: "About ",
-        aboutUsDescription: "afdwdaw",
+        aboutUsDescription: [
+            {
+                __html: `Surrounded by lush vegetation and framed by towering mountains, <b>this confluence exudes a sense of peacefulness and serenity.</b>\n\n`,
+            },
+        ],
         alter: "About Image",
         image: AboutVisitImg,
     };

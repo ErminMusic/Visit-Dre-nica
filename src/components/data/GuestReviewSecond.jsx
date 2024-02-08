@@ -44,7 +44,7 @@ export const GuestReviewSecond = [
         name: "Arun",
         profileImage: ImagePlaceholder,
         flag: Netherlands,
-        countryName: "Venezuela",
+        countryName: "Netherlands",
         score: "10",
         date: "30/08/2023",
         title: "You must stay here",
