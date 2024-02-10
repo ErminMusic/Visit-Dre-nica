@@ -1,9 +1,110 @@
 import styled from "styled-components";
+import Title from "../sections/FAQ-components/Title";
+import QuestionHolder from "../sections/FAQ-components/QuestionHolder";
 
 function Questions() {
+    const HouseRules = {
+        title: "House Rules",
+        questionsAndAnswers: [
+            {
+                question: "Are pets allowed?",
+                answer: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, assumenda? Voluptates delectus odio dolorum deserunt sint voluptate expedita laborum incidunt, fugiat aspernatur ad enim accusamus, molestiae quasi rerum necessitatibus cupiditate!",
+            },
+            {
+                question: "Another question?",
+                answer: "Answer to another question",
+            },
+            {
+                question: "Are pets allowed?",
+                answer: "Pets are not allowed in the facility",
+            },
+            {
+                question: "Another question?",
+                answer: "Answer to another question",
+            },
+            {
+                question: "Are pets allowed?",
+                answer: "Pets are not allowed in the facility",
+            },
+            {
+                question: "Another question?",
+                answer: "Answer to another question",
+            },
+        ],
+    };
+    const RentABoat = {
+        title: "Rent A Boat",
+        questionsAndAnswers: [
+            {
+                question: "Are pets allowed?",
+                answer: "Pets are not allowed in the facility",
+            },
+            {
+                question: "Another question?",
+                answer: "Answer to another question",
+            },
+            {
+                question: "Are pets allowed?",
+                answer: "Pets are not allowed in the facility",
+            },
+            {
+                question: "Another question?",
+                answer: "Answer to another question",
+            },
+            {
+                question: "Are pets allowed?",
+                answer: "Pets are not allowed in the facility",
+            },
+            {
+                question: "Another question?",
+                answer: "Answer to another question",
+            },
+        ],
+    };
+    const Hiking = {
+        title: "Hiking",
+        questionsAndAnswers: [
+            {
+                question: "Are pets allowed?",
+                answer: "Pets are not allowed in the facility",
+            },
+            {
+                question: "Another question?",
+                answer: "Answer to another question",
+            },
+            {
+                question: "Are pets allowed?",
+                answer: "Pets are not allowed in the facility",
+            },
+            {
+                question: "Another question?",
+                answer: "Answer to another question",
+            },
+            {
+                question: "Are pets allowed?",
+                answer: "Pets are not allowed in the facility",
+            },
+            {
+                question: "Another question?",
+                answer: "Answer to another question",
+            },
+        ],
+    };
     return (
         <Container>
-            <h1>FAQ</h1>
+            <Title />
+            <QuestionHolder
+                title={HouseRules.title}
+                questions={HouseRules.questionsAndAnswers}
+            />
+            <QuestionHolder
+                title={RentABoat.title}
+                questions={RentABoat.questionsAndAnswers}
+            />
+            <QuestionHolder
+                title={Hiking.title}
+                questions={Hiking.questionsAndAnswers}
+            />
         </Container>
     );
 }
@@ -11,6 +112,11 @@ function Questions() {
 export default Questions;
 
 const Container = styled.div`
-    height: 500px;
-    background-color: red;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #525252;
+    background: #f8f5df;
 `;

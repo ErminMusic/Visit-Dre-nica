@@ -51,7 +51,7 @@ const Drop = styled.div`
     z-index: 100;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, max-height 0.3s ease; /* Add max-height transition */
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, max-height 0.3s ease;
     transform-origin: top center;
     transform: translateY(-50%);
     @media (max-width: 850px) {
@@ -72,8 +72,8 @@ const Container = styled.div`
         ${Drop} {
             visibility: visible;
             opacity: 1;
-            max-height: 200px; /* Adjust the max-height to your preference */
-            transform: translateY(0);/* Adjust the max-height to your preference */
+            max-height: 200px; 
+            transform: translateY(0);
         }
     }
     @media (max-width: 850px) {
