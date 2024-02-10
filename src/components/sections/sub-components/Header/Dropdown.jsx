@@ -7,23 +7,35 @@ function Dropdown({ title, options }) {
         title: PropTypes.string.isRequired,
         options: PropTypes.arrayOf(PropTypes.string).isRequired,
     };
-    const handleItemClick = (item) => {
-        const section = document.getElementById(item);
-        if (section) {
-            window.scrollTo({
-                behavior: "smooth",
-                top: section.offsetTop,
-            });
+
+    const scrollToSection = (item) => {
+        if (title === "About Us") {
+            const sectionId = item === "About Drežnica" ? "About Drežnica" : "About Us";
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+            }
         }
     };
+    const handleItemClick = (item) => {
+        if (title === "About Us" || item === "About Drežnica") {
+            window.location.href = `/#${item.replace(/\s+/g, "-")}`;
+            scrollToSection(item);
+        } else if (title === "Activities") {
+            const url = `/${item.replace(/\s+/g, "%20")}`;
+            window.location.href = url;
+        }
+    };
+
     return (
         <Container>
             <Wrapp>
-                <span>{title}</span><CustomArrow />
+                <span>{title}</span>
+                <CustomArrow />
             </Wrapp>
             <Drop>
                 {options.map((item, index) => (
-                    <DropOptions key={index} onClick={() => handleItemClick(item)}>
+                    <DropOptions key={index}onClick={() => handleItemClick(item)}>
                         {item}
                     </DropOptions>
                 ))}
