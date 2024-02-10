@@ -6,7 +6,7 @@ const Room = lazy(() => import("./sub-components/Rooms/Room"));
 function Rooms() {
     const mainTitle = "Choose a Room:";
     return (
-        <Wrap>
+        <Wrap id="Rooms">
             <Container>
                 <TitleHolder>
                     <Title>{mainTitle}</Title>

@@ -8,6 +8,7 @@ import {
     BrowserRouter as Router,
     Route,
     Routes,
+    Navigate,
 } from "react-router-dom";
 
 function App() {
@@ -17,9 +18,8 @@ function App() {
                 <Header />
 
                 <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/" element={<Home />} />
-                    <Route path="/" element={<Home />} />
+                    <Route path="/" element={<Navigate to="/Home" />} />
+                    <Route path="/Home" element={<Home />} />
                 </Routes>
 
                 <Suspense fallback={<div>Loading...</div>}>

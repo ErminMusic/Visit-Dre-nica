@@ -4,7 +4,12 @@ import PropTypes from "prop-types";
 function FooterContent({ title, links }) {
     FooterContent.propTypes = {
         title: PropTypes.string.isRequired,
-        links: PropTypes.arrayOf(PropTypes.string),
+        links: PropTypes.arrayOf(
+            PropTypes.shape({
+                name: PropTypes.string.isRequired,
+                link: PropTypes.string.isRequired,
+            })
+        ).isRequired,
     };
 
     return (
@@ -12,7 +17,7 @@ function FooterContent({ title, links }) {
             <Title>{title}</Title>
             {links.map((item, index) => (
                 <Links key={index}>
-                    <CustomLink href={item}>{item}</CustomLink>
+                    <CustomLink href={item.link}>{item.name}</CustomLink>
                 </Links>
             ))}
         </Container>
@@ -41,5 +46,5 @@ const CustomLink = styled.a`
     text-decoration: none;
     color: white;
     padding: 10px 0;
-    font-size: 16px; 
+    font-size: 16px;
 `;

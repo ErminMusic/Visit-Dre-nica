@@ -3,7 +3,7 @@ import styled from "styled-components";
 function Buttons() {
     return (
         <ButtonHolder>
-            <BookButton>
+            <BookButton href="/How To Book" >
                 <span>BOOK</span> THIS ROOM
             </BookButton>
         </ButtonHolder>
@@ -19,7 +19,8 @@ const ButtonHolder = styled.div`
     align-items: center;
     width: 100%;
 `;
-const BookButton = styled.div`
+const BookButton = styled.a`
+    text-decoration: none;
     width: 100%;
     position: relative;
     text-align: center;

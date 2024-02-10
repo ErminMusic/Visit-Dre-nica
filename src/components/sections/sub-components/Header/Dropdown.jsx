@@ -8,19 +8,9 @@ function Dropdown({ title, options }) {
         options: PropTypes.arrayOf(PropTypes.string).isRequired,
     };
 
-    const scrollToSection = (item) => {
-        if (title === "About Us") {
-            const sectionId = item === "About Drežnica" ? "About Drežnica" : "About Us";
-            const section = document.getElementById(sectionId);
-            if (section) {
-                section.scrollIntoView({ behavior: "smooth" });
-            }
-        }
-    };
     const handleItemClick = (item) => {
         if (title === "About Us" || item === "About Drežnica") {
-            window.location.href = `/#${item.replace(/\s+/g, "-")}`;
-            scrollToSection(item);
+            window.location.href = `/Home#${item.replace(/\s+/g, "%20")}`;
         } else if (title === "Activities") {
             const url = `/${item.replace(/\s+/g, "%20")}`;
             window.location.href = url;
@@ -35,7 +25,11 @@ function Dropdown({ title, options }) {
             </Wrapp>
             <Drop>
                 {options.map((item, index) => (
-                    <DropOptions key={index}onClick={() => handleItemClick(item)}>
+                    <DropOptions
+                        href={`#${item}`}
+                        key={index}
+                        onClick={() => handleItemClick(item)}
+                    >
                         {item}
                     </DropOptions>
                 ))}

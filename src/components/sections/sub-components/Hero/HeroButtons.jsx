@@ -15,21 +15,27 @@ function HeroButtons({ content }) {
 
     return (
         <ButtonHolder>
-            <BookButton>
+            <Link href="#Rooms">
                 {content.buttonOne} <span>{content.buttonOneSpan}</span>
-            </BookButton>
-            <ContactButton>
+            </Link>
+
+            <ContactLink href="/Contact">
                 <span>{content.buttonTwoSpan}</span> {content.buttonTwo}
-            </ContactButton>
+            </ContactLink>
         </ButtonHolder>
     );
 }
 
 export default HeroButtons;
 
-const ButtonHolder = styled.div``;
-const BookButton = styled.div`
+const ButtonHolder = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+const Link = styled.a`
+    text-decoration: none;
     border-radius: 10px;
+    color: white;
     background-color: rgb(80, 125, 127);
     text-align: center;
     width: 50%;
@@ -53,11 +59,14 @@ const BookButton = styled.div`
     }
 `;
 
-const ContactButton = styled(BookButton)`
+const ContactLink = styled(Link)`
     background-color: #8fbc8f;
     margin-top: 20px;
     &:hover {
         background-color: white;
         color: #8fbc8f;
+    }
+    span {
+        font-weight: bold;
     }
 `;

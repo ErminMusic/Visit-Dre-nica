@@ -35,20 +35,20 @@ function FooterContact() {
                     </a>
                 </LinkHolder>
                 <LinkHolder>
-                    <p>
+                    <div>
                         <div>
                             <CustomMail />
                             {contact.email}
                         </div>
-                    </p>
+                    </div>
                 </LinkHolder>
                 <LinkHolder>
-                    <p>
+                    <div>
                         <div>
                             <CustomPhone />
                             {contact.phone}
                         </div>
-                    </p>
+                    </div>
                 </LinkHolder>
             </Links>
         </Container>
@@ -98,7 +98,7 @@ const LinkHolder = styled.div`
     align-items: center;
     padding: 10px 0;
     a,
-    p {
+    div {
         text-decoration: none;
         color: white;
         text-align: center;

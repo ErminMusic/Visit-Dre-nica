@@ -14,26 +14,34 @@ function Content({ content, title, titleBold }) {
                 PropTypes.shape({
                     __html: PropTypes.string.isRequired,
                 })
-            ).isRequired,
+            ),
         ]).isRequired,
     };
 
     const renderContent = () => {
         if (Array.isArray(content)) {
-            return content.map((item, index) => (
-                <Paragraph key={index} dangerouslySetInnerHTML={item} />
-            ));
+            return content.map((item, index) => {
+                if (typeof item === "object" && item.__html) {
+                    return <Paragraph key={index} dangerouslySetInnerHTML={item} />;
+                } else if (typeof item === "string") {
+                    return <Paragraph key={index}>{item}</Paragraph>;
+                } else {
+                    console.error(`Invalid content item at index ${index}:`, item);
+                    return null;
+                }
+            });
         } else if (typeof content === "object" && content.__html) {
             return <Paragraph dangerouslySetInnerHTML={content} />;
         } else if (typeof content === "string") {
-            const paragraphs = content
-                .split("\n")
-                .map((paragraph, index) => (
-                    <Paragraph key={index}>{paragraph}</Paragraph>
-                ));
-            return paragraphs;
+            return content.split("\n").map((paragraph, index) => (
+                <Paragraph key={index}>{paragraph}</Paragraph>
+            ));
+        } else {
+            console.error("Invalid content type:", content);
+            return null;
         }
     };
+
     return (
         <ContentHolder>
             <h1>

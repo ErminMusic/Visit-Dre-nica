@@ -8,7 +8,7 @@ function NavItems() {
         home: "Home",
         howTo: "How To Book",
         FAQ: "FAQ",
-        Contact: "Contact"
+        Contact: "Contact",
     };
 
     return (
@@ -31,7 +31,7 @@ function NavItems() {
             </NavBarItem>
             <NavBarItem>
                 <span>
-                    <a href="/Contact">{title.Contact}</a>
+                    <a href="/Contact">{title.FAQ}</a>
                 </span>
             </NavBarItem>
             <NavBarItem>

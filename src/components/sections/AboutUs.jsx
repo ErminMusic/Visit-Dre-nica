@@ -9,7 +9,11 @@ function AboutUs({ content }) {
         content: PropTypes.shape({
             title: PropTypes.string,
             titleBold: PropTypes.string,
-            aboutUsDescription: PropTypes.string.isRequired,
+            aboutUsDescription: PropTypes.arrayOf(
+                PropTypes.shape({
+                    __html: PropTypes.string.isRequired,
+                })
+            ).isRequired,
             alter: PropTypes.string.isRequired,
             image: PropTypes.node.isRequired,
         }).isRequired,

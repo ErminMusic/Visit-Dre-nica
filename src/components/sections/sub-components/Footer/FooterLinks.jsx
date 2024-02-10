@@ -7,29 +7,56 @@ function FooterLinks() {
     const about = {
         title: "About Us",
         links: [
-            "About Drežnica","About Us", "House Rules","FAQ"
-        ]
-    }
+            {
+                name: "About Drežnica",
+                link: "#About Drežnica",
+            },
+            {
+                name: "About Us",
+                link: "#About Us",
+            },
+        ],
+    };
     const howToBook = {
         title: "How To Book",
         links: [
-            "How To Book","Rooms"
-        ]
-    }
+            {
+                name: "How To Book",
+                link: "/How To Book",
+            },
+            {
+                name: "FQA",
+                link: "/FQA",
+            },
+        ],
+    };
     const activitie = {
         title: "Activities",
         links: [
-            "Activities","Nearby Attractions"
-        ]
-    }
+            {
+                name: "Activities",
+                link: "/Activities",
+            },
+            {
+                name: "Nearby Attractions",
+                link: "/Nearby Attractions",
+            },
+        ],
+    };
 
     return (
         <Container>
             <HeaderLogo />
             <ContentHolder>
                 <FooterContent title={about.title} links={about.links} />
-                <FooterContent title={howToBook.title} links={howToBook.links} />
-                <FooterContent title={activitie.title} links={activitie.links} />
+                <FooterContent
+                    title={howToBook.title}
+                    links={howToBook.links}
+                />
+                <FooterContent
+                    title={activitie.title}
+                    links={activitie.links}
+                />
                 <FooterContact />
             </ContentHolder>
         </Container>
