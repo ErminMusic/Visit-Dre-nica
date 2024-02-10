@@ -10,7 +10,7 @@ function Dropdown({ title, options }) {
 
     const handleItemClick = (item) => {
         if (title === "About Us" || item === "About Drežnica") {
-            window.location.href = `/Home#${item.replace(/\s+/g, "%20")}`;
+            window.location.href = `/#${item.replace(/\s+/g, "%20")}`;
         } else if (title === "Activities") {
             const url = `/${item.replace(/\s+/g, "%20")}`;
             window.location.href = url;

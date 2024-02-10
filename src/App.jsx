@@ -4,12 +4,7 @@ import Header from "./components/sections/Header";
 import { lazy, Suspense } from "react";
 const Footer = lazy(() => import("./components/sections/Footer"));
 import Home from "./components/main-components/Home";
-import {
-    BrowserRouter as Router,
-    Route,
-    Routes,
-    Navigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
     return (
@@ -18,8 +13,7 @@ function App() {
                 <Header />
 
                 <Routes>
-                    <Route path="/" element={<Navigate to="/Home" />} />
-                    <Route path="/Home" element={<Home />} />
+                    <Route path="/" element={<Home />} />
                 </Routes>
 
                 <Suspense fallback={<div>Loading...</div>}>
