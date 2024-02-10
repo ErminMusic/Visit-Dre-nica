@@ -5,11 +5,11 @@ import { lazy, Suspense } from "react";
 const Footer = lazy(() => import("./components/sections/Footer"));
 import Home from "./components/main-components/Home";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import MainActivities from "./components/main-components/MainActivities";
-import NearbyAttractions from "./components/main-components/NearbyAttractions";
-import Questions from "./components/main-components/Questions";
-import Contact from "./components/main-components/Contact";
-import HowToBook from "./components/main-components/HowToBook";
+const MainActivities = lazy(() => import("./components/main-components/MainActivities"));
+const NearbyAttractions = lazy(() => import("./components/main-components/NearbyAttractions"));
+const Questions = lazy(() => import("./components/main-components/Questions"));
+const Contact = lazy(() => import("./components/main-components/Contact"));
+const HowToBook = lazy(() => import("./components/main-components/HowToBook"));
 
 function App() {
     return (
