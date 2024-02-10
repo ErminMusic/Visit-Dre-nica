@@ -2,12 +2,13 @@ import styled from "styled-components";
 import Dropdown from "./Dropdown";
 
 function NavItems() {
-    let activities = ["Our Activities", "Nearby Attractions"];
-    let about = ["About Drežnica", "About Us", "House Rules"];
+    let activities = ["Activities", "Nearby Attractions"];
+    let about = ["About Drežnica", "About Us"];
     const title = {
         home: "Home",
         howTo: "How To Book",
         FAQ: "FAQ",
+        Contact: "Contact"
     };
 
     return (
@@ -26,6 +27,11 @@ function NavItems() {
             <NavBarItem>
                 <span>
                     <a href="/How To Book">{title.howTo}</a>
+                </span>
+            </NavBarItem>
+            <NavBarItem>
+                <span>
+                    <a href="/Contact">{title.Contact}</a>
                 </span>
             </NavBarItem>
             <NavBarItem>

@@ -3,18 +3,31 @@ import "./App.css";
 import Header from "./components/sections/Header";
 import Hero from "./components/sections/Hero";
 import { lazy, Suspense } from "react";
-import Footer from "./components/sections/Footer";
-const Home = lazy(() => import("./components/main-components/Home"));
+const Footer = lazy(() => import("./components/sections/Footer"));
+import Home from "./components/main-components/Home";
+import {
+    BrowserRouter as Router,
+    Route,
+    Routes,
+    useNavigate,
+} from "react-router-dom";
 
 function App() {
     return (
         <Container>
-            <Header />
-            <Hero />
-            <Suspense fallback={<div>Loading...</div>}>
-                <Home />
-                <Footer />
-            </Suspense>
+            <Router>
+                <Header />
+
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/" element={<Home />} />
+                    <Route path="/" element={<Home />} />
+                </Routes>
+
+                <Suspense fallback={<div>Loading...</div>}>
+                    <Footer />
+                </Suspense>
+            </Router>
         </Container>
     );
 }

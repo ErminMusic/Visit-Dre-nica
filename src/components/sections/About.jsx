@@ -29,7 +29,7 @@ function About({ content }) {
         }).isRequired,
     };
     return (
-        <Wrap>
+        <Wrap id="About Drežnica">
             <Container>
                 <Suspense fallback={<div>Loading...</div>}>
                     <Image image={content.image} alter={content.alter} />

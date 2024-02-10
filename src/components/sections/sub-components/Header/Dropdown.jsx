@@ -7,7 +7,15 @@ function Dropdown({ title, options }) {
         title: PropTypes.string.isRequired,
         options: PropTypes.arrayOf(PropTypes.string).isRequired,
     };
-
+    const handleItemClick = (item) => {
+        const section = document.getElementById(item);
+        if (section) {
+            window.scrollTo({
+                behavior: "smooth",
+                top: section.offsetTop,
+            });
+        }
+    };
     return (
         <Container>
             <Wrapp>
@@ -15,7 +23,7 @@ function Dropdown({ title, options }) {
             </Wrapp>
             <Drop>
                 {options.map((item, index) => (
-                    <DropOptions key={index} href={`/${item}`}>
+                    <DropOptions key={index} onClick={() => handleItemClick(item)}>
                         {item}
                     </DropOptions>
                 ))}
@@ -23,7 +31,6 @@ function Dropdown({ title, options }) {
         </Container>
     );
 }
-
 const CustomArrow = styled(KeyboardArrowDownIcon)`
     &.MuiSvgIcon-root {
         font-size: 36px;

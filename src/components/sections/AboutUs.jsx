@@ -16,7 +16,7 @@ function AboutUs({ content }) {
     };
 
     return (
-        <Wrap>
+        <Wrap id="About Us">
             <Container>
                 <Suspense fallback={<div>Loading...</div>}>
                     <Image image={content.image} alter={content.alter} />

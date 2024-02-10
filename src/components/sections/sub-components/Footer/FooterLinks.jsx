@@ -19,7 +19,7 @@ function FooterLinks() {
     const activitie = {
         title: "Activities",
         links: [
-            "Our Activities","Nearby Attractions"
+            "Activities","Nearby Attractions"
         ]
     }
 
