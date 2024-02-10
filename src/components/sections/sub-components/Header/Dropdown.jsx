@@ -45,22 +45,23 @@ const CustomArrow = styled(KeyboardArrowDownIcon)`
 const Drop = styled.div`
     background: #4b7376;
     position: absolute;
-    display: flex;
-    flex-direction: column;
     width: 200px;
-    top: 100%;
+    top: calc(100% + 10px);
     margin: 5px 0;
     z-index: 100;
+    opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, max-height 0.3s ease; /* Add max-height transition */
+    transform-origin: top center;
+    transform: translateY(-50%);
     @media (max-width: 850px) {
-        top: 90%;
+        transform: translateY(0%);
+        top: calc(100% - 10px);
         left: 0;
-        margin: 0;
-        position: relative;
         width: 100%;
-        height: 50%;
-        display: none;
+        max-height: 0;
+        overflow: hidden;
+        position: relative;
     }
 `;
 
@@ -70,10 +71,9 @@ const Container = styled.div`
     &:hover {
         ${Drop} {
             visibility: visible;
-            display: flex;
             opacity: 1;
-            z-index: 100;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
+            max-height: 200px; /* Adjust the max-height to your preference */
+            transform: translateY(0);/* Adjust the max-height to your preference */
         }
     }
     @media (max-width: 850px) {
@@ -87,6 +87,7 @@ const DropOptions = styled.a`
     background: #4b7376;
     z-index: 500;
     border-bottom: 1px solid rgb(61, 100, 102);
+    display: block;
 `;
 const Wrapp = styled.div`
     display: flex;
