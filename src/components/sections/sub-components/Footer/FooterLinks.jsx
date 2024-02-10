@@ -25,8 +25,12 @@ function FooterLinks() {
                 link: "/How To Book",
             },
             {
-                name: "FQA",
-                link: "/FQA",
+                name: "Contact Us",
+                link: "/Contact",
+            },
+            {
+                name: "FAQ",
+                link: "/FAQ",
             },
         ],
     };

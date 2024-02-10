@@ -31,7 +31,7 @@ function NavItems() {
             </NavBarItem>
             <NavBarItem>
                 <span>
-                    <a href="/Contact">{title.FAQ}</a>
+                    <a href="/Contact">{title.Contact}</a>
                 </span>
             </NavBarItem>
             <NavBarItem>
