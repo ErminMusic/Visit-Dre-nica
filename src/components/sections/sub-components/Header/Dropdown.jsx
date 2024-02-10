@@ -50,11 +50,11 @@ const Drop = styled.div`
     width: 200px;
     top: 100%;
     margin: 5px 0;
+    z-index: 100;
     visibility: hidden;
-    opacity: 0;
     transition: opacity 0.3s ease, visibility 0.3s ease;
     @media (max-width: 850px) {
-        top: 95%;
+        top: 90%;
         left: 0;
         margin: 0;
         position: relative;
@@ -85,13 +85,14 @@ const DropOptions = styled.a`
     text-decoration: none;
     color: white;
     background: #4b7376;
-    z-index: 50;
+    z-index: 500;
     border-bottom: 1px solid rgb(61, 100, 102);
 `;
 const Wrapp = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+    z-index: 1;
     @media (max-width: 850px) {
         justify-content: start;
     }

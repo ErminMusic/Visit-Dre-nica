@@ -70,6 +70,7 @@ const NavBarItem = styled.div`
         flex-direction: row;
         align-items: flex-start;
         padding: 8px;
+        min-height: 52px;
     }
     span {
         font-size: 13px;
