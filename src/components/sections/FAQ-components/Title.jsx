@@ -4,7 +4,7 @@ function Title() {
     return (
         <Wrap>
             <Container>
-                <h1>Frequently Asked Questions:</h1>
+                <h1>Frequently Asked Questions 🤔</h1>
             </Container>
         </Wrap>
     );

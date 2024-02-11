@@ -152,9 +152,9 @@ function Questions() {
     const Categories = [
         "House Rules",
         "Rent A Boat",
-        "Hiking",
         "Swimming",
         "Location",
+        "Hiking",
     ];
     return (
         <Container>
@@ -169,16 +169,16 @@ function Questions() {
                 questions={RentABoat.questionsAndAnswers}
             />
             <QuestionHolder
-                title={Hiking.title}
-                questions={Hiking.questionsAndAnswers}
-            />
-            <QuestionHolder
                 title={Location.title}
                 questions={Location.questionsAndAnswers}
             />
             <QuestionHolder
                 title={Swimming.title}
                 questions={Swimming.questionsAndAnswers}
+            />
+            <QuestionHolder
+                title={Hiking.title}
+                questions={Hiking.questionsAndAnswers}
             />
         </Container>
     );

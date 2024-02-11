@@ -35,8 +35,9 @@ const Wrap = styled.div`
 `;
 
 const Container = styled.div`
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+    gap: 12px;
     width: 80%;
     padding: 16px;
     @media (max-width: 850px) {
@@ -51,7 +52,6 @@ const NavItem = styled.a`
     font-weight: bold;
     color: #525252;
     text-decoration: none;
-    margin: 16px 36px 16px 0;
     font-size: 16px;
     span {
         letter-spacing: 1.5px;
