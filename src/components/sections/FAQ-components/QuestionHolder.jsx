@@ -2,7 +2,6 @@ import { useState } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-
 function QuestionHolder({ title, questions }) {
     const [isAnswerVisible, setIsAnswerVisible] = useState({});
     const toggleAnswerVisibility = (questionIndex) => {
@@ -11,7 +10,6 @@ function QuestionHolder({ title, questions }) {
             [questionIndex]: !prevState[questionIndex],
         }));
     };
-
     QuestionHolder.propTypes = {
         title: PropTypes.string.isRequired,
         questions: PropTypes.arrayOf(
@@ -21,8 +19,9 @@ function QuestionHolder({ title, questions }) {
             })
         ).isRequired,
     };
+
     return (
-        <Container>
+        <Container id={title}>
             <Category>
                 <h2>{title}:</h2>
             </Category>
@@ -36,7 +35,7 @@ function QuestionHolder({ title, questions }) {
                         <span>{question.question}</span>
                         <CustomArrow />
                     </div>
-                    <Answer visible={isAnswerVisible[index]}> {/* Pass visibility state to Answer component */}
+                    <Answer visible={isAnswerVisible[index]}>
                         <p>{question.answer}</p>
                     </Answer>
                 </Question>
@@ -55,6 +54,9 @@ const Container = styled.div`
     flex-direction: column;
     color: #525252;
     background: #f8f5df;
+        @media (max-width: 850px) {
+        width: 95%;
+    }
 `;
 
 const Category = styled.div`
@@ -113,5 +115,5 @@ const Answer = styled.div`
     margin-top: 12px;
     max-height: ${(props) => (props.visible ? "200px" : "0")};
     overflow: hidden;
-    transition: max-height 250ms ease;
+    transition: max-height 300ms ease;
 `;

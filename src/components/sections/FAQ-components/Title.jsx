@@ -14,6 +14,9 @@ export default Title;
 
 const Container = styled.div`
     width: 80%;
+    @media (max-width: 850px) {
+        width: 95%;
+    }
 `;
 const Wrap = styled.div`
     display: flex;
@@ -21,6 +24,7 @@ const Wrap = styled.div`
     width: 100%;
     background-color: #f0fff0;
     padding: 20px 0;
+    border-bottom: 2.5px solid #cbe3cb;
     h1 {
         font-weight: bold;
     }
