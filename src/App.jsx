@@ -5,7 +5,7 @@ import { lazy, Suspense } from "react";
 const Footer = lazy(() => import("./components/sections/Footer"));
 import Home from "./components/main-components/Home";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-const MainActivities = lazy(() => import("./components/main-components/MainActivities"));
+const ActivitiesDetail = lazy(() => import("./components/main-components/ActivitiesDetail"));
 const NearbyAttractions = lazy(() => import("./components/main-components/NearbyAttractions"));
 const Questions = lazy(() => import("./components/main-components/Questions"));
 const Contact = lazy(() => import("./components/main-components/Contact"));
@@ -19,7 +19,7 @@ function App() {
 
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/Activities" element={<MainActivities />} />
+                    <Route path="/Activities" element={<ActivitiesDetail />} />
                     <Route path="/Nearby Attractions" element={<NearbyAttractions />} />
                     <Route path="/FAQ" element={<Questions />} />
                     <Route path="/Contact" element={<Contact />} />

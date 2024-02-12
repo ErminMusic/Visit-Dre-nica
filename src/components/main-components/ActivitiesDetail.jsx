@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
-function MainActivities() {
+function ActivitiesDetail() {
     return (
         <Container>
-            <h1>MainActivities</h1>
+            <h1>ActivitiesDetail</h1>
         </Container>
     );
 }
 
-export default MainActivities;
+export default ActivitiesDetail;
 
 const Container = styled.div`
     height: 500px;

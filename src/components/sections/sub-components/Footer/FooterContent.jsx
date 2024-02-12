@@ -17,7 +17,7 @@ function FooterContent({ title, links }) {
             <Title>{title}</Title>
             {links.map((item, index) => (
                 <Links key={index}>
-                    <CustomLink href={item.link}>{item.name}</CustomLink>
+                    <CustomLink href={item.link}><span>{item.name}</span></CustomLink>
                 </Links>
             ))}
         </Container>
@@ -37,7 +37,7 @@ const Title = styled.p`
 `;
 
 const Links = styled.div`
-    width: 40%;
+    width: 45%;
     display: flex;
     flex-direction: column;
 `;
@@ -47,4 +47,27 @@ const CustomLink = styled.a`
     color: white;
     padding: 10px 0;
     font-size: 16px;
+    span {
+        letter-spacing: 1.5px;
+        position: relative;
+        &::after {
+            content: "";
+            height: 2.5px;
+            background: #fff;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -4px;
+            opacity: 0;
+            transform: left center;
+            transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+            transform: scaleX(0);
+        }
+    }
+    &:hover {
+        span:after {
+            transform: scaleX(1);
+            opacity: 1;
+        }
+    }
 `;

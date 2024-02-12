@@ -4,14 +4,12 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
 
-function FooterContact() {
-    const contact = {
-        title: "Contact Us",
-        phone: "+387 616 281 58",
+function IconHolder() {
+    const contacts = {
+        IG: "https://www.instagram.com/visitdreznica/",
+        FB: "https://www.facebook.com/visitdreznica",
+        Phone: "+387 616 281 58",
         email: "visitdreznica@gmail.com",
-        social: "Visit Drežnica",
-        igLink: "https://www.instagram.com/visitdreznica/",
-        fbLink: "https://www.facebook.com/visitdreznica",
     };
     const handleCopyToClipboard = (text) => {
         navigator.clipboard
@@ -25,57 +23,39 @@ function FooterContact() {
     };
 
     return (
-        <Container>
-            <Title>{contact.title}</Title>
-            <Links>
-                <LinkHolder>
-                    <a href={`${contact.igLink}`}>
-                        <div>
-                            <CustomIG />
-                            Instagram
-                        </div>
-                    </a>
-                </LinkHolder>
-                <LinkHolder>
-                    <a href={`${contact.fbLink}`}>
-                        <div>
-                            <CustomFB />
-                            Facebook
-                        </div>
-                    </a>
-                </LinkHolder>
-                <LinkHolder>
-                    <div onClick={() => handleCopyToClipboard(contact.phone)}>
-                        <CustomPhone />
-                        {contact.phone}
+        <div>
+            <LinkHolder>
+                <a href={`${contacts.IG}`}>
+                    <div>
+                        <CustomIG /> Instagram
                     </div>
-                </LinkHolder>
-                <LinkHolder>
-                    <div onClick={() => handleCopyToClipboard(contact.email)}>
-                        <CustomMail />
-                        {contact.email}
+                </a>
+            </LinkHolder>
+            <LinkHolder>
+                <a href={`${contacts.FB}`}>
+                    <div>
+                        <CustomFB /> Facebook
                     </div>
-                </LinkHolder>
-            </Links>
-        </Container>
+                </a>
+            </LinkHolder>
+            <LinkHolder>
+                <div onClick={() => handleCopyToClipboard(contacts.Phone)}>
+                    <CustomPhone />
+                    {contacts.Phone}
+                </div>
+            </LinkHolder>
+            <LinkHolder>
+                <div onClick={() => handleCopyToClipboard(contacts.email)}>
+                    <CustomMail />
+                    {contacts.email}
+                </div>
+            </LinkHolder>
+        </div>
     );
 }
 
-export default FooterContact;
+export default IconHolder;
 
-const Container = styled.div`
-    padding: 12px 0;
-`;
-
-const Title = styled.p`
-    font-size: 20px;
-    font-weight: bold;
-    margin: 0 0 4px 0;
-`;
-const Links = styled.div`
-    display: flex;
-    flex-direction: column;
-`;
 const LinkHolder = styled.div`
     display: flex;
     align-items: center;
@@ -83,7 +63,6 @@ const LinkHolder = styled.div`
     a,
     div {
         cursor: pointer;
-        text-decoration: none;
         color: white;
         text-align: center;
         letter-spacing: 1.5px;
