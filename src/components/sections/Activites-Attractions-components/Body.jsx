@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import Image from "./Image";
+import Text from "./Text";
 
 function Body({ content }) {
     return (
@@ -7,17 +9,8 @@ function Body({ content }) {
             {content.map((item, index) => (
                 <Container key={index} $isReversed={!item.side}>
                     <Content $isReversed={!item.side}>
-                        <ImageHolder>
-                            <Image
-                                loading="lazy"
-                                src={item.image}
-                                alt={item.alter}
-                            />
-                        </ImageHolder>
-                        <TextHolder>
-                            <h1 id={item.name}>{item.name}</h1>
-                            <p>{item.description}</p>
-                        </TextHolder>
+                        <Image img={item.image} alt={item.alter} />
+                        <Text name={item.name} des={item.description}/>
                     </Content>
                 </Container>
             ))}
@@ -64,34 +57,5 @@ const Content = styled.div`
     }
 `;
 
-const ImageHolder = styled.div`
-    width: 35%;
-    min-width: 300px;
-    padding: 8px;
 
-    @media (max-width: 850px) {
-        min-width: 250px;
-    }
-    @media (max-width: 300px) {
-        min-width: 200px;
-    }
-    @media (max-width: 700px) {
-        width: 100%;
-    }
-`;
 
-const TextHolder = styled.div`
-    margin: 24px;
-    width: 60%;
-
-    h1 {
-        padding: 12px 0 16px 0;
-    }
-    @media (max-width: 700px) {
-        width: 100%;
-    }
-`;
-
-const Image = styled.img`
-    width: 100%;
-`;
