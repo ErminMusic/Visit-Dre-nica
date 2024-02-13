@@ -16,7 +16,6 @@ function App() {
         <Container>
             <Router>
                 <Header />
-
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/Activities" element={<ActivitiesDetail />} />
@@ -25,7 +24,6 @@ function App() {
                     <Route path="/Contact" element={<Contact />} />
                     <Route path="/How To Book" element={<HowToBook />} />
                 </Routes>
-
                 <Suspense fallback={<div>Loading...</div>}>
                     <Footer />
                 </Suspense>

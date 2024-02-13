@@ -180,6 +180,12 @@ function Questions() {
                 title={Hiking.title}
                 questions={Hiking.questionsAndAnswers}
             />
+            <Contact>
+                <span>
+                    If you still have questions, go here:{" "}
+                    <a href="/Contact">Contact Us</a>
+                </span>
+            </Contact>
         </Container>
     );
 }
@@ -194,4 +200,19 @@ const Container = styled.div`
     justify-content: center;
     color: #525252;
     background: #f8f5df;
+`;
+
+const Contact = styled.div`
+    width: 80%;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 16px 0;
+    a {
+        text-decoration: none;
+        color: #525252;
+        text-decoration: underline;
+    }
+    @media (max-width: 850px) {
+        width: 95%;
+    }
 `;

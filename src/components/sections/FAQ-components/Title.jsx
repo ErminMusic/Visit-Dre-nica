@@ -25,7 +25,4 @@ const Wrap = styled.div`
     background-color: #f0fff0;
     padding: 20px 0;
     border-bottom: 2.5px solid #cbe3cb;
-    h1 {
-        font-weight: bold;
-    }
 `;

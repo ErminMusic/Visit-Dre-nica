@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import Body from "../sections/Activites-Attractions-components/Body";
 
 function ActivitiesDetail() {
     return (
         <Container>
-            <h1>ActivitiesDetail</h1>
+            <Body />
         </Container>
     );
 }
@@ -11,6 +12,8 @@ function ActivitiesDetail() {
 export default ActivitiesDetail;
 
 const Container = styled.div`
-    height: 500px;
-    background-color: red;
+    display: flex;
+    justify-content: center;
+    border: 2px solid black;
+    width: 100%;
 `;

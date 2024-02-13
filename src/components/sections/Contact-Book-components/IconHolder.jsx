@@ -11,6 +11,7 @@ function IconHolder() {
         Phone: "+387 616 281 58",
         email: "visitdreznica@gmail.com",
     };
+
     const handleCopyToClipboard = (text) => {
         navigator.clipboard
             .writeText(text)
@@ -24,28 +25,24 @@ function IconHolder() {
 
     return (
         <div>
-            <LinkHolder>
-                <a href={`${contacts.IG}`}>
-                    <div>
-                        <CustomIG /> Instagram
-                    </div>
-                </a>
+            <LinkHolder href={contacts.IG}>
+                <div>
+                    <CustomIG /> Instagram
+                </div>
             </LinkHolder>
-            <LinkHolder>
-                <a href={`${contacts.FB}`}>
-                    <div>
-                        <CustomFB /> Facebook
-                    </div>
-                </a>
+            <LinkHolder href={contacts.FB}>
+                <div>
+                    <CustomFB /> Facebook
+                </div>
             </LinkHolder>
-            <LinkHolder>
-                <div onClick={() => handleCopyToClipboard(contacts.Phone)}>
+            <LinkHolder onClick={() => handleCopyToClipboard(contacts.Phone)}>
+                <div>
                     <CustomPhone />
                     {contacts.Phone}
                 </div>
             </LinkHolder>
-            <LinkHolder>
-                <div onClick={() => handleCopyToClipboard(contacts.email)}>
+            <LinkHolder onClick={() => handleCopyToClipboard(contacts.email)}>
+                <div>
                     <CustomMail />
                     {contacts.email}
                 </div>
@@ -56,17 +53,19 @@ function IconHolder() {
 
 export default IconHolder;
 
-const LinkHolder = styled.div`
+const LinkHolder = styled.a`
     display: flex;
     align-items: center;
     padding: 10px 0;
-    a,
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    letter-spacing: 1.5px;
+    font-size: 16px;
+    position: relative;
+
     div {
         cursor: pointer;
-        color: white;
-        text-align: center;
-        letter-spacing: 1.5px;
-        font-size: 16px;
         display: flex;
         align-items: center;
         position: relative;
@@ -83,9 +82,7 @@ const LinkHolder = styled.div`
             transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
             transform: scaleX(0);
         }
-    }
-    &:hover {
-        div:after {
+        &:hover::after {
             transform: scaleX(1);
             opacity: 1;
         }

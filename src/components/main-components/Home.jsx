@@ -11,7 +11,6 @@ function Home() {
             <Suspense fallback={<div>Loading...</div>}>
                 <HomeFetch />
             </Suspense>
-            
         </Container>
     );
 }
