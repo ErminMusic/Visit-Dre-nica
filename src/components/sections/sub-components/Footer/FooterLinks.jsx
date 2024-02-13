@@ -50,7 +50,9 @@ function FooterLinks() {
 
     return (
         <Container>
-            <HeaderLogo />
+            <LogoHolder>
+                <HeaderLogo />
+            </LogoHolder>
             <ContentHolder>
                 <FooterContent title={about.title} links={about.links} />
                 <FooterContent
@@ -81,4 +83,7 @@ const Container = styled.div`
 const ContentHolder = styled.div`
     width: 100%;
     padding: 8px 0 0 0;
+`;
+const LogoHolder = styled.div`
+    max-width: 210px;
 `;
