@@ -17,6 +17,7 @@ export default Image;
 const ImageHolder = styled.div`
     width: 35%;
     min-width: 300px;
+    min-height: 300px;
     padding: 8px;
     img {
         width: 100%;
@@ -24,9 +25,11 @@ const ImageHolder = styled.div`
 
     @media (max-width: 850px) {
         min-width: 250px;
+        min-height: 250px;
     }
     @media (max-width: 300px) {
         min-width: 200px;
+        min-height: 200px;
     }
     @media (max-width: 700px) {
         width: 100%;

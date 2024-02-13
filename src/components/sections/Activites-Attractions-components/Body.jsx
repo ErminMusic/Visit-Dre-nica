@@ -10,7 +10,7 @@ function Body({ content }) {
                 <Container key={index} $isReversed={!item.side}>
                     <Content $isReversed={!item.side}>
                         <Image img={item.image} alt={item.alter} />
-                        <Text name={item.name} des={item.description}/>
+                        <Text name={item.name} des={item.description} />
                     </Content>
                 </Container>
             ))}
@@ -44,7 +44,6 @@ const Container = styled.div`
 
 const Content = styled.div`
     width: 80%;
-    height: auto;
     margin: 12px 0;
     display: flex;
     justify-content: space-between;
@@ -57,6 +56,3 @@ const Content = styled.div`
         flex-direction: column-reverse;
     }
 `;
-
-
-
