@@ -8,7 +8,11 @@ function Body({ content }) {
                 <Container key={index} $isReversed={!item.side}>
                     <Content $isReversed={!item.side}>
                         <ImageHolder>
-                            <Image src={item.image} alt={item.alter} />
+                            <Image
+                                loading="lazy"
+                                src={item.image}
+                                alt={item.alter}
+                            />
                         </ImageHolder>
                         <TextHolder>
                             <h1 id={item.name}>{item.name}</h1>
@@ -79,7 +83,7 @@ const ImageHolder = styled.div`
 const TextHolder = styled.div`
     margin: 24px;
     width: 60%;
-    
+
     h1 {
         padding: 12px 0 16px 0;
     }
