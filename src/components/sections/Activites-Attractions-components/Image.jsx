@@ -30,6 +30,7 @@ const ImageHolder = styled.div`
     }
     @media (max-width: 700px) {
         width: 100%;
+        height: 100%;
         padding: 0;
     }
 `;
