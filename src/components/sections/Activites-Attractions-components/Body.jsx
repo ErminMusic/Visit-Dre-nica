@@ -38,8 +38,8 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: ${({ $isReversed }) =>
-        $isReversed ? "#f8f5df" : "#f0fff0"};
+    /* background-color: ${({ $isReversed }) =>
+        $isReversed ? "#f8f5df" : "#f0fff0"}; */
 `;
 
 const Content = styled.div`
