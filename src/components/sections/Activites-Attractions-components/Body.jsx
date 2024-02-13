@@ -1,18 +1,7 @@
-import styled from "styled-components";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 
 function Body({ content }) {
-    Body.propTypes = {
-        content: PropTypes.arrayOf(
-            PropTypes.shape({
-                image: PropTypes.string.isRequired,
-                name: PropTypes.string.isRequired,
-                alter: PropTypes.string.isRequired,
-                side: PropTypes.bool.isRequired,
-                description: PropTypes.string.isRequired,
-            })
-        ).isRequired,
-    };
     return (
         <>
             {content.map((item, index) => (
@@ -31,6 +20,18 @@ function Body({ content }) {
         </>
     );
 }
+
+Body.propTypes = {
+    content: PropTypes.arrayOf(
+        PropTypes.shape({
+            image: PropTypes.string.isRequired,
+            name: PropTypes.string.isRequired,
+            alter: PropTypes.string.isRequired,
+            side: PropTypes.bool.isRequired,
+            description: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+};
 
 export default Body;
 
