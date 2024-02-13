@@ -22,5 +22,7 @@ const TextHolder = styled.div`
     }
     @media (max-width: 700px) {
         width: 100%;
+        margin: 0 0 24px 0;
+
     }
 `;
