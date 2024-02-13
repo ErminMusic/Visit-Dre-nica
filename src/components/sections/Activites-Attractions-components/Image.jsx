@@ -7,7 +7,7 @@ function Image({img, alt}) {
     };
     return (
         <ImageHolder>
-            <img  src={img} alt={alt} />
+            <img loading="lazy" src={img} alt={alt} />
         </ImageHolder>
     );
 }
