@@ -44,6 +44,7 @@ const Container = styled.div`
 
 const Content = styled.div`
     width: 80%;
+    height: auto;
     margin: 12px 0;
     display: flex;
     justify-content: space-between;
