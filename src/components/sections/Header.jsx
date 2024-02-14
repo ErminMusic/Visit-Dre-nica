@@ -9,15 +9,14 @@ function Header() {
     const [isMenuOpen, setMenuOpen] = useState(false);
     const menuRef = useRef(null);
     useEffect(() => {
-        function handleClickOutside(event) {
+        const handleClickOutside = (event) => {
             if (menuRef.current && !menuRef.current.contains(event.target)) {
                 setMenuOpen(false);
             }
-        }
-        document.addEventListener("mousedown", handleClickOutside);
-        return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
         };
+        document.addEventListener("mousedown", handleClickOutside);
+        return () =>
+            document.removeEventListener("mousedown", handleClickOutside);
     }, [menuRef]);
     const toggleMenu = () => {
         setMenuOpen(!isMenuOpen);
@@ -60,11 +59,9 @@ const Container = styled.div`
     justify-content: space-between;
     align-items: center;
     position: relative;
-
     a {
         text-decoration: none;
     }
-
     @media (max-width: 991px) {
         width: 100%;
         padding: 0 15px;
