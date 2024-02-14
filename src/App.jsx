@@ -10,14 +10,8 @@ const NearbyAttractions = lazy(() => import("./components/main-components/Nearby
 const Questions = lazy(() => import("./components/main-components/Questions"));
 const Contact = lazy(() => import("./components/main-components/Contact"));
 const HowToBook = lazy(() => import("./components/main-components/HowToBook"));
-import { useEffect } from 'react';
-import { initGA, logPageView } from './analytics';
 
 function App() {
-    useEffect(() => {
-        initGA();
-        logPageView();
-      }, []);
     return (
         <Container>
             <Router>
