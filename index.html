@@ -24,17 +24,15 @@
         <div id="root"></div>
         <script type="module" src="/src/main.jsx"></script>
         <script
-            async
+            type="text/partytown"
             src="https://www.googletagmanager.com/gtag/js?id=G-6TCDM52R17"
         ></script>
-        <script>
+        <script type="text/partytown">
             window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-            gtag("config", "G-6TCDM52R17");
+            gtag('config', 'G-6TCDM52R17');
         </script>
     </body>
 </html>
