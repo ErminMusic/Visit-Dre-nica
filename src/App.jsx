@@ -10,11 +10,8 @@ const NearbyAttractions = lazy(() => import("./components/main-components/Nearby
 const Questions = lazy(() => import("./components/main-components/Questions"));
 const Contact = lazy(() => import("./components/main-components/Contact"));
 const HowToBook = lazy(() => import("./components/main-components/HowToBook"));
-import { Partytown } from '@builder.io/partytown/react';
 
 function App() {
-    
-    <Partytown debug={true} forward={['dataLayer.push']} />
     return (
         <Container>
             <Router>
@@ -22,7 +19,10 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/Activities" element={<ActivitiesDetail />} />
-                    <Route path="/Nearby Attractions" element={<NearbyAttractions />} />
+                    <Route
+                        path="/Nearby Attractions"
+                        element={<NearbyAttractions />}
+                    />
                     <Route path="/FAQ" element={<Questions />} />
                     <Route path="/Contact" element={<Contact />} />
                     <Route path="/How To Book" element={<HowToBook />} />
