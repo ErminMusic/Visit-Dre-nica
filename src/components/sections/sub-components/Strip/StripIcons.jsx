@@ -26,7 +26,7 @@ function Icons() {
         <Wrapper>
             {content.map((item, index) => (
                 <Holder key={index}>
-                    <IconHolder alt={item.alter} src={item.icon} />
+                    <IconHolder loading="lazy" alt={item.alter} src={item.icon} />
                     <TextHolder>{item.text}</TextHolder>
                 </Holder>
             ))}

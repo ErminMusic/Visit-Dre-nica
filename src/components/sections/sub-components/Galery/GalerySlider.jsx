@@ -57,7 +57,7 @@ function GalerySlider({ images }) {
             <StyledSlider {...settings}>
                 {images.map((image, index) => (
                     <ImageHolder key={index}>
-                        <Image alt={image.alter} src={image.image} />
+                        <Image loading="lazy" alt={image.alter} src={image.image} />
                     </ImageHolder>
                 ))}
             </StyledSlider>
@@ -86,7 +86,6 @@ const Container = styled.div`
 `;
 const StyledSlider = styled(Slider)`
     width: 100%;
-
     @media (max-width: 440px) {
         max-height: 210px;
         .slick-dots {
