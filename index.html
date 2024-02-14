@@ -8,7 +8,11 @@
         <link rel="preload" as="image" href="./src/assets/ContactBg.webp" />
         <link rel="preload" as="image" href="./src/assets/ContactPhone.webp" />
         <link rel="preload" as="image" href="./src/assets/HowToBookBg.webp" />
-        <link rel="preload" as="image" href="./src/assets/HowToBookPhone.webp" />
+        <link
+            rel="preload"
+            as="image"
+            href="./src/assets/HowToBookPhone.webp"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
             name="description"
@@ -19,5 +23,18 @@
     <body>
         <div id="root"></div>
         <script type="module" src="/src/main.jsx"></script>
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-6TCDM52R17"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+
+            gtag("config", "G-6TCDM52R17");
+        </script>
     </body>
 </html>

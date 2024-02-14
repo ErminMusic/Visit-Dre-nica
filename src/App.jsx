@@ -2,34 +2,29 @@ import styled from "styled-components";
 import "./App.css";
 import Header from "./components/sections/Header";
 import { lazy, Suspense } from "react";
-const Footer = lazy(() => import("./components/sections/Footer"));
 import Home from "./components/main-components/Home";
-import { useEffect } from "react";
-import ReactGA from "react-ga4";
+import { Partytown } from "@builder.io/partytown/react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-const ActivitiesDetail = lazy(() => import("./components/main-components/ActivitiesDetail"));
-const NearbyAttractions = lazy(() => import("./components/main-components/NearbyAttractions"));
+import Head from "./components/main-components/Head";
+const Footer = lazy(() => import("./components/sections/Footer"));
+const ActivitiesDetail = lazy(() =>
+    import("./components/main-components/ActivitiesDetail")
+);
+const NearbyAttractions = lazy(() =>
+    import("./components/main-components/NearbyAttractions")
+);
 const Questions = lazy(() => import("./components/main-components/Questions"));
 const Contact = lazy(() => import("./components/main-components/Contact"));
 const HowToBook = lazy(() => import("./components/main-components/HowToBook"));
 
 function App() {
-    ReactGA.initialize("G-6TCDM52R17");
-    useEffect(() => {
-        const script = document.createElement("script");
-        script.async = true;
-        script.src = `https://www.googletagmanager.com/gtag/js?id=G-6TCDM52R17`; // Replace with your tracking ID
-        document.head.appendChild(script);
-
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-            gtm: new Date().getTime(),
-            event: "pageview",
-        });
-        return () => document.head.removeChild(script);
-    }, []);
     return (
         <Container>
+            <Head>
+                <Partytown
+                    config={{ debug: true, forward: ["dataLayer.push"] }}
+                />
+            </Head>
             <Router>
                 <Header />
                 <Routes>
