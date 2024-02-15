@@ -1,6 +1,6 @@
 import { lazy, Suspense } from "react";
 import styled from "styled-components";
-import Hero from "../sections/Hero";
+const Hero= lazy(() => import("../sections/Hero"));
 const HomeFetch = lazy(() => import("./HomeFetch"));
 
 function Home() {
