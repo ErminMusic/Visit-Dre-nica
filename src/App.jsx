@@ -3,9 +3,7 @@ import "./App.css";
 import Header from "./components/sections/Header";
 import { lazy, Suspense } from "react";
 import Home from "./components/main-components/Home";
-import { Partytown } from "@builder.io/partytown/react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Head from "./components/main-components/Head";
 const Footer = lazy(() => import("./components/sections/Footer"));
 const ActivitiesDetail = lazy(() =>
     import("./components/main-components/ActivitiesDetail")
@@ -20,11 +18,6 @@ const HowToBook = lazy(() => import("./components/main-components/HowToBook"));
 function App() {
     return (
         <Container>
-            <Head>
-                <Partytown
-                    config={{ debug: true, forward: ["dataLayer.push"] }}
-                />
-            </Head>
             <Router>
                 <Header />
                 <Routes>
