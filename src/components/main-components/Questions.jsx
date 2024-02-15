@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import Title from "../sections/FAQ-components/Title";
-import QuestionHolder from "../sections/FAQ-components/QuestionHolder";
-import QuestionNavbar from "../sections/FAQ-components/QuestionNavbar";
+import { lazy } from "react";
+const QuestionHolder = lazy(() =>import("../sections/FAQ-components/QuestionHolder"));
+const QuestionNavbar = lazy(() =>import("../sections/FAQ-components/QuestionNavbar"));
 
 function Questions() {
     const HouseRules = {

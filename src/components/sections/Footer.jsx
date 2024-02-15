@@ -1,13 +1,16 @@
 import styled from "styled-components";
-import FooterLinks from "./sub-components/Footer/FooterLinks";
-import Map from "./sub-components/Footer/Map";
+import { lazy, Suspense } from "react";
+const FooterLinks = lazy(() => import("./sub-components/Footer/FooterLinks"));
+const Map = lazy(() => import("./sub-components/Footer/Map"));
 
 function Footer() {
     return (
         <Wrap>
             <Container>
-                <FooterLinks />
-                <Map />
+                <Suspense fallback={<div>Loading...</div>}>
+                    <FooterLinks />
+                    <Map />
+                </Suspense>
             </Container>
         </Wrap>
     );

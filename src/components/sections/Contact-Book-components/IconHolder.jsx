@@ -1,8 +1,9 @@
 import styled from "@emotion/styled";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import EmailIcon from "@mui/icons-material/Email";
-import PhoneIcon from "@mui/icons-material/Phone";
+import { lazy } from "react";
+const InstagramIcon = lazy(() =>import("@mui/icons-material/Instagram"));
+const FacebookIcon = lazy(() =>import("@mui/icons-material/Facebook"));
+const EmailIcon = lazy(() =>import("@mui/icons-material/Email"));
+const PhoneIcon = lazy(() =>import("@mui/icons-material/Phone"));
 
 function IconHolder() {
     const contacts = {

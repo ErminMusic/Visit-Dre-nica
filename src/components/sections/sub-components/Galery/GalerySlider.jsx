@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import Slider from "react-slick";
+import { lazy } from "react";
+const Slider = lazy(() => import("react-slick"));
 
 function SamplePrevArrow(props) {
     const { className, onClick } = props;

@@ -1,9 +1,10 @@
 import styled from "@emotion/styled";
-import BackgroundHolder from "./BackgroundHolder";
-import SideImage from "./SideImage";
-import BookButton from "./BookButton";
-import IconHolder from "./IconHolder";
 import PropTypes from "prop-types";
+import { lazy } from "react";
+const BackgroundHolder = lazy(() =>import("./BackgroundHolder"));
+const SideImage = lazy(() =>import("./SideImage"));
+const BookButton = lazy(() =>import("./BookButton"));
+const IconHolder = lazy(() =>import("./IconHolder"));
 
 function Body({ content }) {
     Body.propTypes = {

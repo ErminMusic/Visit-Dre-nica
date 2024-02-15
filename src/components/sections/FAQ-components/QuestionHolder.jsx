@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, lazy } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+const KeyboardArrowDownIcon = lazy(() =>import("@mui/icons-material/KeyboardArrowDown"));
+
 function QuestionHolder({ title, questions }) {
     const [isAnswerVisible, setIsAnswerVisible] = useState({});
     const toggleAnswerVisibility = (questionIndex) => {

@@ -1,8 +1,9 @@
 import styled from "styled-components";
-import Body from "../sections/Activites-Attractions-components/Body";
-import Title from "../sections/Activites-Attractions-components/Title";
+import { lazy } from "react";
+const Body = lazy(() =>import("../sections/Activites-Attractions-components/Body"));
+const Title = lazy(() =>import("../sections/Activites-Attractions-components/Title"));
+const QuestionNavbar = lazy(() =>import("../sections/FAQ-components/QuestionNavbar"));
 import { AttractionDetailList } from "../data/ActivitesDetail";
-import QuestionNavbar from "../sections/FAQ-components/QuestionNavbar";
 
 function NearbyAttractions() {
     const activityNames = AttractionDetailList.map((activity) => activity.name);

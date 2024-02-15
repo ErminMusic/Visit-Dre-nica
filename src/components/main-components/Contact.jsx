@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import Body from "../sections/Contact-Book-components/Body";
+import { lazy } from "react";
+const Body = lazy(() =>import("../sections/Contact-Book-components/Body"));
 import ContactBg from "../../assets/ContactBg.webp";
 import ContactSide from "../../assets/ContactSide.webp";
 import ContactPhone from "../../assets/ContactPhone.webp";

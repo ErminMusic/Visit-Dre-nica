@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import Image from "./Image";
-import Text from "./Text";
+import { lazy } from "react";
+const Image = lazy(() =>import("./Image"));
+const Text = lazy(() =>import("./Text"));
 
 function Body({ content }) {
     return (
