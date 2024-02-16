@@ -1,12 +1,10 @@
 import styled from "styled-components";
 import { ActivitiesList, AttractionList } from "../data/ActivitiesContent";
 import { lazy, Suspense } from "react";
-import { block } from "million";
 const Activitie = lazy(() =>import("../sections/sub-components/Activities/Activitie"));
 
-function Activities() {
-
-    return block((
+const Activities = () => {
+    return (
         <Wrap>
             <Container>
                 <TitleHolder>
@@ -27,7 +25,7 @@ function Activities() {
                 </ActivitiesHolder>
             </Container>
         </Wrap>
-    ));
+    );
 }
 
 export default Activities;

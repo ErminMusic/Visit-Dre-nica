@@ -5,7 +5,7 @@ const Title = lazy(() =>import("../sections/Activites-Attractions-components/Tit
 const QuestionNavbar = lazy(() =>import("../sections/FAQ-components/QuestionNavbar"));
 import { ActivitiesDetailList } from "../data/ActivitesDetail";
 
-function ActivitiesDetail() {
+const ActivitiesDetail = () => {
     const activityNames = ActivitiesDetailList.map((activity) => activity.name);
     return (
         <Container>

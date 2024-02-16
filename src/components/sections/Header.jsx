@@ -4,9 +4,8 @@ import CloseIcon from "@mui/icons-material/Close";
 import NavItems from "./sub-components/Header/NavItems";
 import HeaderLogo from "./sub-components/Header/HeaderLogo";
 import { useState, useRef, useEffect } from "react";
-import { block } from "million";
 
-function Header() {
+const Header = () => {
     const [isMenuOpen, setMenuOpen] = useState(false);
     const menuRef = useRef(null);
     useEffect(() => {
@@ -22,7 +21,7 @@ function Header() {
     const toggleMenu = () => {
         setMenuOpen(!isMenuOpen);
     };
-    return block((
+    return (
         <Wrapper>
             <Container>
                 <HeaderLogo />
@@ -38,7 +37,7 @@ function Header() {
                 </MenuHolder>
             </Container>
         </Wrapper>
-    ));
+    );
 }
 
 export default Header;
