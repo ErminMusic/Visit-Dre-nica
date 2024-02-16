@@ -50,7 +50,9 @@ const TitleHolder = styled.div`
         padding: 0 0 12px 2%;
     }
 `;
-const Title = styled.h1``;
+const Title = styled.h2`
+    font-size: 28px;
+`;
 const ContentHolder = styled.div`
     width: 80%;
     display: flex;

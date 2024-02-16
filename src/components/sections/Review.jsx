@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { lazy, Suspense } from "react";
-import PropTypes from "prop-types"; 
+import PropTypes from "prop-types";
 const ReviewSlider = lazy(() => import("./sub-components/Review/ReviewSlider"));
 
-function Review( {guestInfo} ) {
+function Review({ guestInfo }) {
     Review.propTypes = {
         guestInfo: PropTypes.arrayOf(
             PropTypes.shape({
@@ -22,7 +22,7 @@ function Review( {guestInfo} ) {
     return (
         <Wrap>
             <TitleHolder>
-                <h1>See what our guests loved the most:</h1>
+                <h2>See what our guests loved the most:</h2>
             </TitleHolder>
             <Suspense fallback={<div>Loading...</div>}>
                 <ReviewSlider list={guestInfo} />
@@ -46,4 +46,7 @@ const Wrap = styled.div`
 `;
 const TitleHolder = styled.div`
     width: 80%;
+    h2 {
+        font-size: 28px;
+    }
 `;

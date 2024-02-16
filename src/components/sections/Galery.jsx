@@ -31,7 +31,9 @@ const Wrap = styled.div`
         padding: 36px 0 60px 0;
     }
 `;
-const Title = styled.h1``;
+const Title = styled.h2`
+    font-size: 28px;
+`;
 const TitleHolder = styled.div`
     margin: 0 0 16px 0;
     width: 80%;

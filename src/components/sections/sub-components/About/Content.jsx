@@ -44,10 +44,10 @@ function Content({ content, title, titleBold }) {
 
     return (
         <ContentHolder>
-            <h1>
+            <h2>
                 <span>{titleBold}</span>
                 {title}
-            </h1>
+            </h2>
             {renderContent()}
         </ContentHolder>
     );
@@ -61,7 +61,8 @@ const ContentHolder = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    h1 {
+    h2 {
+        font-size: 28px;
         font-weight: normal;
         span {
             font-weight: bold;
