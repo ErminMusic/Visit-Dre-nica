@@ -38,7 +38,7 @@ const Link = styled.a`
     color: white;
     background-color: rgb(80, 125, 127);
     text-align: center;
-    width: 50%;
+    width: 80%;
     padding: 16px 0px;
     cursor: pointer;
     opacity: 0.9;
@@ -50,9 +50,6 @@ const Link = styled.a`
         opacity: 1;
         background-color: white;
         color: rgb(80, 125, 127);
-    }
-    @media (max-width: 500px) {
-        width: 55%;
     }
     @media (max-width: 420px) {
         width: 65%;

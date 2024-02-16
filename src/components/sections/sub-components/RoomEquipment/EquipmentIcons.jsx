@@ -44,8 +44,7 @@ function EquipmentIcons({ title, content }) {
 
 export default EquipmentIcons;
 
-const Title = styled.p`
-    font-size: 36px;
+const Title = styled.h1`
     margin: 18px 0 14px 0;
     span {
         font-weight: bold;

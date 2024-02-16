@@ -17,9 +17,9 @@ export default TextHolder;
 
 const Container = styled.div`
     max-height: fit-content;
+    width: 100%;
 `;
 const Headline = styled.h1`
-    font-size: 56px;
     font-weight: bold;
     text-transform: uppercase;
     span {
@@ -28,7 +28,6 @@ const Headline = styled.h1`
 `;
 
 const SubHeadline = styled.h2`
-    font-size: 32px;
     margin: 16px 0 20px 0;
     font-weight: normal;
 `;
