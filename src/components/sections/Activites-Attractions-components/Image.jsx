@@ -21,7 +21,6 @@ const ImageHolder = styled.div`
     padding: 8px;
     img {
         width: 100%;
-        height: 100%;
     }
 
     @media (max-width: 850px) {
