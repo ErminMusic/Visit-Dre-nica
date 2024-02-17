@@ -14,8 +14,9 @@ const NearbyAttractions = lazy(() =>
 const Questions = lazy(() => import("./components/main-components/Questions"));
 const Contact = lazy(() => import("./components/main-components/Contact"));
 const HowToBook = lazy(() => import("./components/main-components/HowToBook"));
+import { block } from "million/react";
 
-function App() {
+const App = block(() => {
     return (
         <Container>
             <Router>
@@ -37,7 +38,7 @@ function App() {
             </Router>
         </Container>
     );
-}
+});
 
 export default App;
 

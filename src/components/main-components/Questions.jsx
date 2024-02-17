@@ -3,9 +3,8 @@ import Title from "../sections/FAQ-components/Title";
 import { lazy } from "react";
 const QuestionHolder = lazy(() =>import("../sections/FAQ-components/QuestionHolder"));
 const QuestionNavbar = lazy(() =>import("../sections/FAQ-components/QuestionNavbar"));
-import { block } from "million/react";
 
-const Questions = block(() => {
+function Questions() {
     const HouseRules = {
         title: "House Rules",
         questionsAndAnswers: [
@@ -190,7 +189,7 @@ const Questions = block(() => {
             </Contact>
         </Container>
     );
-})
+}
 
 export default Questions;
 

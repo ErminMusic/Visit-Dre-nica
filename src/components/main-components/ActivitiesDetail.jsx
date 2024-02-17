@@ -4,9 +4,8 @@ const Body = lazy(() =>import("../sections/Activites-Attractions-components/Body
 const Title = lazy(() =>import("../sections/Activites-Attractions-components/Title"));
 const QuestionNavbar = lazy(() =>import("../sections/FAQ-components/QuestionNavbar"));
 import { ActivitiesDetailList } from "../data/ActivitesDetail";
-import { block } from "million/react";
 
-const ActivitiesDetail = block(() => {
+const ActivitiesDetail = () => {
     const activityNames = ActivitiesDetailList.map((activity) => activity.name);
     return (
         <Container>
@@ -15,7 +14,7 @@ const ActivitiesDetail = block(() => {
             <Body content={ActivitiesDetailList} />
         </Container>
     );
-})
+}
 
 export default ActivitiesDetail;
 
