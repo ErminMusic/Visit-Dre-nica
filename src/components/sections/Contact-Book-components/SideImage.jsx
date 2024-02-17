@@ -1,7 +1,8 @@
 import styled from "@emotion/styled";
 import PropTypes from "prop-types";
+import { block } from "million/react";
 
-function SideImage({ side }) {
+const SideImage = block(({ side }) => {
     SideImage.propTypes = {
         side: PropTypes.node.isRequired,
     };
@@ -10,7 +11,7 @@ function SideImage({ side }) {
             <img src={side} alt="Side Image" />
         </Container>
     );
-}
+})
 
 export default SideImage;
 

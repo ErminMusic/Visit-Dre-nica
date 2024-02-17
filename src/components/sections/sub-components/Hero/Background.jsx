@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import HeroBg from "../../../../assets/Hero.webp";
 import HeroBgPhone from "../../../../assets/HeroPhone.webp";
-
-function Background() {
+import { block } from "million/react";
+const Background = block(() => {
     return (
         <>
             <BackgroundOverlay />
@@ -15,7 +15,7 @@ function Background() {
             />
         </>
     );
-}
+})
 
 export default Background;
 
