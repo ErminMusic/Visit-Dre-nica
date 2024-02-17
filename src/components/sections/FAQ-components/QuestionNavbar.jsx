@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { block } from "million/react";
 
-const QuestionNavbar = block(({ category }) => {
+function QuestionNavbar({ category }) {
     QuestionNavbar.propTypes = {
         category: PropTypes.arrayOf(PropTypes.string).isRequired,
     };
@@ -19,7 +18,7 @@ const QuestionNavbar = block(({ category }) => {
             </Container>
         </Wrap>
     );
-})
+}
 
 export default QuestionNavbar;
 
