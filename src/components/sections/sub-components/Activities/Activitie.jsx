@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { For, block } from "million/react";
 
-const Activitie = block(({ list }) => {
+function Activitie({ list }) {
     Activitie.propTypes = {
         list: PropTypes.arrayOf(
             PropTypes.shape({
@@ -15,27 +14,21 @@ const Activitie = block(({ list }) => {
     };
     return (
         <>
-            <For each={list}>
-                {(item) => (
-                    <Container>
-                        <Image
-                            alt={item.alter}
-                            src={item.image}
-                            loading="lazy"
-                        />
-                        <ContentHolder>
-                            <h2>{item.name}</h2>
-                        </ContentHolder>
-                        <Button href={item.link}>
-                            <span>{item.name}</span>
-                            LEARN MORE
-                        </Button>
-                    </Container>
-                )}
-            </For>
+            {list.map((item, index) => (
+                <Container key={index}>
+                    <Image alt={item.alter} src={item.image} loading="lazy" />
+                    <ContentHolder>
+                        <h2>{item.name}</h2>
+                    </ContentHolder>
+                    <Button href={item.link}>
+                        <span>{item.name}</span>
+                        LEARN MORE
+                    </Button>
+                </Container>
+            ))}
         </>
     );
-});
+}
 
 export default Activitie;
 

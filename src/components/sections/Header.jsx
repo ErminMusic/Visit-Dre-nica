@@ -4,9 +4,8 @@ import CloseIcon from "@mui/icons-material/Close";
 import NavItems from "./sub-components/Header/NavItems";
 import HeaderLogo from "./sub-components/Header/HeaderLogo";
 import { useState, useRef, useEffect } from "react";
-import { block } from "million/react";
 
-const Header = block(() => {
+const Header = () => {
     const [isMenuOpen, setMenuOpen] = useState(false);
     const menuRef = useRef(null);
     useEffect(() => {
@@ -39,7 +38,7 @@ const Header = block(() => {
             </Container>
         </Wrapper>
     );
-})
+}
 
 export default Header;
 
