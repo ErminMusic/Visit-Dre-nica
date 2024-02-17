@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { block, For } from "million/react";
+import { block } from "million/react";
 
 const QuestionNavbar = block(({ category }) => {
     QuestionNavbar.propTypes = {
@@ -9,19 +9,17 @@ const QuestionNavbar = block(({ category }) => {
     return (
         <Wrap>
             <Container>
-                <For each={category}>
-                    {(item, index) => (
-                        <div key={index}>
-                            <NavItem href={`#${item}`}>
-                                <span>{item}</span>
-                            </NavItem>
-                        </div>
-                    )}
-                </For>
+                {category.map((item, index) => (
+                    <div key={index}>
+                        <NavItem href={`#${item}`}>
+                            <span>{item}</span>
+                        </NavItem>
+                    </div>
+                ))}
             </Container>
         </Wrap>
     );
-});
+})
 
 export default QuestionNavbar;
 

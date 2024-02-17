@@ -13,9 +13,8 @@ const Strip = lazy(() => import("../sections/Strip"));
 const Activities = lazy(() => import("../sections/Activities"));
 const Review = lazy(() => import("../sections/Review"));
 const Galery = lazy(() => import("../sections/Galery"));
-import { block } from "million/react";
 
-const HomeFetch = block(() => {
+function HomeFetch() {
     const AboutDreznica = {
         title: "visit Drežnica",
         titleBold: "Why you should ",
@@ -86,7 +85,7 @@ const HomeFetch = block(() => {
             </Suspense>
         </Container>
     );
-})
+}
 
 export default HomeFetch;
 
