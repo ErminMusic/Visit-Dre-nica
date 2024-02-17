@@ -4,7 +4,6 @@ const Hero= lazy(() => import("../sections/Hero"));
 const HomeFetch = lazy(() => import("./HomeFetch"));
 
 function Home() {
-    
     return (
         <Container>
             <Hero />

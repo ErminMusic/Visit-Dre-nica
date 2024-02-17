@@ -1,9 +1,10 @@
 import { useState, lazy } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import { block } from "million/react";
 const KeyboardArrowDownIcon = lazy(() =>import("@mui/icons-material/KeyboardArrowDown"));
 
-function QuestionHolder({ title, questions }) {
+const QuestionHolder = block(({ title, questions }) => {
     const [isAnswerVisible, setIsAnswerVisible] = useState({});
     const toggleAnswerVisibility = (questionIndex) => {
         setIsAnswerVisible((prevState) => ({
@@ -26,7 +27,6 @@ function QuestionHolder({ title, questions }) {
             <Category>
                 <h2>{title}:</h2>
             </Category>
-
             {questions.map((question, index) => (
                 <Question
                     key={index}
@@ -43,7 +43,7 @@ function QuestionHolder({ title, questions }) {
             ))}
         </Container>
     );
-}
+})
 
 export default QuestionHolder;
 
