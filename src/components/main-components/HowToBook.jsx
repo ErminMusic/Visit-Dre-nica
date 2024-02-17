@@ -4,8 +4,9 @@ const  Body = lazy(() =>import("../sections/Contact-Book-components/Body"));
 import HowToBookBg from "../../assets/HowToBookBg.webp";
 import HowToBookSide from "../../assets/HowToBookSide.webp";
 import HowToBookPhone from "../../assets/HowToBookPhone.webp";
+import { block } from "million/react";
 
-function HowToBook() {
+const HowToBook = block(() => {
     const content = {
         title: "How To Book",
         text: "If you are interested in visiting Drežnica, you can book a room trough the Booking.com app:",
@@ -22,7 +23,7 @@ function HowToBook() {
             <Body content={content} />
         </Container>
     );
-}
+})
 
 export default HowToBook;
 

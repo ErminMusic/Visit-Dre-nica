@@ -4,8 +4,9 @@ const Body = lazy(() =>import("../sections/Activites-Attractions-components/Body
 const Title = lazy(() =>import("../sections/Activites-Attractions-components/Title"));
 const QuestionNavbar = lazy(() =>import("../sections/FAQ-components/QuestionNavbar"));
 import { AttractionDetailList } from "../data/ActivitesDetail";
+import { block } from "million/react";
 
-function NearbyAttractions() {
+const NearbyAttractions = block(() => {
     const activityNames = AttractionDetailList.map((activity) => activity.name);
     return (
         <Container>
@@ -14,7 +15,7 @@ function NearbyAttractions() {
             <Body content={AttractionDetailList} />
         </Container>
     );
-}
+})
 
 export default NearbyAttractions;
 

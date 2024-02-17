@@ -2,8 +2,9 @@ import { lazy, Suspense } from "react";
 import styled from "styled-components";
 const Hero= lazy(() => import("../sections/Hero"));
 const HomeFetch = lazy(() => import("./HomeFetch"));
+import { block } from "million/react";
 
-function Home() {
+const Home = block(() => {
     return (
         <Container>
             <Hero />
@@ -12,7 +13,7 @@ function Home() {
             </Suspense>
         </Container>
     );
-}
+})
 
 export default Home;
 
