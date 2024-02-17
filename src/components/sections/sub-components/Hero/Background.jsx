@@ -1,21 +1,20 @@
 import styled from "styled-components";
 import HeroBg from "../../../../assets/Hero.webp";
 import HeroBgPhone from "../../../../assets/HeroPhone.webp";
-import { block } from "million/react";
-const Background = block(() => {
+
+function Background() {
     return (
         <>
             <BackgroundOverlay />
             <BackgroundImage
                 alt="Hero Image"
                 src={HeroBg}
-                loading="lazy"
                 srcSet={`${HeroBgPhone} 600w, ${HeroBg} 1920w`}
                 sizes="(max-width: 600px) 100vw, 1920px"
             />
         </>
     );
-})
+}
 
 export default Background;
 
