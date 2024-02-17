@@ -22,12 +22,14 @@ const Container = styled.div`
 const Headline = styled.h1`
     font-weight: bold;
     text-transform: uppercase;
+    font-size: 56px;
     span {
         color: #f0fff0;
     }
 `;
 
 const SubHeadline = styled.h2`
+    font-size: 32px;
     margin: 16px 0 20px 0;
     font-weight: normal;
 `;
