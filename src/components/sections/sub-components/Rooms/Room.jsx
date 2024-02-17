@@ -35,7 +35,7 @@ const Room = ({ roomContent }) => {
                     </Suspense>
                     <ContentHolder>
                         <Content>
-                            <Title>{item.title}</Title>
+                            <h3>{item.title}</h3>
                             <RoomDescription>
                                 <p>{item.description}</p>
                             </RoomDescription>
@@ -98,11 +98,11 @@ const Content = styled.div`
     p {
         margin: 8px 0;
     }
+    h3 {
+        font-size: 18px;
+    }
 `;
-const Title = styled.p`
-    font-size: 18px;
-    font-weight: bold;
-`;
+// const Title = styled.p``;
 const RoomDescription = styled.div`
     min-height: 160px;
     @media (min-width: 1101px) {

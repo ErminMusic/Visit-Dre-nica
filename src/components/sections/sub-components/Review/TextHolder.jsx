@@ -18,14 +18,10 @@ const TextHolder = ({ date, title, description, disliked }) => {
     };
     const paragraphs = description
         .split("\n")
-        .map((paragraph, index) => (
-            <Description key={index}>{paragraph}</Description>
-        ));
+        .map((paragraph, index) => <p key={index}>{paragraph}</p>);
     const dislike = disliked
         .split("\n")
-        .map((paragraph, index) => (
-            <Description key={index}>{paragraph}</Description>
-        ));
+        .map((paragraph, index) => <p key={index}>{paragraph}</p>);
 
     return (
         <TextContainer>
@@ -34,7 +30,7 @@ const TextHolder = ({ date, title, description, disliked }) => {
                 <br />
                 {date}
             </p>
-            <Title>{title}</Title>
+            <h2>{title}</h2>
             <div style={showDescriptionStyle}>
                 <span>Liked:</span>
                 {paragraphs}
@@ -56,6 +52,10 @@ const TextContainer = styled.div`
     p {
         margin: 8px 0;
     }
+    h2 {
+        font-size: 28px;
+        margin: 14px 0;
+    }
     div {
         span {
             font-size: 18px;
@@ -64,9 +64,7 @@ const TextContainer = styled.div`
         }
     }
 `;
-const Description = styled.p`
-    margin: 8px 0;
-`;
+// const Description = styled.p``;
 
 const ReadMoreButton = styled.button`
     background: none;
@@ -79,7 +77,4 @@ const ReadMoreButton = styled.button`
     outline: none;
     font-size: 18px;
 `;
-const Title = styled.h2`
-    font-size: 28px;
-    margin: 14px 0;
-`;
+// const Title = styled.h2``;

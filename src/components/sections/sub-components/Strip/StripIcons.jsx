@@ -26,8 +26,14 @@ function Icons() {
         <Wrapper>
             {content.map((item, index) => (
                 <Holder key={index}>
-                    <IconHolder loading="lazy" alt={item.alter} src={item.icon} />
-                    <TextHolder>{item.text}</TextHolder>
+                    <IconHolder
+                        loading="lazy"
+                        alt={item.alter}
+                        src={item.icon}
+                    />
+                    <TextHolder>
+                        <p>{item.text}</p>
+                    </TextHolder>
                 </Holder>
             ))}
         </Wrapper>

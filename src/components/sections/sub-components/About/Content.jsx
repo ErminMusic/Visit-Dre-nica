@@ -22,20 +22,23 @@ function Content({ content, title, titleBold }) {
         if (Array.isArray(content)) {
             return content.map((item, index) => {
                 if (typeof item === "object" && item.__html) {
-                    return <Paragraph key={index} dangerouslySetInnerHTML={item} />;
+                    return <p key={index} dangerouslySetInnerHTML={item} />;
                 } else if (typeof item === "string") {
-                    return <Paragraph key={index}>{item}</Paragraph>;
+                    return <p key={index}>{item}</p>;
                 } else {
-                    console.error(`Invalid content item at index ${index}:`, item);
+                    console.error(
+                        `Invalid content item at index ${index}:`,
+                        item
+                    );
                     return null;
                 }
             });
         } else if (typeof content === "object" && content.__html) {
-            return <Paragraph dangerouslySetInnerHTML={content} />;
+            return <p dangerouslySetInnerHTML={content} />;
         } else if (typeof content === "string") {
-            return content.split("\n").map((paragraph, index) => (
-                <Paragraph key={index}>{paragraph}</Paragraph>
-            ));
+            return content
+                .split("\n")
+                .map((paragraph, index) => <p key={index}>{paragraph}</p>);
         } else {
             console.error("Invalid content type:", content);
             return null;
@@ -73,13 +76,14 @@ const ContentHolder = styled.div`
     }
     @media (max-width: 700px) {
         width: 90%;
-        padding:  0 0 24px 0;
+        padding: 0 0 24px 0;
     }
     @media (max-width: 500px) {
         width: 100%;
     }
+    p{
+        margin: 16px 0 0 0;
+    }
 `;
 
-const Paragraph = styled.p`
-    margin: 16px 0 0 0;
-`;
+// const Paragraph = styled.p``;

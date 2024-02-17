@@ -40,6 +40,9 @@ const Links = styled.div`
     width: 45%;
     display: flex;
     flex-direction: column;
+    @media (max-width: 850px) {
+        width: 100%;
+    }
 `;
 
 const CustomLink = styled.a`
