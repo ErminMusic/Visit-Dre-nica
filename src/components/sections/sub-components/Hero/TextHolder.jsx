@@ -4,7 +4,7 @@ function TextHolder() {
     return (
         <Container>
             <h1>
-                Visit <span>Drežnica</span>
+                Visit Drežnica
             </h1>
             <h2>
                 A Hidden Gem in <br /> Bosnia & Herzegovina

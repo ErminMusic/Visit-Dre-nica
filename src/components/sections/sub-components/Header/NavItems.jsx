@@ -45,7 +45,7 @@ function NavItems() {
 
 export default NavItems;
 
-const Container = styled.div`
+const Container = styled.nav`
     display: flex;
     justify-content: space-evenly;
     z-index: 100;
