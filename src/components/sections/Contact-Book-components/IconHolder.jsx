@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from "styled-components";
 import { lazy } from "react";
 const InstagramIcon = lazy(() =>import("@mui/icons-material/Instagram"));
 const FacebookIcon = lazy(() =>import("@mui/icons-material/Facebook"));

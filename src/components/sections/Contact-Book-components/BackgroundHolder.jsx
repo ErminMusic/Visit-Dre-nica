@@ -1,7 +1,7 @@
-import styled from "@emotion/styled";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 
-function BackgroundHolder({Bg, BgPhone}) {
+function BackgroundHolder({ Bg, BgPhone }) {
     BackgroundHolder.propTypes = {
         Bg: PropTypes.node.isRequired,
         BgPhone: PropTypes.node.isRequired,

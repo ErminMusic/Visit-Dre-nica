@@ -2,7 +2,6 @@ import { lazy, Suspense } from "react";
 import AboutImg from "../../assets/About.webp";
 import AboutVisitImg from "../../assets/AboutVisitDreznica.webp";
 import styled from "styled-components";
-
 import { GuestReview } from "../data/GuestReview";
 import { GuestReviewSecond } from "../data/GuestReviewSecond";
 const About = lazy(() => import("../sections/About"));
