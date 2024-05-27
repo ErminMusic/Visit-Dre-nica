@@ -1,39 +1,50 @@
 import styled from "styled-components";
 import "./App.css";
-import Header from "./components/sections/Header";
+import Header from "./components/Universal/Header/Header";
 import { lazy, Suspense } from "react";
-import Home from "./components/main-components/Home";
+import Home from "./components/Home/HomePage/Home";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-const Footer = lazy(() => import("./components/sections/Footer"));
+import ScrollToTopButton from "./components/Universal/ToTopButton/ScrollToTopButton";
+const Footer = lazy(() => import("./components/Universal/Footer/Footer"));
 const ActivitiesDetail = lazy(() =>
-    import("./components/main-components/ActivitiesDetail")
+    import("./components/Activites-Attractions/ActivitiesDetail")
 );
 const NearbyAttractions = lazy(() =>
-    import("./components/main-components/NearbyAttractions")
+    import("./components/Activites-Attractions/NearbyAttractions")
 );
-const Questions = lazy(() => import("./components/main-components/Questions"));
-const Contact = lazy(() => import("./components/main-components/Contact"));
-const HowToBook = lazy(() => import("./components/main-components/HowToBook"));
+const Questions = lazy(() => import("./components/FAQ/Questions"));
+const Contact = lazy(() => import("./components/Contact-Book/Contact"));
+const HowToBook = lazy(() => import("./components/Contact-Book/HowToBook"));
 
 function App() {
     return (
         <Container>
             <Router>
-                <Header />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/Activities" element={<ActivitiesDetail />} />
-                    <Route
-                        path="/Nearby Attractions"
-                        element={<NearbyAttractions />}
-                    />
-                    <Route path="/FAQ" element={<Questions />} />
-                    <Route path="/Contact" element={<Contact />} />
-                    <Route path="/How To Book" element={<HowToBook />} />
-                </Routes>
-                <Suspense fallback={<div>Loading...</div>}>
-                    <Footer />
-                </Suspense>
+                <body>
+                    <header>
+                        <Header />
+                    </header>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route
+                            path="/Activities"
+                            element={<ActivitiesDetail />}
+                        />
+                        <Route
+                            path="/Attractions"
+                            element={<NearbyAttractions />}
+                        />
+                        <Route path="/FAQ" element={<Questions />} />
+                        <Route path="/Contact" element={<Contact />} />
+                        <Route path="/HowToBook" element={<HowToBook />} />
+                    </Routes>
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <footer>
+                            <Footer />
+                        </footer>
+                    </Suspense>
+                    <ScrollToTopButton />
+                </body>
             </Router>
         </Container>
     );
