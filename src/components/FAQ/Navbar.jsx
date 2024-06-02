@@ -10,7 +10,7 @@ function Navbar({ category }) {
     };
 
     const menuRef = useRef(null);
-    const [menuVisible, setMenuVisible] = useState(false);
+    const [menuVisible, setMenuVisible] = useState(true);
 
     const toggleMenu = () => {
         setMenuVisible(!menuVisible);
