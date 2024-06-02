@@ -1,16 +1,19 @@
 import styled from "styled-components";
 import { lazy } from "react";
-const Body = lazy(() => import("../Activites-Attractions/Body"));
-const Title = lazy(() => import("../Activites-Attractions/Title"));
-const QuestionNavbar = lazy(() => import("../FAQ/QuestionNavbar"));
+const Body = lazy(() => import("./Body"));
+const Title = lazy(() => import("./Title"));
+const QuestionNavbar = lazy(() => import("../FAQ/Navbar"));
 import { AttractionDetailList } from "../../data/ActivitesDetail";
 
 function NearbyAttractions() {
-    const activityNames = AttractionDetailList.map((activity) => activity.name);
+    const attractionNames = AttractionDetailList.map((activity) => ({
+        name: activity.linkName,
+        link: activity.link,
+    }));
     return (
         <Container>
             <Title title="Nearby Attractions" />
-            <QuestionNavbar category={activityNames} />
+            <QuestionNavbar category={attractionNames} />
             <Body content={AttractionDetailList} />
         </Container>
     );
@@ -26,4 +29,5 @@ const Container = styled.div`
     align-items: center;
     width: 100%;
     color: #525252;
+    scroll-behavior: smooth;
 `;

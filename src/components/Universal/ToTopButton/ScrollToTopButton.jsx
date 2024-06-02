@@ -41,8 +41,8 @@ const Container = styled.div`
     right: 20px;
     background-color: #4b7376;
     color: white;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     overflow: hidden;
     cursor: pointer;
@@ -50,13 +50,13 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px 0 0 5px;
+    padding: 7.5px;
     &:hover {
         transition: 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
         scale: 1.1;
     }
 `;
 const CustomImage = styled.img`
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
 `;

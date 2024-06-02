@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-function Image({img, alt}) {
+function Image({ img, alt }) {
     Image.propTypes = {
         img: PropTypes.node.isRequired,
         alt: PropTypes.string.isRequired,
@@ -21,6 +21,9 @@ const ImageHolder = styled.div`
     padding: 8px;
     img {
         width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
     }
 
     @media (max-width: 850px) {

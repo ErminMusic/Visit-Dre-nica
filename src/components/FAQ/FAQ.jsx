@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import Title from "../FAQ/Title";
+import Title from "./Title";
 import { lazy } from "react";
-const QuestionHolder = lazy(() => import("../FAQ/QuestionHolder"));
-const QuestionNavbar = lazy(() => import("../FAQ/QuestionNavbar"));
+const QuestionHolder = lazy(() => import("./QuestionHolder"));
+const QuestionNavbar = lazy(() => import("./Navbar"));
 
 function Questions() {
     const HouseRules = {
@@ -151,11 +151,26 @@ function Questions() {
         ],
     };
     const Categories = [
-        "House Rules",
-        "Rent A Boat",
-        "Swimming",
-        "Location",
-        "Hiking",
+        {
+            name: "House Rules",
+            link: "House Rules",
+        },
+        {
+            name: "Rent A Boat",
+            link: "Rent A Boat",
+        },
+        {
+            name: "Rent A Bike",
+            link: "Rent A Bike",
+        },
+        {
+            name: "Location",
+            link: "Location",
+        },
+        {
+            name: "Other",
+            link: "Other",
+        },
     ];
     return (
         <Container>

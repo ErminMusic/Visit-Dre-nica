@@ -9,11 +9,11 @@ function FooterLinks() {
         links: [
             {
                 name: "About Drežnica",
-                link: "#About Drežnica",
+                link: "#AboutDreznica",
             },
             {
                 name: "About Us",
-                link: "#About Us",
+                link: "#AboutUs",
             },
         ],
     };
@@ -22,7 +22,7 @@ function FooterLinks() {
         links: [
             {
                 name: "How To Book",
-                link: "/How To Book",
+                link: "/HowToBook",
             },
             {
                 name: "Contact Us",
@@ -43,7 +43,7 @@ function FooterLinks() {
             },
             {
                 name: "Nearby Attractions",
-                link: "/Nearby Attractions",
+                link: "/Attractions",
             },
         ],
     };

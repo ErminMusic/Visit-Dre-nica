@@ -4,8 +4,6 @@ import Beach from "../assets/Icons/Beach.webp";
 import Breakfast from "../assets/Icons/Breakfast.webp";
 import CCTV from "../assets/Icons/CCTV.webp";
 import Delivery from "../assets/Icons/Delivery.webp";
-import FamilyRoom from "../assets/Icons/FamilyRoom.webp";
-import Fire from "../assets/Icons/Fire.webp";
 import Fireplace from "../assets/Icons/Fireplace.webp";
 import Garden from "../assets/Icons/Garden.webp";
 import Iron from "../assets/Icons/Iron.webp";
@@ -14,9 +12,7 @@ import NonSmokingRooms from "../assets/Icons/NonSmokingRooms.webp";
 import PackedLunch from "../assets/Icons/PackedLunch.webp";
 import Parking from "../assets/Icons/Parking.webp";
 import Patio from "../assets/Icons/Patio.webp";
-import Picnic from "../assets/Icons/Picnic.webp";
 import RoomService from "../assets/Icons/RoomService.webp";
-import Security from "../assets/Icons/Security.webp";
 import Sink from "../assets/Icons/Sink.webp";
 import Toilet from "../assets/Icons/Toilet.webp";
 import WiFi from "../assets/Icons/WiFi.webp";
@@ -50,24 +46,9 @@ export const RoomsInclude = [
         text: "Television",
     },
     {
-        icon: FamilyRoom,
-        alter: "FamilyRoom",
-        text: "Family Room",
-    },
-    {
         icon: NonSmokingRooms,
         alter: "NonSmokingRooms",
         text: "Non-Smoking Rooms",
-    },
-    {
-        icon: Fire,
-        alter: "Fire",
-        text: "Fire Extinguisher",
-    },
-    {
-        icon: Security,
-        alter: "Security",
-        text: "24-Hour Security",
     },
     {
         icon: CCTV,
@@ -96,11 +77,6 @@ export const OutdoorsInclude = [
         icon: Patio,
         alter: "Patio",
         text: "Patio",
-    },
-    {
-        icon: Picnic,
-        alter: "Picnic",
-        text: "Picnic",
     },
 ];
 

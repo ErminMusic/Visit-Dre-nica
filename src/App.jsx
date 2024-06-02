@@ -6,13 +6,13 @@ import Home from "./components/Home/HomePage/Home";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ScrollToTopButton from "./components/Universal/ToTopButton/ScrollToTopButton";
 const Footer = lazy(() => import("./components/Universal/Footer/Footer"));
-const ActivitiesDetail = lazy(() =>
-    import("./components/Activites-Attractions/ActivitiesDetail")
+const Activities = lazy(() =>
+    import("./components/Activites-Attractions/Activities")
 );
-const NearbyAttractions = lazy(() =>
-    import("./components/Activites-Attractions/NearbyAttractions")
+const Attractions = lazy(() =>
+    import("./components/Activites-Attractions/Attractions")
 );
-const Questions = lazy(() => import("./components/FAQ/Questions"));
+const Questions = lazy(() => import("./components/FAQ/FAQ"));
 const Contact = lazy(() => import("./components/Contact-Book/Contact"));
 const HowToBook = lazy(() => import("./components/Contact-Book/HowToBook"));
 
@@ -26,14 +26,8 @@ function App() {
                     </header>
                     <Routes>
                         <Route path="/" element={<Home />} />
-                        <Route
-                            path="/Activities"
-                            element={<ActivitiesDetail />}
-                        />
-                        <Route
-                            path="/Attractions"
-                            element={<NearbyAttractions />}
-                        />
+                        <Route path="/Activities" element={<Activities />} />
+                        <Route path="/Attractions" element={<Attractions />} />
                         <Route path="/FAQ" element={<Questions />} />
                         <Route path="/Contact" element={<Contact />} />
                         <Route path="/HowToBook" element={<HowToBook />} />

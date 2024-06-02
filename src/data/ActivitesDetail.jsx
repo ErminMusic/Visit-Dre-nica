@@ -109,4 +109,3 @@ export const AttractionDetailList = [
         noteDescription: "4km away from the property.",
     },
 ];
-
