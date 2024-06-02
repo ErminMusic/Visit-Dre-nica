@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { lazy, Suspense } from "react";
-import AboutUsImage from "../../../assets/About/AboutUs.webp"
+import AboutUsImage from "../../../assets/About/AboutUs.webp";
 const Image = lazy(() => import("./Image"));
 const Content = lazy(() => import("./Content"));
 
@@ -46,6 +46,7 @@ const Wrap = styled.div`
     align-items: center;
     flex-direction: column;
     padding: 36px 0;
+    scroll-margin-top: 80px;
 `;
 const Container = styled.div`
     width: 80%;

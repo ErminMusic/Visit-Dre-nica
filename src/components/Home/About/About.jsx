@@ -75,6 +75,7 @@ const Wrap = styled.div`
     align-items: center;
     flex-direction: column;
     padding: 36px 0;
+    scroll-margin-top: 80px;
 `;
 const Container = styled.div`
     width: 80%;

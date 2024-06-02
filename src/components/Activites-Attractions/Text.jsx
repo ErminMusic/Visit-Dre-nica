@@ -29,7 +29,6 @@ export default Text;
 const TextHolder = styled.div`
     margin: 24px;
     width: 60%;
-    scroll-behavior: smooth;
     h1 {
         padding: 12px 0 16px 0;
         scroll-margin-top: 160px;

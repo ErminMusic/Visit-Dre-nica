@@ -21,7 +21,7 @@ function Body({ content }) {
         <>
             {content.map((item, index) => (
                 <Container key={index} $isReversed={!item.side}>
-                    <Content $isReversed={!item.side}>
+                    <Content>
                         <Image img={item.image} alt={item.alter} />
                         <Text
                             link={item.link}

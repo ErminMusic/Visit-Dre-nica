@@ -58,7 +58,7 @@ const Wrap = styled.nav`
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: #d4efd4;
+    background-color: #d4efd4d3;
     position: sticky;
     top: 80px;
     z-index: 90;
@@ -85,14 +85,12 @@ const NavItem = styled.a`
     font-weight: bold;
     color: #525252;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     text-decoration: none;
     font-size: 16px;
     height: 100%;
-    @media (max-width: 700px) {
-        justify-content: start;
-    }
+
     span {
         letter-spacing: 1.5px;
         text-transform: uppercase;
