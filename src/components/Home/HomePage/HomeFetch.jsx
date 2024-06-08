@@ -28,16 +28,16 @@ function HomeFetch() {
         ],
         mountainDescription: [
             {
-                __html: `You can <b>scale the peaks of mountains Čvrsnica and Čabulja</b> that encircle Drežnica…\n\n`,
+                __html: `You can climb mountains Čvrsnica and Čabulja that encircle Drežnica.\n\n`,
             },
             {
-                __html: `Čvrsnica commands the skyline to the north, its rugged ridges and majestic cliffs offering a dramatic backdrop to the village…\n\n`,
+                __html: `Čvrsnica to the north, and Čabulja to the south.\n\n`,
             },
             {
-                __html: `To the south, Čabulja stretches out with its rolling slopes and verdant meadows, gently enfolding Drežnica in a tranquil embrace.\n\n`,
+                __html: `These mountains <b>offer cool fresh air</b> and make you <b>feel truly out in nature.</b>\n\n`,
             },
             {
-                __html: `While climbing these mountains, you will <b>feel the thrill of scaling rocky summits</b> and <b>breathing in the crisp mountain air</b> as you gaze out over panoramic vistas that stretch as far as the eye can see.\n\n`,
+                __html: `And at the <b>top, you are rewarded with a view that is simply beautiful.</b>\n\n`,
             },
             {
                 __html: `Or...\n\n`,
@@ -45,16 +45,13 @@ function HomeFetch() {
         ],
         riverDescription: [
             {
-                __html: `You can take a <b>boat ride, kayak, or swim</b> at the meeting point of two natural wonders.\n\n`,
+                __html: `You can take a boat ride or a swim.\n\n`,
             },
             {
-                __html: `<b>Drežanka gracefully converges with the expansive Neretva Lake</b>, creating a harmonious union where flowing waters meet still expanses.\n\n`,
+                __html: `Surrounded by lush vegetation and towering mountains...\n\n`,
             },
             {
-                __html: `Surrounded by lush vegetation and framed by towering mountains, this confluence exudes a sense of peacefulness and serenity.\n\n`,
-            },
-            {
-                __html: `These tranquil emerald waters <b>give a calming and refreshing feeling to everyone</b> who experiences their natural beauty.`,
+                __html: `These emerald waters give a refreshing feeling to everyone who sees them.\n\n`,
             },
         ],
         alter: "About Image",

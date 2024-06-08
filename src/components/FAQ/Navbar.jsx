@@ -123,7 +123,7 @@ const ArrowIconWrapper = styled.div`
     align-items: center;
     font-size: 24px;
     width: 100%;
-    margin: 8px 0;
+    margin: 0 0 8px 0;
     cursor: pointer;
 `;
 
